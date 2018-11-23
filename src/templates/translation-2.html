@@ -1,0 +1,13 @@
+---
+title: Translation page
+---
+{% import "partials/_header.html" as header %}
+{% import "partials/_hero-translation.html" as translation %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{header.header({musicIconNotCircle: true, dark: true})}}
+    {{translation.tr()}}
+
+{% endblock %}

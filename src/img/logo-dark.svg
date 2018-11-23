@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118.68" height="118.68" viewBox="0 0 118.68 118.68">
+  <defs>
+    <style>
+      .e9e172ba-944d-4b3f-a4b4-405ff0ee3d01 {
+        fill: #1a1a1a;
+      }
+
+      .\31 345e55a-87da-476f-974f-0659bde00c4a {
+        fill: url(#cdde3186-b748-4161-9c16-4cc4aee82171);
+      }
+    </style>
+    <linearGradient id="cdde3186-b748-4161-9c16-4cc4aee82171" x1="40.17" y1="59.34" x2="78.05" y2="59.34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8200ff"/>
+      <stop offset="1" stop-color="#005eff"/>
+    </linearGradient>
+  </defs>
+  <title>Ресурс 54</title>
+  <g id="65e1e51d-2489-49f2-bda9-d7c8102082ef" data-name="Слой 2">
+    <g id="d682b834-4b15-4bf1-9738-94a49773eb4d" data-name="Layer 2">
+      <g>
+        <path class="e9e172ba-944d-4b3f-a4b4-405ff0ee3d01" d="M59.34,118.68a59.34,59.34,0,1,1,59.34-59.34A59.41,59.41,0,0,1,59.34,118.68ZM59.34,15a44.31,44.31,0,1,0,44.31,44.31A44.36,44.36,0,0,0,59.34,15Z"/>
+        <path class="1345e55a-87da-476f-974f-0659bde00c4a" d="M59.34,89A29.68,29.68,0,1,1,89,59.34,29.71,29.71,0,0,1,59.34,89Zm0-44.34A14.66,14.66,0,1,0,74,59.34,14.68,14.68,0,0,0,59.34,44.68Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

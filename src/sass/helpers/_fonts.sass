@@ -5,3 +5,39 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+$ermilov: 'Ermilov-Bold'
+$geo: 'Geometria'
+$letterica: 'AGLettericaUltraCompressed-Roman'
+
+@font-face
+	+fontdefault(normal, 700, $ermilov)
+	+fontpath('Ermilov-Bold', 'Ermilov-Bold', Ermilov-Bold)
+
+@font-face
+	+fontdefault(normal, 700, $letterica)
+	+fontpath('AGLettericaUltraCompressed-Roman', 'AGLettericaUltraCompressed-Roman', AGLettericaUltraCompressed-Roman)
+
+@font-face
+	+fontdefault(normal, 300, $geo)
+	+fontpath('Geometria-Light', 'Geometria-Light', Geometria-Light)
+
+@font-face
+	+fontdefault(normal, 400, $geo)
+	+fontpath('Geometria', 'Geometria', Geometria)
+
+@font-face
+	+fontdefault(normal, 500, $geo)
+	+fontpath('Geometria-Medium', 'Geometria-Medium', Geometria-Medium)
+
+@font-face
+	+fontdefault(normal, 700, $geo)
+	+fontpath('Geometria-Bold', 'Geometria-Bold', Geometria-Bold)
+
+@font-face
+	+fontdefault(normal, 800, $geo)
+	+fontpath('Geometria-ExtraBold', 'Geometria-ExtraBold', Geometria-ExtraBold)
+
+@font-face
+	+fontdefault(normal, 900, $geo)
+	+fontpath('Geometria-Heavy', 'Geometria-Heavy', Geometria-Heavy)

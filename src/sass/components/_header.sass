@@ -1,0 +1,111 @@
+.header
+    position: absolute
+    top: 20px
+    left: 0
+    width: 100%
+    z-index: 5
+    &__inner
+        margin-left: calc(50% - 800px)
+        margin-right: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__search
+        +vcenter
+    // &__logo
+    //     margin-right: auto
+    &__nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex: 0 0 612px
+
+.logo
+    display: flex
+    align-items: center
+    color: $white
+    &_dark
+        color: $black
+    &__image
+        max-width: 100%
+    &__text
+        position: relative
+        margin-left: 16px
+    &__name
+        font-family: $ermilov
+        font-size: 48px
+        letter-spacing: -0.057em
+    &__descr
+        position: absolute
+        left: 0
+        top: 70px
+        margin-right: -20px
+        font-weight: 300
+        font-size: 24px
+        line-height: 1.1
+
+.nav
+    color: $white
+    // display: inline-block
+    // vertical-align: middle
+    &__list
+        display: flex
+        align-items: center
+    &__item
+        &:not(:last-child)
+            margin-right: 45px
+    &__link
+        font-size: 24px
+        
+        &_user-name
+
+        &_user-avatar
+            margin-left: auto
+    .icon-music-circle
+        font-size: 76px
+    .icon-flame
+        font-size: 40px
+    .icon-crown
+        font-size: 38px
+
+.user-info
+    // display: inline-block
+    // vertical-align: middle
+    margin-left: auto
+    color: $white
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+    &__name
+        font-size: 24px
+        line-height: 1.1
+    &__avatar
+        margin-left: 32px
+
+.avatar
+    border-radius: 50%
+
+.search
+    position: relative
+    width: 320px
+    &__input
+        width: 100%
+        background-color: transparent
+        border: 3px solid rgba($white, 0.5)
+        height: 52px
+
+        padding: 10px 26px
+        color: $white
+        font-size: 18px
+        border-radius: 26px 
+    &__button
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        background-color: transparent
+        .icon
+            color: $white
+            font-size: 24px
+

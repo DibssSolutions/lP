@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.74" height="23.85" viewBox="0 0 22.74 23.85">
+  <defs>
+    <style>
+      .\33 c13fb8d-d600-44b1-913c-f10a873c51b9 {
+        opacity: 0.8;
+      }
+
+      .fe488f7d-17cd-4795-9088-98adba91fed6 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <title>search</title>
+  <g id="c51f0c3b-ba51-4afe-87f0-e3f2c1f68f2e" data-name="Слой 2">
+    <g id="e48857ab-e7c1-4c02-89d5-70805fd99d48" data-name="Layer 2">
+      <g class="3c13fb8d-d600-44b1-913c-f10a873c51b9">
+        <path class="fe488f7d-17cd-4795-9088-98adba91fed6" d="M.73,19.51l4.06-4.06A9.87,9.87,0,1,1,8.7,18.76L4.34,23.13a2.52,2.52,0,0,1-1.77.72A2.6,2.6,0,0,1,.75,23.1,2.55,2.55,0,0,1,.73,19.51ZM18.8,9.85a5.91,5.91,0,1,0-5.91,5.91A5.92,5.92,0,0,0,18.8,9.85Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

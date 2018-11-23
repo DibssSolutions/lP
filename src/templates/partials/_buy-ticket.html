@@ -1,0 +1,48 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro buy(props) %}
+    <div class="buy">
+        <div class="buy__inner container-inner">
+            <div class="buy__info col-69">
+                <div class="info">
+                    <div class="info__logo">
+                        <img src="img/info_logo.png" alt="info-logo"/>
+                    </div>
+                    <div class="info__text">
+                        <div class="info__name">GESAFFELSTEIN</div>
+                        <div class="info__place">aleph - stadium live</div>
+                        <div class="info__statistics">
+                            <div class="info-control">
+                                <span class="info-control__icon">
+                                    {{ mixins.icon("circle") }}
+                                </span>
+                                <span class="info-control__text">в эфире</span>
+                            </div>
+                            <div class="info-control">
+                                <span class="info-control__icon">
+                                    {{ mixins.icon("heart") }}
+                                </span>
+                                <span class="info-control__text">2,304</span>
+                            </div>
+                            <div class="info-control">
+                                <span class="info-control__icon">
+                                    {{ mixins.icon("eye") }}
+                                </span>
+                                <span class="info-control__text">5,305 смотрят</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buy__cta col-31">
+                <button class="btn-cta">
+                    купить билет
+                </button>
+                <p>
+                    это не займет больше минуты,
+                    <br>
+                    вы ничего не пропустите
+                </p>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
