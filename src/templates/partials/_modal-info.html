@@ -1,47 +1,50 @@
-<div class="modal is-open" data-modal="first">
-  <div
-    class="modal__container container-inner"
-    data-modal-container="data-modal-container"
-  >
-    <div class="modal__left">
-      <div class="ticket">
-        <div class="ticket__top">
-          <div
-            class="ticket__image"
-            style="background-image: url(img/gessafelstein-image.png)"
-          ></div>
-        </div>
-        <div class="ticket__bottom">
-          <img class="ticket__logo" src="img/gessafelstein-logo.png" alt="" />
-          <div class="ticket__text">
-            <h5 class="ticket__place">stadium live</h5>
-            <time class="ticket__time">17.11.2019</time>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal__right">
-      <div class="info info_white">
-        <div class="info__text">
-          <div class="info__name">GESAFFELSTEIN</div>
-          <div class="info__place">aleph - stadium live</div>
-        </div>
-      </div>
-      <div class="modal__info-descr">
-        Смотрите концерт Gesaffelstein <br />прямо сейчас в панорамном
-        VR-качестве
-      </div>
-      <div class="cta cta_white">
-        <div class="cta__top">
-          <button class="cta__btn btn-cta">купить билет</button>
-          <div class="cta__price">99p</div>
-        </div>
+{% import "partials/_mixins.html" as mixins %} 
 
-        <div class="cta__text">
-          это не займет больше минуты, <br />
-          вы ничего не пропустите
-        </div>
+{% macro modal(props) %}
+  <div class="modal is-open" data-modal="first">
+    <div class="modal__container container-inner" data-modal-container="data-modal-container">
+      <div class="modal__left">
+        {{mixins.ticket({
+        image: 'gessafelstein-image.png',
+        logo: 'gessafelstein-logo.png',
+        place: 'stadium live',
+        time: '17.11.2019'      
+      })}}
+      </div>
+      <div class="modal__right">
+        {% if props.first %}
+          <div class="info info_white">
+            <div class="info__text">
+              <div class="info__name">GESAFFELSTEIN</div>
+              <div class="info__place">aleph - stadium live</div>
+            </div>
+          </div>
+          <div class="modal__info-descr">
+            Смотрите концерт Gesaffelstein
+            <br/>прямо сейчас в панорамном VR-качестве
+          </div>
+          <div class="cta cta_white">
+            <div class="cta__top">
+              <button class="cta__btn btn-cta">купить билет</button>
+              <div class="cta__price">99p</div>
+            </div>
+
+            <div class="cta__text">
+              это не займет больше минуты,
+              <br/>
+              вы ничего не пропустите
+            </div>
+          </div>
+        {% endif %}
+        {% if props.second %}
+          <div class="modal-card">
+            <div class="modal-card__tag modal-card__tag_left">
+              шаг 1
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
-</div>
+
+{% endmacro %}

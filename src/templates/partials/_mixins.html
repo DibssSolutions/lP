@@ -45,7 +45,8 @@
                     <span class="info-control__icon">
                         {{ icon("eye") }}
                     </span>
-                    <span class="info-control__text info-control__text_thin">{{props.watches}} просмотров</span>
+                    <span class="info-control__text info-control__text_thin">{{props.watches}}
+                        просмотров</span>
                 </div>
                 <div class="info-control">
                     <span class="info-control__icon">
@@ -53,6 +54,21 @@
                     </span>
                     <span class="info-control__text info-control__text_thin">{{props.likes}}</span>
                 </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro ticket(props) %}
+    <div class="ticket">
+        <div class="ticket__top">
+            <div class="ticket__image" style="background-image: url(img/{{props.image}})"></div>
+        </div>
+        <div class="ticket__bottom">
+            <img class="ticket__logo" src="img/{{props.logo}}" alt=""/>
+            <div class="ticket__text">
+                <h5 class="ticket__place">{{props.place}}</h5>
+                <time class="ticket__time">{{props.time}}</time>
             </div>
         </div>
     </div>

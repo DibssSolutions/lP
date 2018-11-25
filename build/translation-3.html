@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Translation page 3 </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="#" class="logo">
+              <img class="logo__image" src="img/logo.svg" alt="logo" />
+              <div class="logo__text">
+                <h1 class="logo__name">lookport</h1>
+                <div class="logo__descr"> VR-трансляции <br /> лучших событий </div>
+              </div>
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="search">
+              <input type="text" class="search__input" />
+              <button type="submit" class="search__button">
+                <svg class="icon icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="header__nav">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link">
+                    <svg class="icon icon-music-circle">
+                      <use xlink:href="img/sprite.svg#icon-music-circle"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">
+                    <svg class="icon icon-flame">
+                      <use xlink:href="img/sprite.svg#icon-flame"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">
+                    <svg class="icon icon-crown">
+                      <use xlink:href="img/sprite.svg#icon-crown"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="user-info">
+              <ul class="user-info__list">
+                <li class="user-info__item">
+                  <a href="#" class="user-info__name">welovetechno </a>
+                </li>
+                <li class="user-info__item">
+                  <a href="#" class="user-info__avatar">
+                    <img class="avatar" src="img/avatar.png" alt="avatar" />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <svg height="0" width="0">
+          <defs>
+            <clipPath id="ticket-top">
+              <path d="M295.5,436.5c0-12.7,10.3-23,23-23c0.2,0,0.3,0,0.5,0V12c0-6.6-5.4-12-12-12H12C5.4,0,0,5.4,0,12v402 c12.7,0,23,10.3,23,23h272.5C295.5,436.8,295.5,436.7,295.5,436.5z" />
+            </clipPath>
+            <clipPath id="ticket-bottom">
+              <path d="M295.5,0H23c0,12.7-10.3,23-23,23v188c0,6.6,5.4,12,12,12h295c6.6,0,12-5.4,12-12V22.5c-0.2,0-0.3,0-0.5,0
+        C306,22.5,295.8,12.5,295.5,0z" />
+            </clipPath>
+          </defs>
+        </svg>
+      </header>
+      <div class="translation">
+        <div id="player"></div>
+      </div>
+      <div class="modal is-open" data-modal="first">
+        <div class="modal__container container-inner" data-modal-container="data-modal-container">
+          <div class="modal__left">
+            <div class="ticket">
+              <div class="ticket__top">
+                <div class="ticket__image" style="background-image: url(img/gessafelstein-image.png)"></div>
+              </div>
+              <div class="ticket__bottom">
+                <img class="ticket__logo" src="img/gessafelstein-logo.png" alt="" />
+                <div class="ticket__text">
+                  <h5 class="ticket__place">stadium live</h5>
+                  <time class="ticket__time">17.11.2019</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__right">
+            <div class="modal-card">
+              <div class="modal-card__tag modal-card__tag_left"> шаг 1 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buy">
+        <div class="buy__inner container-inner">
+          <div class="buy__info col-69">
+            <div class="info">
+              <div class="info__logo">
+                <img src="img/info_logo.png" alt="info-logo" />
+              </div>
+              <div class="info__text">
+                <div class="info__name">GESAFFELSTEIN</div>
+                <div class="info__place">aleph - stadium live</div>
+                <div class="info__statistics">
+                  <div class="info-control">
+                    <span class="info-control__icon">
+                      <svg class="icon icon-circle">
+                        <use xlink:href="img/sprite.svg#icon-circle"></use>
+                      </svg>
+                    </span>
+                    <span class="info-control__text">в эфире</span>
+                  </div>
+                  <div class="info-control">
+                    <span class="info-control__icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </span>
+                    <span class="info-control__text">2,304</span>
+                  </div>
+                  <div class="info-control">
+                    <span class="info-control__icon">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </span>
+                    <span class="info-control__text">5,305 смотрят</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buy__cta col-31">
+            <div class="cta">
+              <button class="cta__btn buy__cta-btn btn-cta"> купить билет </button>
+              <div class="cta__text"> это не займет больше минуты, <br> вы ничего не пропустите </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-middle">
+        <div class="hero-middle__inner container-inner">
+          <div class="hero-middle__text">
+            <div class="col-69">
+              <h3 class="hero-middle__slogan-middle"> сделайте путешествие незабываемым </h3>
+              <p> смотрится круто на компьютере? попробуйте более захватывающий опыт с нашим приложением для смартфонов и VR-шлемов </p>
+            </div>
+            <div class="col-31">
+              <h3 class="hero-middle__slogan-big">
+                <span> 360 </span>
+                <span> градусов </span>
+                <span> драйва </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommend">
+        <div class="recommend__inner container-inner">
+          <h2 class="title recommend__title"> РЕКОМЕНДОВАНО ВАМ </h2>
+        </div>
+        <div class="recommend__blocks">
+          <div class="block block_full" style="background-image: url(img/best_1-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Night at the Opera </h4>
+              <p class="block__org"> TED Architecture </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block_half" style="background-image: url(img/best_2-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Mensch Machine </h4>
+              <p class="block__org"> CAPCOM </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block_half" style="background-image: url(img/best_3-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Aleph </h4>
+              <p class="block__org"> Bethesda Softworks </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block_full" style="background-image: url(img/best_4-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Night at the Opera </h4>
+              <p class="block__org"> TED Architecture </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block_half" style="background-image: url(img/best_5-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Mensch Machine </h4>
+              <p class="block__org"> CAPCOM </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block_half" style="background-image: url(img/best_6-100.jpg)">
+            <div class="block__text">
+              <h4 class="block__title"> Aleph </h4>
+              <p class="block__org"> Bethesda Softworks </p>
+              <div class="block__statistics">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-eye">
+                      <use xlink:href="img/sprite.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                </div>
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="info-control__text info-control__text_thin">2,304</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommend__load-more">
+          <button class="btn-load-more">
+            <svg class="icon icon-rotate">
+              <use xlink:href="img/sprite.svg#icon-rotate"></use>
+            </svg>
+            <span class="btn-load-more__text">больше рекомендаций</span>
+          </button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner container-inner">
+          <div class="footer__content">
+            <div class="footer__col col-69">
+              <div class="footer__row">
+                <a href="#" class="link">лучшее</a>
+                <a href="#" class="link">новое</a>
+              </div>
+              <div class="footer__row">
+                <a href="#" class="link">рекомендуемое</a>
+                <a href="#" class="link">поддержка</a>
+              </div>
+            </div>
+            <div class="footer__col col-31">
+              <ul class="links">
+                <li class="links__item">
+                  <a href="" class="links__link link">лейблам</a>
+                </li>
+                <li class="links__item">
+                  <a href="" class="links__link link">концертным площадкам</a>
+                </li>
+                <li class="links__item">
+                  <a href="" class="links__link link">пользовательское соглашение</a>
+                </li>
+              </ul>
+              <p class="copyright">ltd. SKY corporation, 2018 ©</p>
+            </div>
+          </div>
+          <div class="footer__logo">
+            <a href="#" class="logo logo_dark">
+              <img class="logo__image" src="img/logo-dark.svg" alt="logo" />
+              <div class="logo__text">
+                <h1 class="logo__name">lookport</h1>
+              </div>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      var conf = {
+        key: 'fbee29e5-ac4c-4705-b2b9-ffc6b9adb82d',
+        //   tweaks: {
+        //      max_buffer_level: 40,
+        //     startup_threshold: 10
+        //   },
+        source:
+        {
+          progressive: [
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1.mp4',
+            label: '4k',
+            type: 'video/mp4',
+            bitrate: 19000000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(2560x1440).mp4',
+            label: '2k',
+            type: 'video/mp4',
+            bitrate: 10256000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(1920x1080).mp4',
+            label: 'FullHD',
+            type: 'video/mp4',
+            bitrate: 5192000,
+            preferred: true
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(1280x720).mp4',
+            label: 'HD',
+            type: 'video/mp4',
+            bitrate: 2192000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(autox480).mp4',
+            label: 'LOW',
+            type: 'video/mp4',
+            bitrate: 1192000
+          }],
+          vr:
+          {
+            startupMode: '2d',
+            startPosition: 0,
+            zoom: 1.5
+          }
+        },
+        playback:
+        {
+          muted: false
+        },
+        style:
+        {
+          aspectratio: '2:1'
+        }
+      };
+      var player = bitmovin.player('player');
+      player.setup(conf);
+      // console.log(bitmovin.player);
+      // var player = new Player(document.getElementById('player'), conf);
+      // UIFactory.buildDefaultUI(player);
+      $(function()
+      {
+        var zoom = 1.5;
+        var zoomKoef = 0.033;
+        $('#player').bind('mousewheel', function(e)
+        {
+          if (e.originalEvent.wheelDelta / 120 > 0)
+          {
+            zoom += zoomKoef;
+            zoom = Math.min(zoom, 2);
+          }
+          else
+          {
+            zoom -= zoomKoef;
+            zoom = Math.max(zoom, 1);
+          }
+          if (player && player.vr)
+          {
+            player.vr.zoom(zoom);
+          }
+          return false;
+        });
+      });
+
+    </script>
+    <!-- END scripts -->
+  </body>
+
+</html>
