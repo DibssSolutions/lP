@@ -1,0 +1,54 @@
+[data-modal]
+	position: absolute
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	min-width: 320px
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	text-align: center
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+		
+[data-modal-container]
+	position: relative
+	z-index: 1
+	font-size: 14px
+	vertical-align: middle
+	padding: 10px
+	// display: inline-block
+[data-modal-close]
+	position: absolute
+	background-color: transparent
+	font-size: 0
+	.icon
+		font-size: 16px
+
+.modal
+	&__container
+		display: inline-flex
+	&__left
+		+flex-size(30%)
+	&__right
+		+flex-size(70%)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		text-align: left
+		.info__name
+			margin-top: -24px
+	&__info-descr
+		font-family : $ermilov
+		font-weight : 700
+		line-height: 1
+		font-size : 48px;
+		letter-spacing : -2.88px;
+		color : #FFFFFF;

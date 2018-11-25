@@ -5,8 +5,8 @@
     width: 100%
     z-index: 5
     &__inner
-        margin-left: calc(50% - 800px)
-        margin-right: 20px
+        padding-left: calc(50% - 800px)
+        padding-right: 40px
         display: flex
         justify-content: space-between
         align-items: center
@@ -77,11 +77,19 @@
         display: flex
         align-items: center
         justify-content: center
+    &__item
+        // margin-right: 120px
+        // + .user-info__item
+        //     margin-left: -120px
     &__name
         font-size: 24px
         line-height: 1.1
+        font-weight: 300
     &__avatar
+        display: block
         margin-left: 32px
+        height: 88px
+        width: 88px
 
 .avatar
     border-radius: 50%

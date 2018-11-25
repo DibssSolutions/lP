@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 319 437" style="enable-background:new 0 0 319 437;" xml:space="preserve">
+<g>
+	<defs>
+		<path id="ticket-top" d="M295.5,436.5c0-12.7,10.3-23,23-23c0.2,0,0.3,0,0.5,0V12c0-6.6-5.4-12-12-12H12C5.4,0,0,5.4,0,12v402
+			c12.7,0,23,10.3,23,23h272.5C295.5,436.8,295.5,436.7,295.5,436.5z"/>
+		<path id="ticket-bottom" d="M295.5,0H23c0,12.7-10.3,23-23,23v188c0,6.6,5.4,12,12,12h295c6.6,0,12-5.4,12-12V22.5c-0.2,0-0.3,0-0.5,0
+			C306,22.5,295.8,12.5,295.5,0z"/>
+	</defs>
+	</g>
+</svg>

@@ -1,11 +1,25 @@
 <footer class="footer">
   <div class="footer__inner container-inner">
     <div class="footer__content">
-        <div class="footer__left">
-
+        <div class="footer__col col-69">
+          <div class="footer__row">
+            <a href="#" class="link">лучшее</a>
+            <a href="#" class="link">новое</a>
+          </div>
+          <div class="footer__row">
+            <a href="#" class="link">рекомендуемое</a>
+            <a href="#" class="link">поддержка</a>
+          </div>
         </div>
-        <div class="footer__right">
-            
+        <div class="footer__col col-31">
+            <ul class="links">
+              {% for item in ["лейблам", "концертным площадкам", "пользовательское соглашение"] %}
+              <li class="links__item">
+                  <a href="" class="links__link link">{{item}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <p class="copyright">ltd. SKY corporation, 2018 ©</p>
         </div>
     </div>
     <div class="footer__logo">

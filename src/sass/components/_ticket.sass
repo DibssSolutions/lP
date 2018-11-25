@@ -1,0 +1,36 @@
+.ticket
+	height: 660px
+	width: 320px
+	color: $white
+	&__top
+		position: relative
+		height: 65.9%
+		clip-path: url(../translation-2.html#ticket-top)
+	&__image
+		+cover
+		+coverdiv
+	&__bottom	
+		position: relative
+		background-image: $blueGradient;
+		clip-path: url(../translation-2.html#ticket-bottom)
+		height: 34.1%
+		box-shadow : 7px 7px 5px rgba(#000, 0.65)
+	&__text
+		position: absolute
+		bottom: 20px
+		left: 20px
+		right: 20px
+		text-align: left
+		font-family : $ermilov;
+		font-weight : 700;
+	&__logo
+		position: absolute
+		top: calc(50% - 30px)
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__place
+		font-size : 20px;
+		letter-spacing : -0.04em;
+	&__time
+		font-size: 17px
+		letter-spacing: -0.02em 

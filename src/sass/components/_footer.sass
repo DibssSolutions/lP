@@ -2,5 +2,30 @@
     position: relative
     padding: 120px 0 
     background-color: $lightGrey
+    // background-color: $purple
     &__logo
         +vcenter
+    &__content
+        display: flex
+        align-items: center
+        
+    &__row
+        &:not(:last-child)
+            margin-bottom: 30px
+        .link:first-child
+            margin-right: 50px
+    .links
+        margin-bottom: 20px
+
+.links
+    &__item
+        line-height: 1
+
+.link
+    font-weight: 700
+    font-size: 30px
+    letter-spacing: -0.03em
+
+.copyright
+    font-size: 30px
+    color: $grey
