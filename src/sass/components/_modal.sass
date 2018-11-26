@@ -24,7 +24,6 @@
 	font-size: 14px
 	vertical-align: middle
 	padding: 10px
-	// display: inline-block
 [data-modal-close]
 	position: absolute
 	background-color: transparent
@@ -33,22 +32,268 @@
 		font-size: 16px
 
 .modal
+	padding-top: 90px
 	&__container
 		display: inline-flex
+		flex-wrap: wrap
 	&__left
 		+flex-size(30%)
+		+xl
+			+flex-size(340px)
+		+lg 
+			display: none
+		// +sm 
+		// 	+flex-size(100%)
 	&__right
 		+flex-size(70%)
 		display: flex
 		flex-direction: column
 		justify-content: space-between
 		text-align: left
+		+r(1700)
+			+flex-size(calc(100% - 340px))
+		+lg
+			+flex-size(100%)
 		.info__name
 			margin-top: -24px
 	&__info-descr
-		font-family : $ermilov
-		font-weight : 700
+		font-family: $ermilov
+		font-weight: 700
+		line-height: 1.2
+		font-size: 48px
+		letter-spacing: -2.88px
+		color: $white
+
+.modal-card
+	border-radius: 12px
+	background-color: $white
+	height: 100%
+	&__top
+		+clr
+		background-color: $lightGrey
+		border-radius: 12px
+	&__tag
+		height: 116px
+		background-image: $mainGradient
+		position: relative
+		+vertical
+		text-align: left
+		+xl 
+			height: 80px
+		&:after
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			border-top: 58px solid transparent
+			border-bottom: 58px solid transparent
+			+xl 
+				border-top: 40px solid transparent
+				border-bottom: 40px solid transparent
+		span 
+			display: inline-block
+			vertical-align: middle
+			font-size: 48px
+			font-family: $ermilov
+			color: $white
+		&_left
+			border-radius: 12px 0 0 12px
+			width: 49.5%
+			span 
+				padding-left: 45px
+			&:after
+				top: 0
+				left: 100%
+				border-left: 30px solid $blue
+		&_right
+			border-radius: 0 12px 12px 0
+			width: 51.5%
+			float: right
+			span 
+				padding-left: 97px
+			&:after
+				top: 0
+				left: 0
+				border-left: 30px solid $lightGrey
+
+	&__bottom
+		height: calc(100% - 116px)
+		display: flex
+		align-items: center
+		+xl
+			height: calc(100% - 80px)
+	&__content
+		width: 100%
+		padding: 26px 160px 0
+		padding-left: 160px
+		padding-top: 26px
+		padding-right: 160px
+		text-align: left
+		+xl 
+			padding: 26px 80px
+	&__title
+		margin-bottom: 28px
+		font-family: $ermilov
+		font-size: 48px
 		line-height: 1
-		font-size : 48px;
-		letter-spacing : -2.88px;
-		color : #FFFFFF;
+		color: $black
+		letter-spacing: -0.06em
+	&__descr
+		font-weight: 700
+		font-size : 30px
+		letter-spacing : -0.02em
+		color: #333333
+		line-height: 1.2
+		margin-bottom: 80px
+	&__social
+		.social-icon
+			&:not(:last-child)
+				margin-right: 26px
+	.modal-form
+		width: 100%
+
+.modal-form
+	display: inline-flex
+	flex-wrap: wrap
+	height: 100%
+	color: $black
+	font-weight: 700
+	&__left
+		+flex-size(69%)
+		padding: 40px 37px 24px 160px
+		border-radius: 0 0 12px 12px
+		box-shadow : 7px 7px 5px rgba(#000, 0.3)
+		height: 100%
+		+xl 
+			padding-left: 60px
+		+lg 
+			padding-left: 40px
+			padding-right: 20px
+		+sm
+			+flex-size(100%)
+			box-shadow: none
+		// 	padding: 24px
+	&__title
+		margin-bottom: 11px
+		font-family: $ermilov
+		font-size: 48px
+		line-height: 1
+		color: $black
+		letter-spacing: -0.06em
+		+lg 
+			font-size: 30px
+	&__list
+		margin-bottom: 45px
+	&__list-item
+		margin-bottom: 3px
+		font-weight: 700
+		font-size: 18px
+		letter-spacing: -0.02em
+		line-height: 1
+	&__group
+		margin-bottom: 18px
+	&__inline-group
+		display: inline-block
+		+ .modal-form__inline-group
+			margin-left: 48px
+			+sm 
+				margin-left: 0
+	&__group-with-helper
+		position: relative
+		padding-bottom: 60px
+	&__label
+		display: block
+		margin-bottom: 30px
+		font-size: 25px
+		letter-spacing: -0.02em
+		color: #333333
+		+xl 
+			font-size: 20px
+	&__input
+		display: inline-block
+		position: relative
+		padding: 3px
+		font-family: $geo
+		font-weight: 700
+		background-color: transparent
+		border-bottom: 1px solid #B2B2B2
+		&_sm
+			width: 83px
+			+sm 
+				width: 70px
+			&:not(:last-child)
+				margin-right: 20px
+				+sm 
+					margin-right: 5px
+		&_lg
+			width: 270px
+		&:focus
+			border-bottom: 5px solid #B2B2B2
+	&__helper
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		font-size: 18px
+		letter-spacing: -0.02em
+		color: #999999
+	&__payments-systems
+		text-align: right
+		margin-top: 10px
+		+sm 
+			display: none
+	&__right
+		+flex-size(31%)
+		padding-top: 55px
+		padding-left: 30px
+		+sm
+			+flex-size(100%)
+			padding: 0 24px 0
+	&__line
+		background-color: #4d4d4d
+		width: calc(100% + 30px)
+		height: 90px
+		margin-left: -30px
+		margin-bottom: 57px
+		+lg 	
+			display: none
+	&__check-group
+		margin-bottom: 76px
+	&__actions-group
+		margin-top: 38px
+
+
+.check
+	&__input
+		position: absolute
+		top: 0
+		height: 0
+		width: 0
+		&:checked
+			+ .check__label:after
+				+fadein
+	&__label
+		display: block
+		position: relative
+		padding-left: 46px
+		font-size: 25px
+		color: #666666
+		letter-spacing: -0.02em
+		+xl 
+			font-size: 20px
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 33px
+			width: 33px
+			border: 1px solid #b2b2b2
+			border-radius: 30%
+		&:after
+			content: "✔"
+			position: absolute
+			bottom: -1px
+			left: 7px
+			color: $purple
+			+fadeout(0.4s)

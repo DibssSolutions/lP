@@ -1,47 +1,134 @@
-<div class="modal is-open" data-modal="first">
-  <div
-    class="modal__container container-inner"
-    data-modal-container="data-modal-container"
-  >
-    <div class="modal__left">
-      <div class="ticket">
-        <div class="ticket__top">
-          <div
-            class="ticket__image"
-            style="background-image: url(img/gessafelstein-image.png)"
-          ></div>
-        </div>
-        <div class="ticket__bottom">
-          <img class="ticket__logo" src="img/gessafelstein-logo.png" alt="" />
-          <div class="ticket__text">
-            <h5 class="ticket__place">stadium live</h5>
-            <time class="ticket__time">17.11.2019</time>
+{% import "partials/_mixins.html" as mixins %}
+{% macro modal(props) %}
+  <div class="modal is-open" data-modal="first">
+    <div class="modal__container container-inner{% if props.second %} modal_top-centered{% endif %}" data-modal-container="data-modal-container">
+      <div class="modal__left">
+        {{
+        mixins.ticket({
+          image: "gessafelstein-image.png",
+          logo: "gessafelstein-logo.png",
+          place: "stadium live",
+          time: "17.11.2019"
+        })
+      }}
+      </div>
+      <div class="modal__right">
+        {% if props.first %}
+          <div class="info info_white">
+            <div class="info__text">
+              <div class="info__name">GESAFFELSTEIN</div>
+              <div class="info__place">aleph - stadium live</div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal__right">
-      <div class="info info_white">
-        <div class="info__text">
-          <div class="info__name">GESAFFELSTEIN</div>
-          <div class="info__place">aleph - stadium live</div>
-        </div>
-      </div>
-      <div class="modal__info-descr">
-        Смотрите концерт Gesaffelstein <br />прямо сейчас в панорамном
-        VR-качестве
-      </div>
-      <div class="cta cta_white">
-        <div class="cta__top">
-          <button class="cta__btn btn-cta">купить билет</button>
-          <div class="cta__price">99p</div>
-        </div>
+          <div class="modal__info-descr">
+            Смотрите концерт Gesaffelstein
+            <br/>прямо сейчас в панорамном VR-качестве
+          </div>
+          <div class="cta cta_white">
+            <div class="cta__top">
+              <button class="cta__btn btn-cta">купить билет</button>
+              <div class="cta__price">99p</div>
+            </div>
 
-        <div class="cta__text">
-          это не займет больше минуты, <br />
-          вы ничего не пропустите
-        </div>
+            <div class="cta__text">
+              это не займет больше минуты,
+              <br/>
+              вы ничего не пропустите
+            </div>
+          </div>
+        {% endif %}
+
+        {% if props.second %}
+          <div class="modal-card">
+            <div class="modal-card__top">
+              <div class="modal-card__tag modal-card__tag_left">
+                <span>шаг 1</span>
+              </div>
+            </div>
+            <div class="modal-card__bottom">
+              <div class="modal-card__content">
+                <h4 class="modal-card__title">Выберите способ авторизации</h4>
+                <div class="modal-card__descr">
+                  Просто щелкните на иконку соцсети, все
+                  <br>произойдет автоматически
+                </div>
+                <div class="modal-card__social">
+                  <a href="#" class="social-icon"><img src="img/card-fb.png" alt="inst"/></a>
+                  <a href="#" class="social-icon"><img src="img/card-vk.png" alt="inst"/></a>
+                  <a href="#" class="social-icon"><img src="img/card-inst.png" alt="inst"/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if props.third %}
+          <div class="modal-card">
+            <div class="modal-card__top">
+              <div class="modal-card__tag modal-card__tag_right">
+                <span>шаг 2</span>
+              </div>
+            </div>
+            <div class="modal-card__bottom">
+              <form action="/" class="modal-form">
+                <div class="modal-form__left">
+                  <h4 class="modal-form__title">Введите данные карты</h4>
+                  <ul class="modal-form__list">
+                    {% for item in["магазин: lookport", "описание: Stadium Live Gesaffelstein ", " сумма : 99 р "] %}
+                      <li class="modal-form__list-item">{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                  <div class="modal-form__group">
+                    <label for="number" class="modal-form__label">
+                      Номер карты
+                    </label>
+
+                    <input type="text" class="modal-form__input modal-form__input_sm modal-form__input_bold"/>
+                    <input type="text" class="modal-form__input modal-form__input_sm"/>
+                    <input type="text" class="modal-form__input modal-form__input_sm"/>
+                    <input type="text" class="modal-form__input modal-form__input_sm"/>
+                  </div>
+                  <div class="modal-form__inline-group modal-form__group-with-helper">
+                    <label for="number" class="modal-form__label">
+                      Имя держателя карты
+                    </label>
+                    <input type="text" class="modal-form__input modal-form__input_lg"/>
+                    <div class="modal-form__helper">
+                      введите имя и фамилию <br>как указано на карте
+                    </div>
+                  </div>
+                  <div class="modal-form__inline-group">
+                    <label for="number" class="modal-form__label">
+                      Месяц / Год
+                    </label>
+                    <input type="text" class="modal-form__input modal-form__input_sm"/>
+                  </div>
+                  <div class="modal-form__payments-systems">
+                    <img src="img/card-payment-systems.png" alt="">
+                  </div>
+                </div>
+                <div class="modal-form__right">
+                  <div class="modal-form__line"></div>
+                  <div class="modal-form__check-group check">
+                    <input type="checkbox" class="check__input" id="check">
+                    <label class="check__label" for="check">Сохранить карту</label>
+                  </div>
+                  <div class="modal-form__group">
+                    <label for="cv" class="modal-form__label">
+                      CVC\CVV
+                    </label>
+                    <input id="cv" type="text" class="modal-form__input modal-form__input_sm"/>
+                  </div>
+                  <div class="modal-form__actions-group">
+                    <button class="btn-submit" type="submit">оплатить</button>
+                    <button class="btn-back" type="button">назад</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
-</div>
+{% endmacro %}

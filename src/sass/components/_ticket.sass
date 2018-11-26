@@ -5,32 +5,31 @@
 	&__top
 		position: relative
 		height: 65.9%
-		clip-path: url(../translation-2.html#ticket-top)
+		clip-path: url(#ticket-top)
 	&__image
 		+cover
 		+coverdiv
 	&__bottom	
 		position: relative
 		background-image: $blueGradient;
-		clip-path: url(../translation-2.html#ticket-bottom)
+		clip-path: url(#ticket-bottom)
 		height: 34.1%
 		box-shadow : 7px 7px 5px rgba(#000, 0.65)
 	&__text
 		position: absolute
-		bottom: 20px
-		left: 20px
-		right: 20px
+		bottom: 17px
+		left: 30px
 		text-align: left
-		font-family : $ermilov;
-		font-weight : 700;
+		font-weight: 700
 	&__logo
 		position: absolute
-		top: calc(50% - 30px)
+		top: calc(50% - 45px)
 		left: 50%
 		transform: translate(-50%, -50%)
 	&__place
-		font-size : 20px;
-		letter-spacing : -0.04em;
+		font-family: $ermilov
+		font-size: 20px
+		letter-spacing: -0.04em
 	&__time
-		font-size: 17px
-		letter-spacing: -0.02em 
+		font-size: 18px
+		letter-spacing: -0.025em 
