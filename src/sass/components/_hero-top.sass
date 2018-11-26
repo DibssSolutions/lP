@@ -1,0 +1,54 @@
+.hero-top
+	position: relative
+	height: 100vh
+	+cover
+	color: $white
+	&__inner
+		height: 100%
+		+vertical
+	&__content
+		display: inline-flex
+		vertical-align: middle
+		justify-content: space-between
+		align-items: center
+		width: 100%
+	&__more
+		display: block
+		font-family: $ermilov
+		font-size: 50px
+		letter-spacing: -0.02em
+		max-width: 300px
+
+.hero-info
+	position: relative
+
+	h3 
+		font-family: $letterica
+		font-size: 166px
+		line-height: 1
+		letter-spacing: 0.02em
+		// +xl 
+		// 	font-size: 120px
+	&__right
+		position: absolute
+		top: 50%
+		left: 110%
+		transform: translateY(-50%)
+		width: 200px
+		text-align: left
+	&__bottom
+		position: absolute
+		top: 100%
+		left: 0
+		text-align: left
+	.info-control
+		width: 100%
+		margin-bottom: 10px
+	&__top
+		position: absolute
+		left: 0
+		bottom: 100%
+		font-weight: 400
+		font-size: 32px
+		line-height: 1
+		letter-spacing: 0.04em
