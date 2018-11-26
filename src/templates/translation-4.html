@@ -1,0 +1,19 @@
+---
+title: Translation page 4
+---
+{% import "partials/_header.html" as header %}
+{% import "partials/_hero-translation.html" as translation %}
+{% import "partials/_buy-ticket.html" as buy %}
+{% import "partials/_modal-info.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{header.header()}}
+    {{translation.tr()}}
+	{{modal.modal({third: true})}}
+    {{buy.buy()}}
+    {% include "partials/_hero-middle.html" %}
+    {% include "partials/_recommend.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

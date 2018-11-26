@@ -1,84 +1,75 @@
-{% import "partials/_mixins.html" as mixins %} {% macro header(props) %}
-<header class="header{% if props.dark %} header_dark{% endif %}">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="#" class="logo">
-        <img class="logo__image" src="img/logo.svg" alt="logo" />
-        <div class="logo__text">
-          <h1 class="logo__name">lookport</h1>
-          <div class="logo__descr">
-            VR-трансляции <br />
-            лучших событий
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="header__search">
-      <form class="search">
-        <input type="text" class="search__input" />
-        <button type="submit" class="search__button">
-          {{ mixins.icon("search") }}
-        </button>
-      </form>
-    </div>
-    <div class="header__nav">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              {% if props.musicIconNotCircle %} {{ mixins.icon("music") }} {%
-              else %} {{ mixins.icon("music-circle") }} {% endif %}
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link"> {{ mixins.icon("flame") }} </a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link"> {{ mixins.icon("crown") }} </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-info">
-        <ul class="user-info__list">
-          <li class="user-info__item">
-            <a href="#" class="user-info__name">welovetechno </a>
-          </li>
-          <li class="user-info__item">
-            <a href="#" class="user-info__avatar">
-              <img class="avatar" src="img/avatar.png" alt="avatar" />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <svg height="0" width="0">
-    <defs>
-      <clipPath id="ticket-top">
-        <path  d="M295.5,436.5c0-12.7,10.3-23,23-23c0.2,0,0.3,0,0.5,0V12c0-6.6-5.4-12-12-12H12C5.4,0,0,5.4,0,12v402 c12.7,0,23,10.3,23,23h272.5C295.5,436.8,295.5,436.7,295.5,436.5z"/>
-      </clipPath>
-      <clipPath id="ticket-bottom">
-        <path d="M295.5,0H23c0,12.7-10.3,23-23,23v188c0,6.6,5.4,12,12,12h295c6.6,0,12-5.4,12-12V22.5c-0.2,0-0.3,0-0.5,0
-        C306,22.5,295.8,12.5,295.5,0z"/>
-      </clipPath>
-    </defs>
-  </svg>
-  
-  {# <svg height="0" width="0">
-      <defs>
-          <clipPath id="ticket-top">
-              <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="M215,100.3c97.8-32.6,90.5-71.9,336-77.6
-          c92.4-2.1,98.1,81.6,121.8,116.4c101.7,149.9,53.5,155.9,14.7,178c-96.4,54.9,5.4,269-257,115.1c-57-33.5-203,46.3-263.7,20.1
-          c-33.5-14.5-132.5-45.5-95-111.1C125.9,246.6,98.6,139.1,215,100.3z"/>
-          </clipPath>
-      </defs>
-  </svg> #}
+{% import "partials/_mixins.html" as mixins %}
+{% macro header(props) %}
+  <header class="header{% if props.dark %} header_dark{% endif %} js-header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="#" class="logo">
+          <div class="logo__image"><img src="img/logo.svg" alt="logo"/></div>
 
-  {# <svg height="0" width="0">
-    <defs>
-      <path id="ticket-bottom" d="M295.5,0H23c0,12.7-10.3,23-23,23v188c0,6.6,5.4,12,12,12h295c6.6,0,12-5.4,12-12V22.5c-0.2,0-0.3,0-0.5,0
-        C306,22.5,295.8,12.5,295.5,0z"/>
-    </defs>
-  </svg> #}
-</header>
+          <div class="logo__text">
+            <h1 class="logo__name">lookport</h1>
+            <div class="logo__descr">
+              VR-трансляции
+              <br/>
+              лучших событий
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="header__search">
+        <form class="search">
+          <input type="text" class="search__input"/>
+          <button type="submit" class="search__button">
+            {{ mixins.icon("search") }}
+          </button>
+        </form>
+      </div>
+      <div class="header__nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                {% if props.musicIconNotCircle %}
+                  {{ mixins.icon("music") }}
+                {%
+              else %}
+                  {{ mixins.icon("music-circle") }}
+                {% endif %}
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                {{ mixins.icon("flame") }}
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                {{ mixins.icon("crown") }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-info">
+          <ul class="user-info__list">
+            <li class="user-info__item">
+              <a href="#" class="user-info__name">welovetechno
+              </a>
+            </li>
+            <li class="user-info__item">
+              <a href="#" class="user-info__avatar">
+                <img class="avatar" src="img/avatar.png" alt="avatar"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__toggle">
+        <a href="#" class="toggle-button js-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </header>
 {% endmacro %}

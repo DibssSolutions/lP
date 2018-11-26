@@ -11,6 +11,12 @@
     box-shadow : 7px 7px 5px rgba(0, 0, 0, 0.3)
     letter-spacing: -0.012em
     // cursor: pointer
+    +xl 
+        font-size: 48px
+    +lg 
+        font-size: 36px
+        padding: 10px 20px
+
     
 .btn-load-more
     font-size: 0
@@ -21,11 +27,43 @@
         vertical-align: middle
     &__text
         margin-left: 10px
+        padding-bottom: 4px
         font-family: $geo
         font-size: 44px
         font-weight: 700
-        border-bottom: 1px solid $darkBlue
-        
+        border-bottom: 2px solid $darkBlue
+        +lg 
+            font-size: 30px
+        +sm 
+            font-size: 20px
     .icon
         font-size: 48px
+        +lg 
+            font-size: 36px
+        +sm 
+            font-size: 24px
+
+.btn-submit
+    font-family: $ermilov
+    font-weight: 700
+    font-size: 42px
+    line-height: 1
+    letter-spacing: -0.02em
+    color: $white
+    background-image: $mainGradient
+    padding: 4px 14px 6px
+    width: 100%
+    text-align: left
+
+.btn-back
+    font-family: $geo
+    font-weight: 700
+    font-size: 25px
+    line-height: 1.2
+    letter-spacing: -0.02em
+    color: $darkGrey
+    background: none
+    padding: 6px 0
+    width: 100%
+    text-align: left
         

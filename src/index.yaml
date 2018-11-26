@@ -9,3 +9,5 @@ PageList:
   ready: 50
 - file: translation-3.html
   ready: 50
+- file: translation-4.html
+  ready: 50

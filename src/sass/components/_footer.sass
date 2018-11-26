@@ -1,31 +1,57 @@
 .footer
     position: relative
-    padding: 120px 0 
+    padding: 90px 0 120px
     background-color: $lightGrey
-    // background-color: $purple
+    +sm 
+        padding-bottom: 40px
     &__logo
         +vcenter
+        +sm 
+            top: 20px
+            left: 50%
+            transform: translateX(-50%)
     &__content
         display: flex
         align-items: center
-        
+        flex-wrap: wrap
+        +sm 
+            text-align: center
     &__row
         &:not(:last-child)
-            margin-bottom: 30px
+            margin-bottom: 40px
+            +lg 
+                margin-bottom: 0
         .link:first-child
             margin-right: 50px
+            +lg 
+                margin-right: 0
+        +lg 
+            .link
+                display: block
     .links
-        margin-bottom: 20px
+        margin-bottom: 13px
 
-.links
-    &__item
-        line-height: 1
+// .links
+//     &__item
+//         line-height: 1
+//         margin-bottom: 5px
 
 .link
     font-weight: 700
     font-size: 30px
     letter-spacing: -0.03em
+    line-height: 1
+        margin-bottom: 5px
+    +lg 
+        font-size: 22px
 
 .copyright
     font-size: 30px
     color: $grey
+    +lg 
+        font-size: 22px
+
+#clip-svg
+    position: absolute
+    bottom: 0
+    left: 0
