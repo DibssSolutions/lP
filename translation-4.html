@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title> Translation page </title>
+    <title> Translation page 4 </title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -85,6 +85,79 @@
       </header>
       <div class="translation">
         <div id="player"></div>
+      </div>
+      <div class="modal is-open" data-modal="first">
+        <div class="modal__container container-inner" data-modal-container="data-modal-container">
+          <div class="modal__left">
+            <div class="ticket">
+              <div class="ticket__top">
+                <div class="ticket__image" style="background-image: url(img/gessafelstein-image.png)"></div>
+              </div>
+              <div class="ticket__bottom">
+                <img class="ticket__logo" src="img/gessafelstein-logo.png" alt="" />
+                <div class="ticket__text">
+                  <h5 class="ticket__place">stadium live</h5>
+                  <time class="ticket__time">17.11.2019</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__right">
+            <div class="modal-card">
+              <div class="modal-card__top">
+                <div class="modal-card__tag modal-card__tag_right">
+                  <span>шаг 2</span>
+                </div>
+              </div>
+              <div class="modal-card__bottom">
+                <form action="/" class="modal-form">
+                  <div class="modal-form__left">
+                    <h4 class="modal-form__title">Введите данные карты</h4>
+                    <ul class="modal-form__list">
+                      <li class="modal-form__list-item">магазин: lookport</li>
+                      <li class="modal-form__list-item">описание: Stadium Live Gesaffelstein </li>
+                      <li class="modal-form__list-item"> сумма : 99 р </li>
+                    </ul>
+                    <div class="modal-form__group">
+                      <label for="number" class="modal-form__label"> Номер карты </label>
+                      <input type="text" class="modal-form__input modal-form__input_sm modal-form__input_bold" />
+                      <input type="text" class="modal-form__input modal-form__input_sm" />
+                      <input type="text" class="modal-form__input modal-form__input_sm" />
+                      <input type="text" class="modal-form__input modal-form__input_sm" />
+                    </div>
+                    <div class="modal-form__inline-group modal-form__group-with-helper">
+                      <label for="number" class="modal-form__label"> Имя держателя карты </label>
+                      <input type="text" class="modal-form__input modal-form__input_lg" />
+                      <div class="modal-form__helper"> введите имя и фамилию <br>как указано на карте </div>
+                    </div>
+                    <div class="modal-form__inline-group">
+                      <label for="number" class="modal-form__label"> Месяц / Год </label>
+                      <input type="text" class="modal-form__input modal-form__input_sm" />
+                    </div>
+                    <div class="modal-form__payments-systems">
+                      <img src="img/card-payment-systems.png" alt="">
+                    </div>
+                  </div>
+                  <div class="modal-form__right">
+                    <div class="modal-form__line"></div>
+                    <div class="modal-form__check-group check">
+                      <input type="checkbox" class="check__input" id="check">
+                      <label class="check__label" for="check">Сохранить карту</label>
+                    </div>
+                    <div class="modal-form__group">
+                      <label for="cv" class="modal-form__label"> CVC\CVV </label>
+                      <input id="cv" type="text" class="modal-form__input modal-form__input_sm" />
+                    </div>
+                    <div class="modal-form__actions-group">
+                      <button class="btn-submit" type="submit">оплатить</button>
+                      <button class="btn-back" type="button">назад</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="buy">
         <div class="buy__inner container-inner">
