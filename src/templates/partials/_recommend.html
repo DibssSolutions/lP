@@ -1,50 +1,4 @@
-{% import "partials/_mixins.html" as mixins %}
-{% set blocks = [
-    {
-        image: "best_1-100.jpg",
-        title: "Night at the Opera",
-        org: "TED Architecture",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'full'
-    }, {
-        image: "best_2-100.jpg",
-        title: "Mensch Machine",
-        org: "CAPCOM",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'half'
-    }, {
-        image: "best_3-100.jpg",
-        title: "Aleph",
-        org: "Bethesda Softworks",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'half'
-    }, {
-        image: "best_4-100.jpg",
-        title: "Night at the Opera",
-        org: "TED Architecture",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'full'
-    }, {
-        image: "best_5-100.jpg",
-        title: "Mensch Machine",
-        org: "CAPCOM",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'half'
-    }, {
-        image: "best_6-100.jpg",
-        title: "Aleph",
-        org: "Bethesda Softworks",
-        watches: "5,305",
-        likes: "2,304",
-        modifier: 'half'
-    }
 
-] %}
 <div class="recommend">
     <div class="recommend__inner container-inner">
         <h2 class="title recommend__title">
@@ -52,16 +6,7 @@
         </h2>
     </div>
     <div class="recommend__blocks">
-        {% for item in blocks %}
-            {{mixins.block({
-                    image: item.image,
-                    title: item.title, 
-                    org: item.org, 
-                    watches: item.watches, 
-                    likes: item.likes, 
-                    modifier: item.modifier })
-                }}
-        {% endfor %}
+        {% include "partials/_blocks.html" %}
     </div>
     <div class="recommend__load-more">
         <button class="btn-load-more">

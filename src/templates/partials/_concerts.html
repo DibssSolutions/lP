@@ -1,0 +1,62 @@
+<div class="concerts">
+    {% for item in[
+        {
+            image: "hero_bottom_1.png",
+            group_1: "АННА ПЛЕТНЕВА",
+            group_2: "ВИНТАЖ",
+            watch: "5,305",
+            likes: "2,304"
+            
+        }, {
+            image: "hero_bottom_2.jpg",
+            group_1: "BOYS NOIZE",
+            watch: "5,305",
+            likes: "2,304",
+            online: true
+        }
+
+    ] %}
+
+        <div class="concert">
+            <div class="concert__image" style="background-image: url(img/{{item.image}})"></div>
+            <div class="concert__info">
+                <div class="concert__group">
+                    <span class="group-title">{{item.group_1}}</span>
+                    {% if item.group_2 %}
+                        <span class="group-title">{{item.group_2}}</span>
+                    {% endif %}
+                </h3>
+                {% if item.online %}
+                    <div class="concert__group-online">
+                        <div class="info-control">
+                            <span class="info-control__icon">
+                                {{ mixins.icon("circle") }}
+                            </span>
+                            <span class="info-control__text">в эфире</span>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="concert__details">
+
+                <div class="info-control">
+                    <span class="info-control__icon">
+                        {{ mixins.icon("eye") }}
+                    </span>
+                    <span class="info-control__text">{{item.watch}}
+                        смотрят</span>
+                </div>
+                <div class="info-control">
+                    <span class="info-control__icon">
+                        {{ mixins.icon("heart") }}
+                    </span>
+                    <span class="info-control__text">{{item.likes}}
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+</div>

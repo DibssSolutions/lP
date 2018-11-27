@@ -35,7 +35,17 @@
     <a href="#" class="block{% if props.modifier %} block_{{props.modifier}}{% endif %}" style="background-image: url(img/{{props.image}})">
         <div class="block__text">
             <h4 class="block__title">
-                {{props.title}}
+                <span>{{props.title}}</span>
+                {% if props.online %}
+                    <span class="block__online">
+                        <div class="info-control">
+                            <span class="info-control__icon">
+                                {{ icon("circle") }}
+                            </span>
+                            <span class="info-control__text">в эфире</span>
+                        </div>
+                    </span>
+                {% endif %}
             </h4>
             <p class="block__org">
                 {{props.org}}

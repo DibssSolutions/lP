@@ -9,7 +9,7 @@ title: Translation page 3
 
 {% block content %}
 	
-	  {{header.header()}}
+	  {{ header.header( {user: true} )}}
     <div class="translation">
         {{modal.modal({second: true})}}
         <div id="player"></div>

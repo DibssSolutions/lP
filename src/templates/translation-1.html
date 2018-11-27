@@ -8,7 +8,7 @@ title: Translation page
 
 {% block content %}
 	
-	{{header.header()}}
+	{{header.header({user: true})}}
     {{translation.tr()}}
     {{buy.buy()}}
     {% include "partials/_hero-middle.html" %}
