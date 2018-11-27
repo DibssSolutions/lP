@@ -28,9 +28,19 @@
           <div class="header__search">
             <form class="search">
               <input type="text" class="search__input" />
-              <button type="submit" class="search__button js-mob-search-toggler">
+              <button type="button" class="search__button search__button_mob js-mob-search-open">
                 <svg class="icon icon-search">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+              <button type="submit" class="search__button">
+                <svg class="icon icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+              <button type="button" class="search__close js-mob-search-close">
+                <svg class="icon icon-close_thin">
+                  <use xlink:href="img/sprite.svg#icon-close_thin"></use>
                 </svg>
               </button>
             </form>
@@ -82,7 +92,7 @@
             <div class="modal__left">
               <div class="ticket">
                 <div class="ticket__top">
-                  <div class="ticket__image" style="background-image: url(img/gessafelstein-image.png)"></div>
+                  <div class="ticket__image" style="background-image: url(./img/gessafelstein-image.png)"></div>
                 </div>
                 <div class="ticket__bottom">
                   <img class="ticket__logo" src="img/gessafelstein-logo.png" alt="" />
@@ -200,11 +210,6 @@
         </div>
       </div>
       <div class="hero-middle">
-        <button type="button" class="hero-middle__close">
-          <svg class="icon icon-close">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
         <div class="hero-middle__inner container-inner">
           <div class="hero-middle__text">
             <div class="col-69">
