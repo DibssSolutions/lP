@@ -1,1 +1,16 @@
+---
+title: Main page
+---
+{% import "partials/_header.html" as header %}
+{% import "partials/_hero-translation.html" as translation %}
+{% import "partials/_buy-ticket.html" as buy %}
+{% extends "layouts/_layout.html" %}
 
+{% block content %}
+  
+  {{header.header()}}
+    {% include "partials/_hero-top.html" %}
+    {% include "partials/_hero-middle.html" %}
+    {% include "partials/_recommend.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

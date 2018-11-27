@@ -10,8 +10,11 @@ title: Translation page 4
 {% block content %}
 	
 	{{header.header()}}
-    {{translation.tr()}}
-	{{modal.modal({third: true})}}
+    <div class="translation">
+        {{modal.modal({third: true})}}
+        <div id="player"></div>
+    </div>
+	
     {{buy.buy()}}
     {% include "partials/_hero-middle.html" %}
     {% include "partials/_recommend.html" %}
