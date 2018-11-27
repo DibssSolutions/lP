@@ -1,0 +1,29 @@
+.concerts
+    font-size: 0
+    margin-bottom: 114px
+.concert
+    display: inline-block
+    vertical-align: top
+    width: 50%
+    color: $black
+    &__image
+        +cover
+        padding-bottom: 65%
+    &__info
+        padding: 20px 74px 20px 112px 
+        display: flex
+    &__group
+        +flex-size(64%)
+        position: relative
+    &__group-online
+        display: inline-block
+        vertical-align: middle
+        margin-left: 32px
+        height: 91px
+    &__details
+        +flex-size(36%)
+        margin-top: 32px
+        .info-control
+            margin-bottom: 16px
+            &:not(:last-child)
+                margin-right: 18px

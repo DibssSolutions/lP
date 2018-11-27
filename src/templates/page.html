@@ -8,9 +8,11 @@ title: Main page
 
 {% block content %}
   
-  {{header.header()}}
+  {{header.header({login: true, center: true})}}
     {% include "partials/_hero-top.html" %}
+    {% include "partials/_concerts.html" %}
     {% include "partials/_hero-middle.html" %}
-    {% include "partials/_recommend.html" %}
+    {% include "partials/_best.html" %}
+    {% include "partials/_new.html" %}
     {% include "partials/_footer.html" %}
 {% endblock %}

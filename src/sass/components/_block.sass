@@ -19,7 +19,34 @@
         font-weight: 700
         letter-spacing: -0.02em
     .info-control
-        
         &:first-child
             margin-right: 10px
+    &__online
+        margin-left: 18px
+        display: inline-block
+
+.blocks
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 624px
+    +lg 
+        max-height: inherit
+        flex-direction: row
+    .block
+        width: 25%
+        +lg 
+            width: 50%
+        +sm 
+            width: 100%
+    .block_big
+        width: 50%
+        height: 624px
+    .block_full
+        height: 624px
+        +lg 
+            height: 312px
+        
+    .block_half
+        height: 312px
         

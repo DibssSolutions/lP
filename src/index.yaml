@@ -11,5 +11,3 @@ PageList:
   ready: 50
 - file: translation-4.html
   ready: 50
-- file: page.html
-  ready: 50

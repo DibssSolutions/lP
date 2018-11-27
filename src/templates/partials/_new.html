@@ -1,0 +1,57 @@
+{% import "partials/_mixins.html" as mixins %}
+{% set blocks = [
+    {
+        image: "new_big-100.jpg",
+        title: "Night at the Opera",
+        org: "TED Architecture",
+        watches: "5,305",
+        likes: "2,304",
+        modifier: 'big',
+        online: true,
+        time: '2:27:38'
+    }, {
+        image: "best_1-100.jpg",
+        title: "Night at the Opera",
+        org: "TED Architecture",
+        watches: "5,305",
+        likes: "2,304",
+        modifier: 'full'
+    }, {
+        image: "best_2-100.jpg",
+        title: "Mensch Machine",
+        org: "CAPCOM",
+        watches: "5,305",
+        likes: "2,304",
+        modifier: 'half'
+    }, {
+        image: "best_3-100.jpg",
+        title: "Aleph",
+        org: "Bethesda Softworks",
+        watches: "5,305",
+        likes: "2,304",
+        modifier: 'half'
+    }
+
+] %}
+
+<div class="new-section">
+    <div class="new-section__inner container-inner">
+        <div class="best-section__title">
+            <h3 class="title">новое</h3>
+            <div class="subtitle">свежие трансляции, основанные на ваших лайках</div>
+        </div>
+    </div>
+    <div class="blocks">
+        {% for item in blocks %}
+            {{mixins.block({
+                                    image: item.image,
+                                    title: item.title, 
+                                    org: item.org, 
+                                    watches: item.watches, 
+                                    likes: item.likes, 
+                                    online: item.online,
+                                    modifier: item.modifier })
+                                }}
+        {% endfor %}
+    </div>
+</div>

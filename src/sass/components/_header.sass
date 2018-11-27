@@ -12,6 +12,8 @@
         display: flex
         justify-content: space-between
         align-items: center
+        &_center
+            margin-right: calc(50% - 800px)
         +xl 
             max-width: 1600px
             padding: 0 10px
@@ -279,3 +281,8 @@
         opacity: 0
     span:nth-child(3)
         transform: rotate(-45deg) translate(3px, -9px)
+
+.login
+    font-size: 32px
+    letter-spacing: -0.02em
+    color: $white

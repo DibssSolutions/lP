@@ -13,15 +13,49 @@
 		align-items: center
 		width: 100%
 	&__more
-		display: block
-		font-family: $ermilov
-		font-size: 50px
-		letter-spacing: -0.02em
-		max-width: 300px
+		font-size: 0
+		div
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+		span
+			display: block
+			font-family: $ermilov
+			font-size: 50px
+			letter-spacing: -0.02em
+			max-width: 300px
+			line-height: 1
+			&:not(:first-child)
+				margin-top: -4px
+		.icon
+			font-size: 118px
+			display: inline-block
+			vertical-align: middle
+			color: $white
+	&__bottom
+		// display: inline-block
+		// vertical-align: bottom
+		position: absolute
+		display: flex
+		height: 25vh
+		width: 100%
+		max-width: 1600px
+		bottom: 0
+		font-size: 20px
+	&__details
+		+flex-size(50%)
+		text-align: left
+		display: flex
+		align-items: center
+		span 
+			display: block
+	&__groups
+		+flex-size(50%)
+		font-size: 0
+
 
 .hero-info
 	position: relative
-
 	h3 
 		font-family: $letterica
 		font-size: 166px
@@ -52,3 +86,23 @@
 		font-size: 32px
 		line-height: 1
 		letter-spacing: 0.04em
+
+.group-card
+	display: inline-block
+	width: 50%
+	height: 100%
+	position: relative
+	+cover
+	&:after
+		content: ''
+		+coverdiv
+		background-color: rgba($black, 0.5)
+		z-index: 1
+	&__text
+		+vcenter
+		width: 100%
+		color: $white
+		z-index: 2
+
+
+	
