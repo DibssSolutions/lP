@@ -8,6 +8,12 @@
         font-size: 166px
         line-height: 1
         padding-right: 30px
+        +xl 
+            line-height: 120px
+        +lg 
+            line-height: 70px
+        +sm 
+            line-height: 56px
         img 
             max-width: 100% 
     &__text
@@ -19,16 +25,27 @@
         letter-spacing: 0.02em
         +xl 
             font-size: 120px
+        +lg 
+            font-size: 70px
+        +sm 
+            font-size: 56px
     &__place
         font-family: $ermilov
         font-size: 48px
         margin-top: -20px
         letter-spacing: -0.06em
+        +lg 
+            font-size: 32px
+        +sm 
+            font-size: 20px
+            margin-top: 0
     &__statistics
         margin-top: -4px
     .info-control
         &:not(:last-child)
             margin-right: 20px
+            +md 
+                margin-right: 10px
     
 .info-control
     font-size: 0
@@ -43,15 +60,27 @@
         line-height: 1.2
         &_thin
             font-weight: 700
+            +md 
+                font-size: 14px
+            +sm 
+                font-size: 12px
     &__icon
-        // padding-right: 10px
+        display: inline-block
+        vertical-align: middle  
+        font-size: 0
     .icon-circle
         color: red
         font-size: 20px
         margin-right: 6px
+        +md 
+            font-size: 12px
     .icon-heart
         font-size: 22px
         margin-right: 12px
+        +md 
+            font-size: 14px
     .icon-eye
         font-size: 14px
         margin-right: 13px
+        +md 
+            font-size: 10px

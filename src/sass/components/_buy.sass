@@ -17,12 +17,19 @@
     &__top
         display: flex
         align-items: center
+        +md 
+            flex-direction: column
+            align-items: flex-start
     &__price
         margin-left: 24px
         line-height: 1
         font-family: $ermilov
         font-size: 64px
         letter-spacing: -0.02em
+        +lg 
+            font-size: 36px
+            margin-left: 0
+            margin-top: 18px
     &__text
         margin-top: 34px
         font-size: 30px
@@ -30,4 +37,7 @@
         +xl 
             font-size: 24px
             margin-top: 24px
+        +lg 
+            font-size: 18px
+
 

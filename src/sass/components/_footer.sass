@@ -2,20 +2,35 @@
     position: relative
     padding: 90px 0 120px
     background-color: $lightGrey
-    +sm 
+    +lg
         padding-bottom: 40px
+        padding-top: 40px
+    +sm 
+        padding-top: 90px
     &__logo
         +vcenter
-        +sm 
-            top: 20px
+        +md
+            top: 40px
             left: 50%
             transform: translateX(-50%)
+        +sm
+            top: 20px
     &__content
         display: flex
         align-items: center
         flex-wrap: wrap
-        +sm 
+        +md 
+            align-items: flex-start
+        +sm
             text-align: center
+    &__left
+        +flex-size(69%)
+        +sm 
+            +flex-size(100%)
+    &__right
+        +flex-size(31%)
+        +sm 
+            +flex-size(100%)
     &__row
         &:not(:last-child)
             margin-bottom: 40px
@@ -49,7 +64,7 @@
     font-size: 30px
     color: $grey
     +lg 
-        font-size: 22px
+        font-size: 20px
 
 #clip-svg
     position: absolute

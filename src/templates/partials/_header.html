@@ -19,7 +19,7 @@
       <div class="header__search">
         <form class="search">
           <input type="text" class="search__input"/>
-          <button type="submit" class="search__button">
+          <button type="submit" class="search__button js-mob-search-toggler">
             {{ mixins.icon("search") }}
           </button>
         </form>
@@ -63,13 +63,13 @@
           </ul>
         </nav>
       </div>
-      <div class="header__toggle">
+      {# <div class="header__toggle">
         <a href="#" class="toggle-button js-toggle">
           <span></span>
           <span></span>
           <span></span>
         </a>
-      </div>
+      </div> #}
     </div>
   </header>
 {% endmacro %}
