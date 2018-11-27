@@ -77,13 +77,31 @@
 {% macro ticket(props) %}
     <div class="ticket">
         <div class="ticket__top">
-            <div class="ticket__image" style="background-image: url(img/{{props.image}})"></div>
+            <div class="ticket__image" style="background-image: url(./img/{{props.image}})"></div>
         </div>
         <div class="ticket__bottom">
             <img class="ticket__logo" src="img/{{props.logo}}" alt=""/>
             <div class="ticket__text">
                 <h5 class="ticket__place">{{props.place}}</h5>
                 <time class="ticket__time">{{props.time}}</time>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro chanel(props) %}
+    <div class="chanel" style="background-image: url(./img/{{props.image}})">
+        <div class="chanel__inner">
+            <div class="chanel__info">
+                <div class="chanel__logo" style="background-image: url(./img/{{props.logo}}"></div>
+                <div class="chanel__group">{{props.group}}</div>
+                <h3 class="chanel__name">{{props.name}}</h3>
+                <div class="chanel__likes">
+
+                </div>
+            </div>
+            <div class="chanel__tags">
+
             </div>
         </div>
     </div>
