@@ -15,6 +15,8 @@
             transform: translateX(-50%)
         +sm
             top: 20px
+            left: 10px
+            transform: none
     &__content
         display: flex
         align-items: center
@@ -22,11 +24,12 @@
         +md 
             align-items: flex-start
         +sm
-            text-align: center
+            text-align: left
     &__left
         +flex-size(69%)
         +sm 
             +flex-size(100%)
+            margin-bottom: 20px
     &__right
         +flex-size(31%)
         +sm 

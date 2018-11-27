@@ -4,6 +4,8 @@
     left: 0
     width: 100%
     z-index: 5
+    // &.is-active 
+    //     background-color: $white
     +xl
         top: 20px
     &__inner
@@ -12,6 +14,7 @@
         display: flex
         justify-content: space-between
         align-items: center
+        
         &_center
             margin-right: calc(50% - 800px)
         +xl 
@@ -43,15 +46,24 @@
             width: 30px
             margin-left: auto
             padding-right: 40px
+            .is-active &
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 60px
+                width: calc(100% - 70px)
     &__nav
         display: flex
         justify-content: space-between
         align-items: center
         +flex-size(612px)
+        transition: 0.4s opacity, 0.4s visibility
         +xl
             +flex-size(auto)
-        +md 
-            // order: 1
+        .is-active &
+            +sm
+                opacity: 0
+                visibility: hidden
         // +md 
         //     position: fixed
         //     top: 0
@@ -219,17 +231,13 @@
         &:focus
             border-color: $white
         +md 
-            // height: 40px
+            height: 40px
         +sm 
-            position: fixed
-            top: 90px
-            left: 10px
-            right: 10px
-            width: calc(100% - 20px)
             +fadeout(0.4s)
-            .is-active &
+            padding-right: 35px
+        .is-active &
+            +sm
                 +fadein
-
 
     &__button
         position: absolute
@@ -237,16 +245,43 @@
         right: 20px
         transform: translateY(-50%)
         background-color: transparent
-        +sm 
+        font-size: 0
+        +sm
+            display: none
             right: 50%
             transform: translate(50%, -50%)
+        .is-active &
+            +sm
+                right: 22px
+                display: block
+        &_mob
+            display: none
+            +sm 
+                display: block
             .is-active &
-                position: fixed
-                top: 117px
-                right: 40px
+                +sm
+                    opacity: 0
         .icon
             color: $white
             font-size: 24px
+            .is-active &
+                +sm 
+                    font-size: 20px
+
+    &__close
+        display: none
+        background-color: transparent
+        position: absolute
+        right: -30px
+        top: -10px
+        .is-active &
+            +sm
+                display: block
+        .icon
+            font-size: 16px
+            color: $white
+
+
 
 .social-icon
     display: inline-block
