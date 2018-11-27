@@ -64,6 +64,11 @@
                     </span>
                     <span class="info-control__text info-control__text_thin">{{props.likes}}</span>
                 </div>
+                {% if props.time %}
+                    <span class="block__time">
+                        {{props.time}} в эфире
+                    </span>
+                {% endif %}
             </div>
         </div>
     </a>
