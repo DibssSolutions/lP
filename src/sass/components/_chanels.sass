@@ -1,3 +1,19 @@
+.chanels-section
+    &__row
+        display: flex
+        .card-online
+            min-width: 25%
+        .chanel
+            flex-grow: 1
+    .chanel
+        margin-bottom: 50px
+    &__load-more
+        padding: 40px 0 100px
+        text-align: center
+        +md 
+            padding: 40px 0
+        
+
 .tags
     display: inline-block
     vertical-align: middle
@@ -14,3 +30,100 @@
         color: $white
         background-image: $mainGradient
   
+.tag-small
+    line-height: 1
+    display: inline-block
+    vertical-align: top
+    font-size: 25px
+    letter-spacing: -0.02em
+
+.chanel
+    position: relative
+    height: 312px
+    padding: 32px 0 18px
+    +cover  
+    color: $white
+    &:after
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 40%
+        content: ''
+        background-image: linear-gradient(90deg, rgba($black, 1) 0%, transparent 68.65%)
+    &__inner
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        // max-width: 1800px
+        height: 100%
+        padding: 0 70px
+        margin: 0 auto
+        z-index: 5
+    &__info 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+        background-image: 
+    &__logo
+        +circle(104)
+        +cover
+    &__group
+        font-size: 18px
+        letter-spacing: -0.02em
+        line-height: 1.2
+        font-weight: 700
+    &__name
+        font-size: 37px
+        line-height: 1
+        letter-spacing: -0.02em
+    &__likes
+        margin-top: auto
+        .icon-heart
+            color: red
+    &__tags
+        line-height: 22px
+        & > *
+            margin-right: 3px
+        // float: right
+        // display: flex
+
+// .card-online
+//     position: relative
+//     height: 312px
+//     +cover
+//     color: $white
+//     display: flex
+//     &__content
+//         position: absolute
+//         top: calc(50% - 52px)
+//         bottom: 0
+//         display: flex
+//         flex-direction: column
+//         padding: 0 130px 20px
+//         text-align: left
+//     &__statistics
+//         margin-top: auto
+
+    
+
+.card-online
+    position: relative
+    height: 312px
+    +cover
+    color: $white
+    display: flex
+    align-items: center
+    padding: 0 130px 20px
+    &__content
+        position: relative
+        .info-control
+            position: absolute
+            top: 100%
+            left: 0
+    &__statistics
+        position: absolute
+        left: 130px
+        bottom: 10px

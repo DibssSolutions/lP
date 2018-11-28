@@ -2,19 +2,36 @@
 	height: 660px
 	width: 320px
 	color: $white
+	+hover
+		.ticket__actions
+			+fadein
 	&__top
 		position: relative
 		height: 65.9%
-		clip-path: url(#ticket-top)
 	&__image
 		+cover
 		+coverdiv
+		clip-path: url(#ticket-top)
+	&__actions
+		position: absolute
+		top: 0
+		left: 100%
+		padding-left: 10px
+		text-align: center
+		+fadeout($tr)
+		& > *:not(:last-child)
+			margin-bottom: 10px
 	&__bottom	
 		position: relative
-		background-image: $blueGradient;
 		clip-path: url(#ticket-bottom)
 		height: 34.1%
 		box-shadow : 7px 7px 5px rgba(#000, 0.65)
+		&_blue
+			background-image: $blueGradient
+		&_orange
+			background-image: $orangeGradient
+		&_red
+			background-image: $redGradient
 	&__text
 		position: absolute
 		bottom: 17px

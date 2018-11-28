@@ -31,6 +31,34 @@
     <!-- end input -->
 {% endmacro %} #}
 
+{% macro online() %}
+    <div class="info-control">
+        <span class="info-control__icon">
+            {{ icon("circle") }}
+        </span>
+        <span class="info-control__text">в эфире</span>
+    </div>
+{% endmacro %}
+
+{% macro watch(props) %}
+    <div class="info-control">
+        <span class="info-control__icon {% if props.modifier %}info-control__icon_{{props.modifier}}{% endif %}">
+            {{ icon("eye") }}
+        </span>
+        <span class="info-control__text info-control__text_thin">{{'5,305' or props.watches}}
+            просмотров</span>
+    </div>
+{% endmacro %}
+
+{% macro like(props) %}
+    <div class="info-control">
+        <span class="info-control__icon {% if props.modifier %}info-control__icon_{{props.modifier}}{% endif %}">
+            {{ icon("heart") }}
+        </span>
+        <span class="info-control__text info-control__text_thin">{{'2,304' or props.likes}}</span>
+    </div>
+{% endmacro %}
+
 {% macro block(props) %}
     <a href="#" class="block{% if props.modifier %} block_{{props.modifier}}{% endif %}" style="background-image: url(img/{{props.image}})">
         <div class="block__text">
@@ -38,12 +66,7 @@
                 <span>{{props.title}}</span>
                 {% if props.online %}
                     <span class="block__online">
-                        <div class="info-control">
-                            <span class="info-control__icon">
-                                {{ icon("circle") }}
-                            </span>
-                            <span class="info-control__text">в эфире</span>
-                        </div>
+                        {{online()}}
                     </span>
                 {% endif %}
             </h4>
@@ -51,22 +74,12 @@
                 {{props.org}}
             </p>
             <div class="block__statistics">
-                <div class="info-control">
-                    <span class="info-control__icon">
-                        {{ icon("eye") }}
-                    </span>
-                    <span class="info-control__text info-control__text_thin">{{props.watches}}
-                        просмотров</span>
-                </div>
-                <div class="info-control">
-                    <span class="info-control__icon">
-                        {{ icon("heart") }}
-                    </span>
-                    <span class="info-control__text info-control__text_thin">{{props.likes}}</span>
-                </div>
+                {{watch({watches: props.watches})}}
+                {{like({likes: props.likes})}}
                 {% if props.time %}
                     <span class="block__time">
-                        {{props.time}} в эфире
+                        {{props.time}}
+                        в эфире
                     </span>
                 {% endif %}
             </div>
@@ -78,8 +91,19 @@
     <div class="ticket">
         <div class="ticket__top">
             <div class="ticket__image" style="background-image: url(./img/{{props.image}})"></div>
+            <div class="ticket__actions">
+                <button class="btn-notification is-active">
+                    {{icon('ring')}}
+                </button>
+                <button class="btn-edit">
+                    {{icon('pensil')}}
+                </button>
+                <button class="btn-present">
+                    {{icon('present')}}
+                </button>
+            </div>
         </div>
-        <div class="ticket__bottom">
+        <div class="ticket__bottom{% if props.color %} ticket__bottom_{{props.color}}{% else %} ticket__bottom_blue{% endif %}">
             <img class="ticket__logo" src="img/{{props.logo}}" alt=""/>
             <div class="ticket__text">
                 <h5 class="ticket__place">{{props.place}}</h5>
@@ -89,20 +113,22 @@
     </div>
 {% endmacro %}
 
-{% macro chanel(props) %}
-    <div class="chanel" style="background-image: url(./img/{{props.image}})">
-        <div class="chanel__inner">
-            <div class="chanel__info">
-                <div class="chanel__logo" style="background-image: url(./img/{{props.logo}}"></div>
-                <div class="chanel__group">{{props.group}}</div>
-                <h3 class="chanel__name">{{props.name}}</h3>
-                <div class="chanel__likes">
+<!-- {% macro chanel(props) %} <div class="chanel" style="background-image: url(./img/{{props.image}})"> <div class="chanel__inner"> <div class="chanel__info"> <div class="chanel__logo" style="background-image: url(./img/{{props.logo}}"></div> <div class="chanel__group">{{props.group}}</div> <h3 class="chanel__name">{{props.name}}</h3> <div class="chanel__likes"> {{props.likes}} </div> </div> <div class="chanel__tags"> {% for tag in props.tags %} <a href="#" class="tag-small">#{{tag}}</a> {% endfor %} </div> </div> </div> {% endmacro %} -->
 
+{% macro subscr(props) %}
+    <div class="subscr{% if props.online %} is-online{% endif %}">
+        <div class="subscr__image" style="background-image: url(./img/subscr.png"></div>
+        <div class="subscr__text">
+            {% if props.online %}
+                <div class="subscr__online">
+                    {{online()}}
                 </div>
+            {% endif %}
+            <a href="#" class="subscr__name">{{'Carpenter Brut' or props.name}}</a>
+            <div class="subscr__likes">
+                {{like()}}
             </div>
-            <div class="chanel__tags">
-
-            </div>
+            
         </div>
     </div>
 {% endmacro %}

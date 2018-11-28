@@ -1,0 +1,28 @@
+.start
+    height: 100vh
+    +cover
+    &__logo
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(-50%, -50%)
+        height: 90vh
+        width: 90vh
+        img 
+            width: 100%
+            opacity: 0.9
+    &__inner
+        padding: 0 160px
+        width: 960px
+        float: right
+        color: $white
+    &__icons
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        .icon-monitor
+            font-size: 196px
+        .icon-device
+            font-size: 141px
+        .icon-phone
+            font-size: 96px

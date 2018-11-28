@@ -1,52 +1,72 @@
 body
-	background: #FFF
-	line-height: 1.4
-	font-family: $geo
-	font-size: 16px
-	color: $black
-	min-width: 320px
-	font-weight: 400
-	
+    background: #FFF
+    line-height: 1.4
+    font-family: $geo
+    font-size: 16px
+    color: $black
+    min-width: 320px
+    font-weight: 400
+    
 .title
-	font-family: $letterica
-	font-size: 108px
-	line-height: 1
-	letter-spacing: 0.02em
-	display: inline-block
-	vertical-align: middle
-	+xl 
-		font-size: 90px
-	+lg 
-		font-size: 70px
-	+md 
-		font-size: 50px
-	+sm 
-		font-size: 36px
+    font-family: $letterica
+    font-size: 108px
+    line-height: 1
+    letter-spacing: 0.02em
+    display: inline-block
+    vertical-align: middle
+    +xl 
+        font-size: 90px
+    +lg 
+        font-size: 70px
+    +md 
+        font-size: 50px
+    +sm 
+        font-size: 36px
 
 .title-big
-	font-family: $letterica
-	font-size: 139px
-	letter-spacing: 0.02em
-	line-height: 1
-	text-transform: uppercase
-	display: inline-block
-	vertical-align: middle
-
+    font-family: $letterica
+    font-size: 139px
+    letter-spacing: 0.02em
+    line-height: 1
+    text-transform: uppercase
+    display: inline-block
+    vertical-align: middle
 
 .subtitle
-	display: inline-block
-	vertical-align: middle
-	max-width: 500px
-	margin-top: -10px
-	margin-left: 20px
-	font-weight: 400
-	font-size: 37px
-	line-height: 1.1
-	letter-spacing: -0.02em
-	
+    display: inline-block
+    vertical-align: middle
+    max-width: 500px
+    margin-top: -10px
+    margin-left: 20px
+    font-weight: 400
+    font-size: 37px
+    line-height: 1.1
+    letter-spacing: -0.02em
+    
 
 .group-title
-	font-family: $letterica
-	font-size: 91px
-	line-height: 1
-	letter-spacing: 0.02em
+    font-family: $letterica
+    font-size: 91px
+    line-height: 1
+    letter-spacing: 0.02em
+
+.numbers-title
+    position: relative
+    display: inline-block
+    &__number
+        position: absolute
+        top: 0
+        left: 100%
+        +circle(54)
+        background-image: $mainGradient
+        +vertical
+        span
+            display: inline-block
+            vertical-align: middle
+            line-height: 54px
+            font-family: $ermilov
+            font-size: 48px
+            color: $white
+        
+.out
+    overflow: hidden

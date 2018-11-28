@@ -28,24 +28,12 @@
                 </h3>
                 {% if item.online %}
                     <div class="concert__group-online">
-                        <div class="info-control">
-                            <span class="info-control__icon">
-                                {{ mixins.icon("circle") }}
-                            </span>
-                            <span class="info-control__text">в эфире</span>
-                        </div>
+                        {{mixins.online()}}
                     </div>
                 {% endif %}
             </div>
             <div class="concert__details">
-
-                <div class="info-control">
-                    <span class="info-control__icon">
-                        {{ mixins.icon("eye") }}
-                    </span>
-                    <span class="info-control__text">{{item.watch}}
-                        смотрят</span>
-                </div>
+                {{mixins.watch({watches: item.watch})}}
                 <div class="info-control">
                     <span class="info-control__icon">
                         {{ mixins.icon("heart") }}

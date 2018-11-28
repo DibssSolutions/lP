@@ -1,0 +1,17 @@
+---
+title: Cabinet
+---
+{% import "partials/_header.html" as header %}
+{% import "partials/_hero-translation.html" as translation %}
+{% import "partials/_buy-ticket.html" as buy %}
+{% import "partials/_modal-info.html" as modal %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{header.header({user: true, dark: true, username: true, cabinet: true})}}
+    {% include "partials/_tickets.html" %}
+    {% include "partials/_subscriptions.html" %}
+    {% include "partials/_likes.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

@@ -127,11 +127,9 @@
 
 .nav
     color: $white
-    // display: inline-block
-    // vertical-align: middle
-    // +md 
-    //     order: 2
     font-size: 0
+    .header_dark &
+        color: $black
     &__list
         display: flex
         align-items: center
@@ -174,23 +172,14 @@
             font-size: 24px
 
 .user-info
-    // display: inline-block
-    // vertical-align: middle
     margin-left: auto
     color: $white
-    // +xl 
-    //     margin-left: 36px
     +md 
         margin-right: auto
-        // order: 1
     &__list
         display: flex
         align-items: center
         justify-content: center
-    &__item
-        // margin-right: 120px
-        // + .user-info__item
-        //     margin-left: -120px
     &__name
         font-size: 24px
         line-height: 1.1
@@ -199,9 +188,23 @@
             display: none
     &__avatar
         display: block
+        position: relative
         margin-left: 32px
         height: 88px
         width: 88px
+        &_colored
+            &:after
+                content: ''
+                height: calc(100% + 24px)
+                width: calc(100% + 24px)
+                border-radius: 50%
+                +vcenter
+                background-color: red
+                z-index: -1
+                background-image: $mainGradient
+                +xl 
+                    height: calc(100% + 12px)
+                    width: calc(100% + 12px)
         img 
             max-width: 100%
         +xl 
@@ -228,8 +231,13 @@
         color: $white
         font-size: 18px
         border-radius: 26px 
+        .header_dark &
+            border: 3px solid rgba($black, 0.5)
+            color: $black
         &:focus
             border-color: $white
+            .header_dark &
+                border-color: $black
         +md 
             height: 40px
         +sm 
@@ -264,6 +272,8 @@
         .icon
             color: $white
             font-size: 24px
+            .header_dark &
+                color: $black
             .is-active &
                 +sm 
                     font-size: 20px

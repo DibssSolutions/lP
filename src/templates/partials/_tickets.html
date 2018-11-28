@@ -1,0 +1,55 @@
+{% set tickets = [
+    {
+        image: "ticket-1.jpg",
+        logo: "ticket-logo-1.png",
+        place: "live @ boiler room",
+        time: "12.01.2019"
+    },
+    {
+        image: "ticket-2.jpg",
+        logo: "ticket-logo-2.png",
+        place: "anaheim convention center",
+        time: "15.02.2019",
+        color: 'orange'
+    },
+    {
+        image: "ticket-3.jpg",
+        logo: "ticket-logo-1.png",
+        place: "главклуб",
+        time: "17.11.2019",
+        color: 'red'
+    }
+] %}
+
+<section class="tickets">
+    <div class="tickets__inner container-inner">
+        <div class="tickets__title">
+            <div class="numbers-title">
+                <h3 class="title-big">мои билеты</h3>
+                <div class="numbers-title__number">
+                    <span>6</span>
+                </div>
+            </div>
+        </div>
+        <div class="tickets__main">
+            {% for ticket in tickets %}
+                {{mixins.ticket({
+                image: ticket.image,
+                logo: ticket.logo,
+                place: ticket.place,
+                time: ticket.time,
+                color: ticket.color
+              })}}
+            {% endfor %}
+            <div class="tickets__cta">
+                <a href="#" class="link-cta link-cta_big">
+                    <span class="main-link">в магазин</span>
+                    {{mixins.icon('arrow-right')}}
+                </a>
+            </div>
+        </div>
+        <div class="tickets__link">
+            <a class="main-link" href="#">все билеты</a>
+        </div>
+    </div>
+</section>

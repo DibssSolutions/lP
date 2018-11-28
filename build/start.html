@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Start page </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <div class="start" style="background-image: url(./img/start-bg.jpg)">
+        <div class="start__logo"><img src="./img/logo.svg" alt="logo" /></div>
+        <div class="start__inner">
+          <div class="start__icons">
+            <span class="start-icon">
+              <svg class="icon icon-monitor">
+                <use xlink:href="img/sprite.svg#icon-monitor"></use>
+              </svg>
+            </span>
+            <span class="start-icon">
+              <svg class="icon icon-device">
+                <use xlink:href="img/sprite.svg#icon-device"></use>
+              </svg>
+            </span>
+            <span class="start-icon">
+              <svg class="icon icon-phone">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      var conf = {
+        key: 'fbee29e5-ac4c-4705-b2b9-ffc6b9adb82d',
+        //   tweaks: {
+        //      max_buffer_level: 40,
+        //     startup_threshold: 10
+        //   },
+        source:
+        {
+          progressive: [
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1.mp4',
+            label: '4k',
+            type: 'video/mp4',
+            bitrate: 19000000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(2560x1440).mp4',
+            label: '2k',
+            type: 'video/mp4',
+            bitrate: 10256000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(1920x1080).mp4',
+            label: 'FullHD',
+            type: 'video/mp4',
+            bitrate: 5192000,
+            preferred: true
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(1280x720).mp4',
+            label: 'HD',
+            type: 'video/mp4',
+            bitrate: 2192000
+          },
+          {
+            url: 'https://cache-skycorp.cdnvideo.ru/skycorp/1%20(autox480).mp4',
+            label: 'LOW',
+            type: 'video/mp4',
+            bitrate: 1192000
+          }],
+          vr:
+          {
+            startupMode: '2d',
+            startPosition: 0,
+            zoom: 1.5
+          }
+        },
+        playback:
+        {
+          muted: false
+        },
+        style:
+        {
+          aspectratio: '2:1'
+        }
+      };
+      var player = bitmovin.player('player');
+      player.setup(conf);
+      // console.log(bitmovin.player);
+      // var player = new Player(document.getElementById('player'), conf);
+      // UIFactory.buildDefaultUI(player);
+      $(function()
+      {
+        var zoom = 1.5;
+        var zoomKoef = 0.033;
+        $('#player').bind('mousewheel', function(e)
+        {
+          if (e.originalEvent.wheelDelta / 120 > 0)
+          {
+            zoom += zoomKoef;
+            zoom = Math.min(zoom, 2);
+          }
+          else
+          {
+            zoom -= zoomKoef;
+            zoom = Math.max(zoom, 1);
+          }
+          if (player && player.vr)
+          {
+            player.vr.zoom(zoom);
+          }
+          return false;
+        });
+      });
+
+    </script>
+    <!-- END scripts -->
+  </body>
+
+</html>

@@ -1,14 +1,128 @@
+{% set chanels = [
+  {
+    image: "chanels_1-100.jpg",
+    logo: "chanel_logo_1.png",
+    group: "лейбл",
+    name: "MALFA",
+    likes: "2,304",
+    tags: ["music", "synthwave", "helsinki"]
+  }, {
+    image: "chanels_2-100.jpg",
+    logo: "chanel_logo_2.png",
+    group: "фестиваль",
+    name: "Burning Man",
+    likes: "2,304",
+    tags: [
+      "music",
+      "festival",
+      "america",
+      "rave",
+      "culture",
+      "party"
+    ]
+  }, {
+    image: "chanels_3-100.jpg",
+    logo: "chanel_logo_3.png",
+    group: "группа",
+    name: "Bloody Beetroots",
+    likes: "2,304",
+    tags: [
+      "music",
+      "edm",
+      "noise",
+      "house",
+      "berlin",
+      "party"
+    ]
+  }
+] %}
+
 <div class="chanels-section">
   <div class="chanels-section__inner container-inner">
     <div class="chanels-section__title">
       <h3 class="title-big">каналы</h3>
       <div class="tags">
-          <span class="tag tag_active">#музыка</span>
-          <span class="tag">#спорт</span>
-          <span class="tag">#культура</span>
-          <span class="tag">#игры</span>
+        <a href="#" class="tag tag_active">#музыка</a>
+        <a href="#" class="tag">#спорт</a>
+        <a href="#" class="tag">#культура</a>
+        <a href="#" class="tag">#игры</a>
       </div>
     </div>
   </div>
-  {% include "partials/_blocks.html" %}
+  {% for chanel in chanels %}
+    {% if loop.first %}
+      <div class="chanels-section__row">
+        <div class="chanel" style="background-image: url(./img/{{chanel.image}})">
+          <div class="chanel__inner">
+            <div class="chanel__info">
+              <div class="chanel__logo" style="background-image: url(./img/{{chanel.logo}}"></div>
+              <div class="chanel__group">{{chanel.group}}</div>
+              <h3 class="chanel__name">{{chanel.name}}</h3>
+              <div class="chanel__likes">
+                <div class="info-control">
+                  <span class="info-control__icon">
+                    {{ mixins.icon('heart') }}
+                  </span>
+                  <span class="info-control__text info-control__text_thin">{{chanel.likes}}</span >
+                </div>
+              </div>
+            </div>
+            <div class="chanel__tags">
+              {% for tag in chanel.tags %}
+                <a href="#" class="tag-small">#{{tag}}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="card-online" style="background-image: url(./img/hero.jpg)">
+          <div class="card-online__content">
+            <h3 class="card-online__title group-title">
+              наргиз
+            </h3>
+            {{mixins.online()}}
+          </div>
+          <div class="card-online__statistics">
+            <div class="info-control">
+              <span class="info-control__icon">
+                {{ mixins.icon("eye") }}
+              </span>
+              <span class="info-control__text info-control__text_thin">5,305</span>
+            </div>
+            {{mixins.like()}}
+          </div>
+
+        </div>
+      </div>
+
+    {% else %}
+      <div class="chanel" style="background-image: url(./img/{{chanel.image}})">
+        <div class="chanel__inner">
+          <div class="chanel__info">
+            <div class="chanel__logo" style="background-image: url(./img/{{chanel.logo}}"></div>
+            <div class="chanel__group">{{chanel.group}}</div>
+            <h3 class="chanel__name">{{chanel.name}}</h3>
+            <div class="chanel__likes">
+              <div class="info-control">
+                <span class="info-control__icon">
+                  {{ mixins.icon('heart') }}
+                </span>
+                <span class="info-control__text info-control__text_thin">{{chanel.likes}}</span >
+              </div>
+            </div>
+          </div>
+          <div class="chanel__tags">
+            {% for tag in chanel.tags %}
+              <a href="#" class="tag-small">#{{tag}}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="chanels-section__load-more">
+        <button class="btn-load-more">
+            {{mixins.icon('rotate')}}
+            <span class="btn-load-more__text">загрузить еще</span>
+        </button>
+    </div>
 </div>

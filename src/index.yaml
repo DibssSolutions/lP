@@ -11,3 +11,7 @@ PageList:
   ready: 50
 - file: translation-4.html
   ready: 50
+- file: cabinet.html
+  ready: 50
+- file: start.html
+  ready: 50

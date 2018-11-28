@@ -1,0 +1,59 @@
+.subscr
+    display: flex
+    align-items: stretch
+    &__image
+        +circle(104)
+        +cover
+    &__text
+        position: relative
+        display: flex
+        align-items: center
+        margin-left: 16px
+    &__name
+        display: block
+        position: relative
+        overflow: hidden
+        font-size: 37px
+        font-weight: 700
+        letter-spacing: -0.02em
+        color: $darkBlue
+        transform: color $tr
+        // &:after
+        //     content: ''
+        //     position: absolute
+        //     bottom: 3px
+        //     left: 0
+        //     width: 100%
+        //     height: 2px
+        //     background-color: $darkBlue
+        //     transform: translateX(-100%)
+        //     transition: transform $tr
+        +hover 
+            color: lighten($darkBlue, 20%)
+        //     &:after
+        //         transform: translateX(0)
+                // transform-origin: 100% 0
+
+        .is-online &
+            color: $red
+    &__online,
+    &__likes
+        position: absolute
+        left: 0
+    &__online
+        top: 0
+    &__likes
+        bottom: 0
+
+.subscriptions
+    margin-bottom: 100px
+    &__title
+        margin-bottom: 40px
+    &__main
+        display: flex
+        flex-wrap: wrap
+        margin: 0 -20px
+        .subscr
+            +flex-size(600px)
+            padding: 0 20px
+            margin-bottom: 60px

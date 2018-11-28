@@ -81,3 +81,55 @@
         font-size: 120px
         stroke: $white
         stroke-width: 16px
+
+.btn-edit,
+.btn-present,
+.btn-notification
+    background: none
+    display: inline-block
+
+    .icon
+        color: rgba(#000, 0.4)
+    &.is-active 
+        .icon 
+            color: $red
+
+.btn-notification
+    .icon
+        font-size: 33px
+
+.btn-edit
+    .icon
+        font-size: 27px
+
+.btn-present
+    .icon
+        font-size: 36px
+
+.link-cta
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    &_big
+        +circle(406)
+        background-color: $white
+        &:after
+            +vcenter
+            height: 200%
+            width: 200%
+            border-radius: 50%
+            background-image: $mainGradient
+            // background-image: radial-gradient(farthest-side at 50% 50%, transparent 0%, transparent 50%, $purple 50%, $blue 100%)
+            content: ''
+            z-index: -1
+    .icon
+        font-size: 121px
+        color: $darkBlue
+
+
+.main-link
+    color: $darkBlue
+    font-size: 48px
+    font-family: $ermilov
+    letter-spacing: -0.06em
