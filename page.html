@@ -20,6 +20,7 @@
             <a href="#" class="logo">
               <div class="logo__image">
                 <img src="img/logo.svg" alt="logo" />
+                <img class="logo__rotated-img" src="img/logo.svg" alt="logo" />
               </div>
               <div class="logo__text">
                 <h1 class="logo__name">lookport</h1>
@@ -77,7 +78,8 @@
           </div>
         </div>
       </header>
-      <div class="hero-top" style="background-image: url(./img/hero.jpg)">
+      <div class="hero-top">
+        <div class="hero-top__bg" style="background-image: url(./img/hero.jpg)"></div>
         <div class="hero-top__inner container-inner">
           <div class="hero-top__content">
             <div class="hero-top__info">
@@ -123,72 +125,71 @@
             </div>
             <a href="#" class="hero-top__more">
               <div>
-                <span>Больше </span>
-                <span>прямых </span>
-                <span>эфиров </span>
+                <span>Больше </span> <span>прямых </span> <span>эфиров </span>
               </div>
               <svg class="icon icon-arrow-right">
                 <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
               </svg>
             </a>
           </div>
-        </div>
-        <div class="hero-top__bottom">
           <div class="hero-top__details">
-            <div>
-              <span>Stadium Live, Москва</span>
-              <span>1:23:22 в эфире</span>
-            </div>
+            <div><span>Stadium Live, Москва</span> <span>1:23:22 в эфире</span></div>
           </div>
-          <div class="hero-top__groups">
-            <div class="group-card" style="background-image: url(./img/hero_small_1.jpg)">
-              <div class="group-card__text group-title"> DAFT PUNK </div>
-            </div>
-            <div class="group-card" style="background-image: url(./img/hero_small_2.jpg)">
-              <div class="group-card__text group-title"> MAPFIRE ROCK </div>
-            </div>
-          </div>
-          <!-- <div class="hero__play">
+        </div>
+      </div>
+      <div class="groups">
+        <div class="group-card">
+          <div class="group-card__bg" style="background-image: url(./img/hero_small_1.jpg)"></div>
+          <div class="group-card__text group-title">DAFT PUNK</div>
+        </div>
+        <div class="group-card">
+          <div class="group-card__bg" style="background-image: url(./img/hero_small_2.jpg)"></div>
+          <div class="group-card__text group-title">MAPFIRE ROCK</div>
+        </div>
+      </div>
+      <!-- <div class="hero__play">
     <svg class="icon icon-play">
         <use xlink:href="img/sprite.svg#icon-play"></use>
     </svg>
 </div> -->
-        </div>
-      </div>
       <div class="concerts">
         <div class="concert">
-          <div class="concert__image" style="background-image: url(img/hero_bottom_1.png)"></div>
+          <a href="#" class="concert__image-wrapper">
+            <div class="concert__image" style="background-image: url(img/hero_bottom_1.png)"></div>
+          </a>
           <div class="concert__info">
             <div class="concert__group">
-              <span class="group-title">АННА ПЛЕТНЕВА</span>
-              <span class="group-title">ВИНТАЖ</span>
+              <a href="#" class="group-title">АННА ПЛЕТНЕВА</a>
+              <a href="#" class="group-title">ВИНТАЖ</a href="#">
               </h3>
             </div>
             <div class="concert__details">
               <div class="info-control">
-                <span class="info-control__icon ">
+                <span class="info-control__icon">
                   <svg class="icon icon-eye">
                     <use xlink:href="img/sprite.svg#icon-eye"></use>
                   </svg>
                 </span>
-                <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                <span class="info-control__text info-control__text_thin">5,305 смотрят</span>
               </div>
               <div class="info-control">
-                <span class="info-control__icon">
+                <button type="button" class="info-control__icon info-control__like js-like">
                   <svg class="icon icon-heart">
                     <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
-                </span>
-                <span class="info-control__text">2,304 </span>
+                </button>
+                <span class="info-control__text info-control__text_thin">2,304</span>
               </div>
             </div>
           </div>
         </div>
         <div class="concert">
-          <div class="concert__image" style="background-image: url(img/hero_bottom_2.jpg)"></div>
+          <a href="#" class="concert__image-wrapper">
+            <div class="concert__image" style="background-image: url(img/hero_bottom_2.jpg)"></div>
+          </a>
           <div class="concert__info">
             <div class="concert__group">
-              <span class="group-title">BOYS NOIZE</span>
+              <a href="#" class="group-title">BOYS NOIZE</a>
               </h3>
               <div class="concert__group-online">
                 <div class="info-control">
@@ -203,20 +204,20 @@
             </div>
             <div class="concert__details">
               <div class="info-control">
-                <span class="info-control__icon ">
+                <span class="info-control__icon">
                   <svg class="icon icon-eye">
                     <use xlink:href="img/sprite.svg#icon-eye"></use>
                   </svg>
                 </span>
-                <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
+                <span class="info-control__text info-control__text_thin">5,305 смотрят</span>
               </div>
               <div class="info-control">
-                <span class="info-control__icon">
+                <button type="button" class="info-control__icon info-control__like js-like">
                   <svg class="icon icon-heart">
                     <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
-                </span>
-                <span class="info-control__text">2,304 </span>
+                </button>
+                <span class="info-control__text info-control__text_thin">2,304</span>
               </div>
             </div>
           </div>
@@ -245,10 +246,11 @@
           </div>
         </div>
         <div class="blocks">
-          <a href="#" class="block block_full" style="background-image: url(img/best_1-100.jpg)">
+          <div class="block block_full">
+            <a href="#" class="block__bg" style="background-image: url(img/best_1-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Night at the Opera</span>
+                <a href="#">Night at the Opera</a>
               </h4>
               <p class="block__org"> TED Architecture </p>
               <div class="block__statistics">
@@ -261,20 +263,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_2-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_2-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Mensch Machine</span>
+                <a href="#">Mensch Machine</a>
               </h4>
               <p class="block__org"> CAPCOM </p>
               <div class="block__statistics">
@@ -287,20 +290,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_3-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_3-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Aleph</span>
+                <a href="#">Aleph</a>
               </h4>
               <p class="block__org"> Bethesda Softworks </p>
               <div class="block__statistics">
@@ -313,20 +317,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_full" style="background-image: url(img/best_4-100.jpg)">
+          </div>
+          <div class="block block_full">
+            <a href="#" class="block__bg" style="background-image: url(img/best_4-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Night at the Opera</span>
+                <a href="#">Night at the Opera</a>
               </h4>
               <p class="block__org"> TED Architecture </p>
               <div class="block__statistics">
@@ -339,20 +344,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_5-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_5-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Mensch Machine</span>
+                <a href="#">Mensch Machine</a>
               </h4>
               <p class="block__org"> CAPCOM </p>
               <div class="block__statistics">
@@ -365,20 +371,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_6-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_6-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Aleph</span>
+                <a href="#">Aleph</a>
               </h4>
               <p class="block__org"> Bethesda Softworks </p>
               <div class="block__statistics">
@@ -391,16 +398,16 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <div class="new-section">
@@ -411,10 +418,11 @@
           </div>
         </div>
         <div class="blocks">
-          <a href="#" class="block block_big" style="background-image: url(img/new_big-100.jpg)">
+          <div class="block block_big">
+            <a href="#" class="block__bg" style="background-image: url(img/new_big-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Night at the Opera</span>
+                <a href="#">Night at the Opera</a>
                 <span class="block__online">
                   <div class="info-control">
                     <span class="info-control__icon">
@@ -437,21 +445,22 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
                 <span class="block__time"> 2:27:38 в эфире </span>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_full" style="background-image: url(img/best_1-100.jpg)">
+          </div>
+          <div class="block block_full">
+            <a href="#" class="block__bg" style="background-image: url(img/best_1-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Night at the Opera</span>
+                <a href="#">Night at the Opera</a>
               </h4>
               <p class="block__org"> TED Architecture </p>
               <div class="block__statistics">
@@ -464,20 +473,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_2-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_2-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Mensch Machine</span>
+                <a href="#">Mensch Machine</a>
               </h4>
               <p class="block__org"> CAPCOM </p>
               <div class="block__statistics">
@@ -490,20 +500,21 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
-          <a href="#" class="block block_half" style="background-image: url(img/best_3-100.jpg)">
+          </div>
+          <div class="block block_half">
+            <a href="#" class="block__bg" style="background-image: url(img/best_3-100.jpg)"></a>
             <div class="block__text">
               <h4 class="block__title">
-                <span>Aleph</span>
+                <a href="#">Aleph</a>
               </h4>
               <p class="block__org"> Bethesda Softworks </p>
               <div class="block__statistics">
@@ -516,16 +527,16 @@
                   <span class="info-control__text info-control__text_thin">5,305 просмотров</span>
                 </div>
                 <div class="info-control">
-                  <span class="info-control__icon ">
+                  <button type="button" class="info-control__icon info-control__like js-like">
                     <svg class="icon icon-heart">
                       <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                  </span>
+                  </button>
                   <span class="info-control__text info-control__text_thin">2,304</span>
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <div class="chanels-section">
@@ -533,10 +544,10 @@
           <div class="chanels-section__title">
             <h3 class="title-big">каналы</h3>
             <div class="tags">
-              <a href="#" class="tag tag_active">#музыка</a>
-              <a href="#" class="tag">#спорт</a>
-              <a href="#" class="tag">#культура</a>
-              <a href="#" class="tag">#игры</a>
+              <a href="#" class="tag is-active"><span>#музыка</span></a>
+              <a href="#" class="tag"><span>#спорт</span></a>
+              <a href="#" class="tag"><span>#культура</span></a>
+              <a href="#" class="tag"><span>#игры</span></a>
             </div>
           </div>
         </div>
@@ -587,11 +598,11 @@
                 <span class="info-control__text info-control__text_thin">5,305</span>
               </div>
               <div class="info-control">
-                <span class="info-control__icon ">
+                <button type="button" class="info-control__icon info-control__like js-like">
                   <svg class="icon icon-heart">
                     <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
-                </span>
+                </button>
                 <span class="info-control__text info-control__text_thin">2,304</span>
               </div>
             </div>
@@ -690,7 +701,10 @@
           </div>
           <div class="footer__logo">
             <a href="#" class="logo logo_dark">
-              <img class="logo__image" src="img/logo-dark.svg" alt="logo" />
+              <div class="logo__image">
+                <img src="img/logo-dark.svg" alt="logo" />
+                <img class="logo__rotated-img" src="img/logo-dark.svg" alt="logo" />
+              </div>
               <div class="logo__text">
                 <h1 class="logo__name">lookport</h1>
               </div>
@@ -705,6 +719,13 @@
             <clipPath id="ticket-bottom">
               <path d="M295.5,0H23c0,12.7-10.3,23-23,23v188c0,6.6,5.4,12,12,12h295c6.6,0,12-5.4,12-12V22.5c-0.2,0-0.3,0-0.5,0
         C306,22.5,295.8,12.5,295.5,0z" />
+            </clipPath>
+            <clipPath id="ticket-top-lg">
+              <path d="M236.4,349.2c0-10.2,8.2-18.4,18.4-18.4c0.1,0,0.3,0,0.4,0V9.6c0-5.3-4.3-9.6-9.6-9.6H9.6
+					C4.3,0,0,4.3,0,9.6v321.6c10.2,0,18.4,8.2,18.4,18.4h218C236.4,349.5,236.4,349.3,236.4,349.2z" />
+            </clipPath>
+            <clipPath id="ticket-bottom-lg">
+              <path d="M236.4,0h-218c0,10.2-8.2,18.4-18.4,18.4v150.4c0,5.3,4.3,9.6,9.6,9.6h236c5.3,0,9.6-4.3,9.6-9.6V18c-0.1,0-0.3,0-0.4,0C244.8,18,236.6,10,236.4,0z" />
             </clipPath>
           </defs>
         </svg>
