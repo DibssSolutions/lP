@@ -3,6 +3,8 @@
     display: block
     height: 100%
     overflow: hidden
+    +gpu
+    backface-visibility: hidden
     &:hover
         .block__bg
             +imgScale
@@ -10,6 +12,7 @@
         +coverdiv
         +cover
         transition: transform 0.7s
+        // backface-visibility: hidden
     &__text
         position: absolute
         bottom: 27px
@@ -60,6 +63,7 @@
     flex-direction: column
     flex-wrap: wrap
     max-height: 624px
+    overflow: hidden
     +lg 
         max-height: inherit
         flex-direction: row
@@ -67,7 +71,7 @@
         width: 25%
         +lg 
             width: 50%
-        +sm 
+        +xs 
             width: 100%
     .block_big
         width: 50%

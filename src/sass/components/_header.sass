@@ -153,6 +153,9 @@
         +md 
             margin-right: 12px
     &__item
+        +circle(80)
+        background-color: $red
+        +vertical
         &:nth-child(1)
             margin-right: 45px
             +r(1700)
@@ -165,6 +168,11 @@
                 margin-right: 30px
             +r(1400)
                 margin-right: 20px
+    &__link
+        display: inline-block
+        vertical-align: middle
+        mask: url(img/sprite.svg#flame-mask)
+        background-color: transparent
     .icon-music-circle
         font-size: 76px
         +xl

@@ -66,15 +66,15 @@
         <div class="ticket__top">
             <div class="ticket__image" style="background-image: url(./img/{{props.image}})"></div>
             <div class="ticket__actions">
-                <button class="btn-notification is-active">
+                <a href="#" class="btn-notification">
                     {{icon('ring')}}
-                </button>
-                <button class="btn-edit">
+                </a>
+                <a href="#" class="btn-edit">
                     {{icon('pensil')}}
-                </button>
-                <button class="btn-present">
+                </a>
+                <a href="#" class="btn-present">
                     {{icon('present')}}
-                </button>
+                </a>
             </div>
         </div>
         <div class="ticket__bottom{% if props.color %} ticket__bottom_{{props.color}}{% else %} ticket__bottom_blue{% endif %}">

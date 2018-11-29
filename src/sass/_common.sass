@@ -87,6 +87,11 @@ body
         +circle(54)
         background-image: $mainGradient
         +vertical
+        +xl 
+            +circle(40)
+        +lg 
+            +circle(32)
+            top: -5px
         span
             display: inline-block
             vertical-align: middle
@@ -94,6 +99,12 @@ body
             font-family: $ermilov
             font-size: 48px
             color: $white
+            +xl 
+                line-height: 40px
+                font-size: 36px
+            +lg 
+                line-height: 32px
+                font-size: 30px
         
 .out
     overflow: hidden
