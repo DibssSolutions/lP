@@ -14,7 +14,7 @@
     },
     {
         image: "ticket-3.jpg",
-        logo: "ticket-logo-1.png",
+        logo: "ticket-logo-3.png",
         place: "главклуб",
         time: "17.11.2019",
         color: 'red'
@@ -49,7 +49,18 @@
             </div>
         </div>
         <div class="tickets__link">
-            <a class="main-link" href="#">все билеты</a>
+            <a class="main-link js-dd-trigger" href="#">все билеты</a>
+        </div>
+         <div class="tickets__secondary js-dd-hidden">
+            {% for ticket in tickets %}
+                {{mixins.ticket({
+                image: ticket.image,
+                logo: ticket.logo,
+                place: ticket.place,
+                time: ticket.time,
+                color: ticket.color
+              })}}
+            {% endfor %}
         </div>
     </div>
 </section>

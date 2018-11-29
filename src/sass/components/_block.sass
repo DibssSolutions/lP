@@ -1,14 +1,25 @@
 .block
     position: relative
     display: block
-    +cover
     height: 100%
+    overflow: hidden
+    &:hover
+        .block__bg
+            +imgScale
+    &__bg
+        +coverdiv
+        +cover
+        transition: transform 0.7s
     &__text
         position: absolute
         bottom: 27px
         left: 38px
         right: 38px
         color: $white
+        +sm 
+            left: 20px
+            bottom: 20px
+            right: 20px
     &__title
         font-size: 26px
         font-weight: 900
@@ -19,17 +30,30 @@
         // text-transform: uppercase
         font-weight: 700
         letter-spacing: -0.02em
+        +lg 
+            font-size: 18px
     &__statistics
         display: flex
         align-items: center
+        flex-wrap: wrap
     .info-control
         &:first-child
             margin-right: 10px
+    .icon-heart
+        color: $white
     &__online
         margin-left: 18px
         display: inline-block
+        +md 
+            width: 100%
+            margin-left: 0
+            margin-top: -10px
     &__time
         margin-left: auto
+        +md 
+            +flex-size(100%)
+            font-size: 16px
+            margin-top: 4px
 
 .blocks
     display: flex
@@ -48,6 +72,8 @@
     .block_big
         width: 50%
         height: 624px
+        +lg 
+            height: 312px
     .block_full
         height: 624px
         +lg 

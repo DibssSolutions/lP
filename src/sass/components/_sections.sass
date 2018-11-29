@@ -1,33 +1,55 @@
 .best-section
     &__title
         margin: 200px auto 30px
+        +xl 
+            margin-top: 120px
+        +lg 
+            margin-top: 100px
+        +sm 
+            margin-top: 40px
 
 .tickets
-    padding-top: 300px
-    margin-bottom: 200px
+    padding-top: 306px
+    margin-bottom: 168px
     &__title
         margin-bottom: 60px
-    &__main
+    &__main,
+    &__secondary
         display: flex
         position: relative
-        margin-bottom: 60px
         .ticket
             position: relative
             z-index: 3
             &:not(:last-child)
                 margin-right: 160px
+                +lg 
+                    margin: 30px
+    &__main
+        margin-bottom: 52px
+    &__secondary
+        max-height: 0
+        overflow: hidden
+        transition: max-height 1s
+        &.is-active 
+            max-height: 1000px
     &__cta
         position: absolute
-        right: -185px
+        right: -172px
         top: 50%
-        transform: translateY(-50%)
+        transform: translateY(-56%)
+        +xl 
+            right: -70px
     
 .likes
-    padding-bottom: 100px
+    padding-bottom: 194px
     &__title
         display: flex
         align-items: center
         justify-content: space-between
-        margin-bottom: 40px
+        margin-bottom: 120px
+        +lg 
+            margin-bottom: 30px
+        .link-cta
+            margin-top: -20px
     
     

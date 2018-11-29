@@ -68,10 +68,20 @@
         display: inline-block
         vertical-align: middle  
         font-size: 0
+    &__like
+        background-color: transparent
+        font-family: $geo
+        line-height: 1.4
+        font-size: 0
+        &.is-liked
+            .icon
+                color: $red
     .icon-circle
         color: red
         font-size: 20px
         margin-right: 6px
+        margin-bottom: -3px
+        animation: heartbeat 2s ease-in-out infinite both
         +md 
             font-size: 12px
     .icon-heart
@@ -84,3 +94,28 @@
         margin-right: 13px
         +md 
             font-size: 10px
+
+@keyframes heartbeat 
+    50% 
+        transform: scale(1.1)
+        transform-origin: center center
+//   from 
+//     transform: scale(1)
+//     transform-origin: center center
+//     animation-timing-function: ease-out
+  
+//   10% 
+//     transform: scale(0.91)
+//     animation-timing-function: ease-in
+  
+//   17% 
+//     transform: scale(0.98)
+//     animation-timing-function: ease-out
+  
+//   33% 
+//     transform: scale(0.87)
+//     animation-timing-function: ease-in
+  
+//   45% 
+//     transform: scale(1)
+//     animation-timing-function: ease-out

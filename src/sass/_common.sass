@@ -31,6 +31,14 @@ body
     text-transform: uppercase
     display: inline-block
     vertical-align: middle
+    +xl 
+        font-size: 90px
+    +lg 
+        font-size: 70px
+    +md 
+        font-size: 50px
+    +sm 
+        font-size: 36px
 
 .subtitle
     display: inline-block
@@ -42,21 +50,40 @@ body
     font-size: 37px
     line-height: 1.1
     letter-spacing: -0.02em
-    
+    +xl 
+        font-size: 30px
+    +lg 
+        font-size: 22px
+    +sm 
+        font-size: 18px
+        display: block
+        margin-left: 0
+        margin-top: 0
+
 
 .group-title
+    padding: 0 10px
     font-family: $letterica
     font-size: 91px
     line-height: 1
     letter-spacing: 0.02em
+
+    +xl 
+        font-size: 80px
+    +lg 
+        font-size: 60px
+    +md 
+        font-size: 40px
+    +sm 
+        font-size: 36px
 
 .numbers-title
     position: relative
     display: inline-block
     &__number
         position: absolute
-        top: 0
-        left: 100%
+        top: 8px
+        left: 101%
         +circle(54)
         background-image: $mainGradient
         +vertical

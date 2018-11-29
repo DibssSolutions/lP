@@ -4,6 +4,8 @@
     &__image
         +circle(104)
         +cover
+        +lg 
+            +circle(80)
     &__text
         position: relative
         display: flex
@@ -18,6 +20,12 @@
         letter-spacing: -0.02em
         color: $darkBlue
         transform: color $tr
+        +xl 
+            font-size: 30px
+        +lg 
+            font-size: 22px
+        +sm 
+            font-size: 18px
         // &:after
         //     content: ''
         //     position: absolute
@@ -46,14 +54,16 @@
         bottom: 0
 
 .subscriptions
-    margin-bottom: 100px
+    margin-bottom: 257px
     &__title
-        margin-bottom: 40px
+        margin-bottom: 102px
     &__main
         display: flex
         flex-wrap: wrap
         margin: 0 -20px
         .subscr
-            +flex-size(600px)
+            +flex-size(640px)
             padding: 0 20px
-            margin-bottom: 60px
+            margin-bottom: 76px
+            +lg 
+                margin-bottom: 32px

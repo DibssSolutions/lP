@@ -1,16 +1,27 @@
 .btn-cta
-    // width: 100%
+    position: relative
     padding: 5px 24px 10px 20px
     text-align: center
     line-height: 1
     background-color: transparent
-    background-image: $mainGradient
     font-family: $ermilov
     font-size: 64px
     color: $white
     box-shadow : 7px 7px 5px rgba(0, 0, 0, 0.3)
     letter-spacing: -0.012em
-    // cursor: pointer
+    &:hover:after
+        +fadein
+    &:before,
+    &:after
+        content: ''
+        +coverdiv
+    &:before
+        background-image: $mainGradient
+        z-index: -2
+    &:after
+        z-index: -1
+        background-image: linear-gradient(90deg, $blue, $purple)
+        +fadeout($tr)
     +xl 
         font-size: 48px
     +lg 
@@ -31,7 +42,18 @@
         font-family: $geo
         font-size: 44px
         font-weight: 700
-        border-bottom: 2px solid $darkBlue
+        position: relative
+        overflow: hidden
+        &:hover:after
+            animation: line 1s
+        &:after
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            height: 2px
+            width: 100%
+            background-color: $darkBlue
         +lg 
             font-size: 30px
         +sm 
@@ -78,9 +100,15 @@
     color: transparent
     background-color: transparent
     .icon
-        font-size: 120px
+        font-size: 172px
         stroke: $white
         stroke-width: 16px
+        +xl 
+            font-size: 120px
+        +lg 
+            font-size: 80px
+        +sm 
+            font-size: 50px
 
 .btn-edit,
 .btn-present,
@@ -111,25 +139,109 @@
     align-items: center
     justify-content: center
     position: relative
+    &_bouncing
+        +hover
+            .icon
+                animation: bounce-top 0.4s both
     &_big
         +circle(406)
         background-color: $white
-        &:after
+        +hover
+            // &:after
+            //     background-position: 100% 0
+            &:before
+                +fadein 
+                // z-index: -1
+            &:after
+                // opacity: 0
+                // visibility: hidden
+        &:after,
+        &:before
             +vcenter
-            height: 200%
-            width: 200%
-            border-radius: 50%
-            background-image: $mainGradient
-            // background-image: radial-gradient(farthest-side at 50% 50%, transparent 0%, transparent 50%, $purple 50%, $blue 100%)
+            +circle(826)
             content: ''
+            // z-index: 1
+            // transition: opacity 0.1s, visibility 0.1s
+            // transition: z-index 1.5s
+        &:after
+            background-image: $mainGradient
+            z-index: -2
+            // background-image: radial-gradient(farthest-side at 50% 50%, transparent 0%, transparent 50%, $purple 50%, $blue 100%)
+        &:before
+            opacity: 0
+            visibility: hidden
+            transition: opacity $tr ease-in-out, visibility $tr ease-in-out
             z-index: -1
+            background-image: linear-gradient(90deg, $blue, $purple)
+    .main-link
+        position: relative
+        z-index: 2
+        // &:after,
+        //     +vcenter
+        //     +circle(826)
+        //     content: ''
+        //     z-index: -1
+        //     background-image: linear-gradient(90deg, $purple 25%, $blue 50%, $blue 50%, $purple 75%)
+        //     background-size: 200% 100%
+        //     background-position: 0 0
+        //     transition: background-position 0.5s
+
+           
+        
     .icon
         font-size: 121px
         color: $darkBlue
+        +lg 
+            font-size: 60px
+        +sm 
+            font-size: 30px
+            margin-top: 2px
 
-
+@keyframes bounce-top 
+    0% 
+        transform: translateY(-40px)
+        opacity: 1
+    24% 
+        opacity: 1
+    40% 
+        transform: translateY(-24px)
+        animation-timing-function: ease-in
+    65% 
+        transform: translateY(-12px)
+        animation-timing-function: ease-in
+    82% 
+        transform: translateY(-6px)
+        animation-timing-function: ease-in
+    93% 
+        transform: translateY(-4px)
+        animation-timing-function: ease-in
+    25%,
+    55%,
+    75%,
+    87% 
+        transform: translateY(0px)
+        animation-timing-function: ease-out
+    100% 
+        transform: translateY(0px)
+        animation-timing-function: ease-out
+        opacity: 1
+  
 .main-link
     color: $darkBlue
     font-size: 48px
     font-family: $ermilov
     letter-spacing: -0.06em
+    +lg 
+        font-size: 30px
+    +sm 
+        font-size: 20px
+
+@keyframes line 
+    0%
+        transform: translateX(0)
+    50%
+        transform: translateX(100%)
+    52%
+        transform: translateX(-100%)
+    100%
+        transform: translateX(0)

@@ -1,112 +1,172 @@
 .hero-top
-	position: relative
-	height: 100vh
-	+cover
-	color: $white
-	&__inner
-		height: 100%
-		+vertical
-	&__content
-		position: relative
-		display: inline-flex
-		vertical-align: middle
-		justify-content: space-between
-		align-items: center
-		width: 100%
-	&__play
-		+vcenter
-	&__more
-		font-size: 0
-		div
-			display: inline-block
-			vertical-align: middle
-			margin-right: 10px
-		span
-			display: block
-			font-family: $ermilov
-			font-size: 50px
-			letter-spacing: -0.02em
-			max-width: 300px
-			line-height: 1
-			&:not(:first-child)
-				margin-top: -4px
-		.icon
-			font-size: 118px
-			display: inline-block
-			vertical-align: middle
-			color: $white
-	&__bottom
-		// display: inline-block
-		// vertical-align: bottom
-		position: absolute
-		display: flex
-		height: 25vh
-		width: 100%
-		// max-width: 1600px
-		bottom: 0
-		font-size: 20px
-	&__details
-		+flex-size(50%)
-		text-align: left
-		display: flex
-		align-items: center
-		padding-left: calc(50% - 800px)
-		span 
-			display: block
-	&__groups
-		+flex-size(50%)
-		font-size: 0
+    position: relative
+    height: 100vh
+    min-height: 700px 
+    overflow: hidden
+    color: $white
+    +lg
+        height: 125vh
+    &:hover
+        .hero-top__bg
+            transform: scale(1.05)
+    &__bg 
+        +coverdiv
+        +cover
+        transition: transform 0.7s
+    &__inner
+        height: 100%
+        position: relative
+        +vertical
+    &__content
+        position: relative
+        display: inline-flex
+        vertical-align: middle
+        justify-content: space-between
+        align-items: center
+        width: 100%
+    &__play
+        +vcenter
+    &__more
+        font-size: 0
+        div
+            display: inline-block
+            vertical-align: middle
+            margin-right: 89px
+            +xl 
+                margin-right: 50px
+            +lg 
+                margin-right: 30px
+            +sm 
+                margin-right: 16px
+        span
+            display: block
+            font-family: $ermilov
+            font-size: 50px
+            letter-spacing: -0.02em
+            max-width: 300px
+            line-height: 1
+            &:not(:first-child)
+                margin-top: -4px
+            +lg 
+                font-size: 36px
+            +sm 
+                font-size: 24px
+        .icon
+            font-size: 118px
+            display: inline-block
+            vertical-align: middle
+            color: $white
+            +lg 
+                font-size: 90px
+            +sm 
+                font-size: 54px
+    &__details
+        position: absolute
+        left: 10px
+        bottom: 0
+        display: flex
+        align-items: center
+        height: 25vh
+        text-align: left
+        font-size: 31px
+        +xl 
+            padding-left: calc(50% - 710px)
+        +lg 
+            font-size: 24px
+            padding-left: calc(50% - 610px)
+        +sm 
+            font-size: 18px
+        span 
+            display: block
 
+.groups
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 50%
+    height: 25vh
+    min-height: 200px
+    font-size: 0
+    +md 
+        position: relative
+        width: 100%
 
 .hero-info
-	position: relative
-	h3 
-		font-family: $letterica
-		font-size: 166px
-		line-height: 1
-		letter-spacing: 0.02em
-		// +xl 
-		// 	font-size: 120px
-	&__right
-		position: absolute
-		top: 50%
-		left: 110%
-		transform: translateY(-50%)
-		width: 200px
-		text-align: left
-	&__bottom
-		position: absolute
-		top: 100%
-		left: 0
-		text-align: left
-	.info-control
-		width: 100%
-		margin-bottom: 10px
-	&__top
-		position: absolute
-		left: 0
-		bottom: 100%
-		font-weight: 400
-		font-size: 32px
-		line-height: 1
-		letter-spacing: 0.04em
+    position: relative
+    text-align: left
+    h3 
+        font-family: $letterica
+        font-size: 166px
+        line-height: 1
+        letter-spacing: 0.02em
+        +xl 
+            font-size: 120px
+        +lg 
+            font-size: 70px
+        +sm 
+            font-size: 56px
+    &__right
+        position: absolute
+        top: 50%
+        left: 110%
+        transform: translateY(-50%)
+        width: 200px
+        text-align: left
+        +md 
+            position: static
+            margin-top: 16px
+    &__bottom
+        position: absolute
+        top: 100%
+        left: 0
+        text-align: left
+        +md 
+            position: relative
+            transform: none
+    .info-control
+        width: 100%
+        margin-bottom: 10px
+        +sm 
+            margin-bottom: 4px
+    &__top
+        position: absolute
+        left: 0
+        bottom: 100%
+        font-weight: 400
+        font-size: 32px
+        line-height: 1
+        letter-spacing: 0.04em
+        +lg 
+            font-size: 24px
+        +sm 
+            font-size: 16px
 
 .group-card
-	display: inline-block
-	width: 50%
-	height: 100%
-	position: relative
-	+cover
-	&:after
-		content: ''
-		+coverdiv
-		background-color: rgba($black, 0.5)
-		z-index: 1
-	&__text
-		+vcenter
-		width: 100%
-		color: $white
-		z-index: 2
+    display: inline-block
+    width: 50%
+    height: 100%
+    position: relative
+    overflow: hidden
+    +cover
+    text-align: center
+    &:hover
+        .group-card__bg
+            transform: scale(1.05)
+
+    &__bg
+        +coverdiv
+        +cover
+        transition: transform 0.7s
+    &:after
+        content: ''
+        +coverdiv
+        background-color: rgba($black, 0.5)
+        z-index: 1
+    &__text
+        +vcenter
+        width: 100%
+        color: $white
+        z-index: 2
 
 
-	
+    

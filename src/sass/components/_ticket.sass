@@ -2,9 +2,15 @@
 	height: 660px
 	width: 320px
 	color: $white
+	+xl 
+		height: 528px
+		width: 255px
 	+hover
-		.ticket__actions
+		.btn-notification,
+		.btn-edit,
+		.btn-present
 			+fadein
+			transform: translateX(0)
 	&__top
 		position: relative
 		height: 65.9%
@@ -12,20 +18,34 @@
 		+cover
 		+coverdiv
 		clip-path: url(#ticket-top)
+		+xl 
+			clip-path: url(#ticket-top-lg)
 	&__actions
 		position: absolute
 		top: 0
 		left: 100%
-		padding-left: 10px
+		padding-left: 16px
+		padding-top: 20px
 		text-align: center
-		+fadeout($tr)
-		& > *:not(:last-child)
-			margin-bottom: 10px
+		& > *
+			display: inline-block
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.35s, visibility 0.35s, transform 0.45s
+			transform: translateX(-60%)
+			&:not(:last-child)
+				margin-bottom: 20px
+		.btn-edit
+			transition-delay: 0.15s
+		.btn-present
+			transition-delay: 0.3s
 	&__bottom	
 		position: relative
 		clip-path: url(#ticket-bottom)
 		height: 34.1%
 		box-shadow : 7px 7px 5px rgba(#000, 0.65)
+		+xl 
+			clip-path: url(#ticket-bottom-lg)
 		&_blue
 			background-image: $blueGradient
 		&_orange
@@ -33,16 +53,18 @@
 		&_red
 			background-image: $redGradient
 	&__text
-		position: absolute
-		bottom: 17px
-		left: 30px
+		// position: absolute
+		// bottom: 17px
+		// left: 30px
+		padding: 0 10px 5px 30px
 		text-align: left
 		font-weight: 700
+	&__logo-wrapper
+		height: 158px
+		+vertical
 	&__logo
-		position: absolute
-		top: calc(50% - 45px)
-		left: 50%
-		transform: translate(-50%, -50%)
+		vertical-align: middle
+		max-width: 100%
 	&__place
 		font-family: $ermilov
 		font-size: 20px

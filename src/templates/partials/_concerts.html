@@ -18,12 +18,14 @@
     ] %}
 
         <div class="concert">
-            <div class="concert__image" style="background-image: url(img/{{item.image}})"></div>
+            <a href="#" class="concert__image-wrapper">
+                <div class="concert__image" style="background-image: url(img/{{item.image}})"></div>
+            </a>
             <div class="concert__info">
                 <div class="concert__group">
-                    <span class="group-title">{{item.group_1}}</span>
+                    <a href="#" class="group-title">{{item.group_1}}</a> 
                     {% if item.group_2 %}
-                        <span class="group-title">{{item.group_2}}</span>
+                        <a href="#" class="group-title">{{item.group_2}}</a href="#">
                     {% endif %}
                 </h3>
                 {% if item.online %}
@@ -33,14 +35,13 @@
                 {% endif %}
             </div>
             <div class="concert__details">
-                {{mixins.watch({watches: item.watch})}}
                 <div class="info-control">
                     <span class="info-control__icon">
-                        {{ mixins.icon("heart") }}
+                        {{ mixins.icon("eye") }}
                     </span>
-                    <span class="info-control__text">{{item.likes}}
-                    </span>
+                    <span class="info-control__text info-control__text_thin">5,305 смотрят</span>
                 </div>
+                {{mixins.like()}}
 
             </div>
         </div>
