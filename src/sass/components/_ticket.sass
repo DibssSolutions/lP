@@ -11,6 +11,9 @@
 		.btn-present
 			+fadein
 			transform: translateX(0)
+		.ticket__bottom
+			&:before
+				+fadein
 	&__top
 		position: relative
 		height: 65.9%
@@ -47,9 +50,6 @@
 		height: 34.1%
 		box-shadow : 7px 7px 5px rgba(#000, 0.65)
 		position: relative
-		+hover
-			&:before
-				+fadein
 		&:after, 
 		&:before
 			+coverdiv
