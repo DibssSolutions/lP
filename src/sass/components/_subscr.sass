@@ -1,5 +1,5 @@
 .subscr
-    display: flex
+    display: inline-flex
     align-items: stretch
     
     &__image
@@ -12,16 +12,18 @@
     &__text
         +flex-size(calc(100% - 104px))
         position: relative
+        padding: 24px 0
         display: flex
-        flex-direction: column
+        // flex-direction: column
 
-        // align-items: center
+        align-items: center
         flex-wrap: wrap
         margin-left: 16px
     &__name
         display: block
         // position: relative
-        margin-top: auto
+        // padding: 20px 0
+        // margin-top: auto
         overflow: hidden
         font-size: 37px
         font-weight: 700
@@ -49,33 +51,36 @@
         //     &:after
         //         transform: translateX(0)
                 // transform-origin: 100% 0
-
         .is-online &
             color: $red
-    // &__online,
-    // &__likes
-    //     position: absolute
-    //     left: 0
-    // &__online
-    //     top: 0
-    // &__likes
-    //     bottom: 0
+    &__online,
+    &__likes
+        position: absolute
+        left: 0
+    &__online
+        top: 0
+    &__likes
+        bottom: 0
 
 .subscriptions
     margin-bottom: 257px
     +lg 
         margin-bottom: 100px
+    +md 
+        margin-bottom: 40px
     &__title
         margin-bottom: 102px
         +lg 
            margin-bottom: 50px 
     &__main
-        display: flex
-        flex-wrap: wrap
+        // display: flex
+        // flex-wrap: wrap
         margin: 0 -20px
         .subscr
             // +flex-size(640px)
-            +flex-size(40%)
+            // +flex-size(40%)
+            
+            width: 40%
             padding: 0 20px
             margin-bottom: 76px
             +lg 

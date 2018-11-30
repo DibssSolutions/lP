@@ -189,11 +189,19 @@
 .card-online
     position: relative
     height: 312px
-    +cover
     color: $white
     display: flex
     align-items: center
     padding: 0 130px 20px
+    overflow: hidden
+    +hover 
+        .card-online__bg
+            +imgScale
+    &__bg
+        +coverdiv
+        +cover
+        backface-visibility: hidden
+        transition: transform 0.7s
     &__content
         position: relative
         min-width: 150px

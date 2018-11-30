@@ -81,6 +81,8 @@ body
     position: relative
     display: inline-block
     &__number
+        display: inline-block
+        vertical-align: middle
         position: absolute
         top: 8px
         left: 101%
@@ -92,6 +94,8 @@ body
         +lg 
             +circle(32)
             top: -5px
+        +md 
+            position: static
         span
             display: inline-block
             vertical-align: middle

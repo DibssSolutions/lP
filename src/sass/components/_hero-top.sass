@@ -4,8 +4,6 @@
     min-height: 700px 
     overflow: hidden
     color: $white
-    +lg
-        height: 125vh
     &:hover
         .hero-top__bg
             transform: scale(1.05)
@@ -24,10 +22,17 @@
         justify-content: space-between
         align-items: center
         width: 100%
+        +xs 
+            flex-direction: column
+            min-height: 400px
+            align-items: flex-start
     &__play
         +vcenter
     &__more
         font-size: 0
+        +hover 
+            .icon 
+                animation: bounce 0.4s both
         div
             display: inline-block
             vertical-align: middle
@@ -113,14 +118,20 @@
         width: 200px
         text-align: left
         +md 
+            left: 0
+            top: 120%
+        +xs 
             position: static
             margin-top: 16px
     &__bottom
         position: absolute
         top: 100%
         left: 0
+        min-width: 200px
         text-align: left
         +md 
+            top: 140%
+        +xs 
             position: relative
             transform: none
     .info-control
@@ -157,6 +168,7 @@
         +coverdiv
         +cover
         transition: transform 0.7s
+        backface-visibility: hidden
     &:after
         content: ''
         +coverdiv

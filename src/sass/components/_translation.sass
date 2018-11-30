@@ -3,3 +3,17 @@
     height: 100vh
     min-height: 900px
     background: $mainGradient
+    &.is-modal-open
+        &:after
+            display: block
+
+    &:after
+        +coverdiv
+        content: ''
+        background-color: rgba($black, 0.4)
+        pointer-events: none
+        display: none
+    
+        
+.is-modal-open .bitmovinplayer-container
+    filter: blur(4px) !important

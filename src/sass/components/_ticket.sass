@@ -46,14 +46,36 @@
 		clip-path: url(#ticket-bottom)
 		height: 34.1%
 		box-shadow : 7px 7px 5px rgba(#000, 0.65)
+		position: relative
+		+hover
+			&:before
+				+fadein
+		&:after, 
+		&:before
+			+coverdiv
+			content: ''
+			z-index: -2
+		&:before
+			+fadeout($tr)
+			z-index: -1
 		+lg 
 			clip-path: url(#ticket-bottom-lg)
 		&_blue
-			background-image: $blueGradient
+			&:after
+				background-image: $blueGradient
+			&:before
+				background-image: $blueGradientReversed
 		&_orange
-			background-image: $orangeGradient
+			&:after
+				background-image: $orangeGradient
+			&:before
+				background-image: $orangeGradientReversed
 		&_red
-			background-image: $redGradient
+			&:after
+				background-image: $redGradient
+			&:before
+				background-image: $redGradientReversed
+		
 	&__text
 		// position: absolute
 		// bottom: 17px
@@ -107,13 +129,13 @@
 				+sm 
 					padding-right: 0
 					flex-direction: column
-					align-items: center
+					// align-items: center
 				.ticket
 						position: relative
 						z-index: 3
 						margin-bottom: 32px
 						&:not(:last-child)
-								margin-right: 160px
+								margin-right: 120px
 								+xl 
 										margin-right: 70px
 								+lg 
@@ -131,12 +153,13 @@
 		&__cta
 				position: absolute
 				right: -172px
-				top: 50%
+				top: 330px
 				transform: translateY(-56%)
 				+xl 
-						right: -70px
+					right: -70px
 				+lg 
-						right: -15px
-				+sm 
-						position: static
-						margin-top: 100px
+					right: -15px
+					top: 254px
+				+xs
+					position: static
+					margin-top: 100px

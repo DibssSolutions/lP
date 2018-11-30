@@ -11,14 +11,25 @@
     
 .likes
     padding-bottom: 194px
+    +lg 
+        left: 100px
+    +md 
+        padding-bottom: 40px
     &__title
         display: flex
         align-items: center
         justify-content: space-between
+        flex-wrap: wrap
         margin-bottom: 120px
         +lg 
             margin-bottom: 30px
         .link-cta
             margin-top: -20px
+            +lg 
+                margin-top: 6px
+            +xs 
+                margin-left: -10px
+                width: 100%
+                justify-content: flex-start
     
     

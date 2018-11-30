@@ -14,7 +14,6 @@
         display: flex
         justify-content: space-between
         align-items: center
-        
         &_center
             margin-right: calc(50% - 800px)
         +xl 
@@ -58,6 +57,8 @@
         align-items: center
         +flex-size(612px)
         transition: 0.4s opacity, 0.4s visibility
+        .header__inner_center &
+            justify-content: flex-end
         +xl
             +flex-size(auto)
         .is-active &
@@ -145,6 +146,16 @@
     font-size: 0
     .header_dark &
         color: $black
+        .hover-invis 
+            fill: rgba($black, 0.8)
+        .hover-vis 
+            fill: rgba($black, 0.8)
+    .header__inner_center &
+        margin-right: 100px
+        +lg 
+            margin-right: 30px
+        +sm 
+            margin-right: 10px
     &__list
         display: flex
         align-items: center
@@ -153,46 +164,52 @@
         +md 
             margin-right: 12px
     &__item
-        +circle(80)
-        background-color: $red
-        +vertical
         &:nth-child(1)
             margin-right: 45px
             +r(1700)
                 margin-right: 30px
-            +r(1400)
+            +lg
                 margin-right: 20px
+            +sm 
+                margin-right: 6px
         &:nth-child(2)
             margin-right: 57px
             +r(1700)
                 margin-right: 30px
-            +r(1400)
+            +lg
                 margin-right: 20px
+            +sm 
+                margin-right: 6px
     &__link
         display: inline-block
         vertical-align: middle
-        mask: url(img/sprite.svg#flame-mask)
-        background-color: transparent
-    .icon-music-circle
-        font-size: 76px
-        +xl
-            font-size: 50px
-        +md 
-            font-size: 40px
-        +sm 
-            font-size: 24px
-    .icon-flame
-        font-size: 40px
-        +md
-            font-size: 30px
-        +sm 
-            font-size: 24px
-    .icon-crown
-        font-size: 38px
-        +md
-            font-size: 30px
-        +sm 
-            font-size: 24px
+        // mask: url(img/sprite.svg#flame-mask)
+        // background-color: transparent
+        &.is-active
+            .hover-invis 
+                opacity: 0
+            .hover-vis
+                opacity: 1
+        svg
+            height: 76px
+            width: 76px
+            +xl
+                height: 50px
+                width: 50px
+            +md 
+                height: 40px
+                width: 40px
+            +sm 
+                height: 30px
+                width: 30px
+        .hover-invis
+            opacity: 1
+            fill: $white
+            transition: opacity 0.2s
+        .hover-vis 
+            fill: $white
+            opacity: 0
+            transition: opacity 0.2s
 
 .user-info
     margin-left: auto
@@ -354,3 +371,22 @@
     font-size: 32px
     letter-spacing: -0.02em
     color: $white
+    position: relative
+    overflow: hidden
+    display: inline-block
+    +lg 
+        font-size: 24px
+    +sm 
+        font-size: 20px
+    &:hover:after
+        transform: translateX(0)
+    &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 100%
+        transform: translateX(-100%)
+        background-color: $white
+        transition: transform $tr

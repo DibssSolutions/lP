@@ -1,5 +1,6 @@
 .start
     height: 100vh
+    min-height: 700px
     +cover
     &__logo
         position: absolute
@@ -8,21 +9,141 @@
         transform: translate(-50%, -50%)
         height: 90vh
         width: 90vh
+        +xl 
+            height: 50vw
+            width: 50vw
+        +md 
+            display: none
         img 
             width: 100%
             opacity: 0.9
-    &__inner
-        padding: 0 160px
-        width: 960px
+    &__wrapper
         float: right
+        position: relative
+        padding: 90px 160px 
+        max-width: 960px
+        
+        height: 100%
+        +lg 
+            padding: 80px
+            max-width: 700px
+        +md 
+            max-width: 100%
+            padding: 80px 40px 
+        +sm 
+            padding: 20px 10px
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: -200px
+            height: 100%
+            width: calc(100% + 200px)
+            background-image: linear-gradient(to right, transparent 0%, $black 66.34%)
+            z-index: 1
+            +md 
+                background-image: linear-gradient(to right, rgba($black, 0.4), rgba($black, 0.4))
+    &__inner
         color: $white
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        height: 100%
+        z-index: 2
+        +lg 
+            justify-content: space-around
+        & > *:not(:last-child)
+            margin-bottom: 16px
     &__icons
         display: flex
         justify-content: space-between
         align-items: flex-end
+        +md 
+            justify-content: flex-start
+            margin: 0 -20px
+            & > * 
+                padding: 0 20px
         .icon-monitor
             font-size: 196px
+            +xl 
+                font-size: 140px
+            +lg    
+                font-size: 98px
+            +sm 
+                font-size: 60px
         .icon-device
             font-size: 141px
+            +xl 
+                font-size: 120px
+            +lg 
+                font-size: 70px
+            +sm 
+                font-size: 48px
+
         .icon-phone
             font-size: 96px
+            +xl 
+                font-size: 80px
+            +lg 
+                font-size: 48px
+            +sm 
+                font-size: 36px
+    &__title
+        max-width: 400px
+        font-size: 80px
+        font-family: $ermilov
+        letter-spacing: -0.04em
+        line-height: 1
+        +lg 
+            font-size: 60px
+        +sm 
+            font-size: 40px
+    &__lead,
+    p
+        font-size: 30px
+        letter-spacing: -0.02em
+        line-height: 1
+        +xl 
+            font-size: 30px
+        +lg 
+            font-size: 28px
+        +sm 
+            font-size: 22px
+    &__lead
+        font-weight: 900
+    p 
+        font-weight: 500
+        
+.start-btn
+    padding: 16px 36px 20px
+    max-width: 360px
+    background-color: $white
+    border-radius: 12px
+    color: black
+    font-size: 0
+    +xl 
+        padding: 6px 16px 12px
+    +lg
+        max-width: 300px
+    +md 
+        max-width: 270px
+    & > * 
+        display: inline-block
+        vertical-align: middle
+    &__text
+        font-size: 32px
+        font-family: $geo
+        line-height: 1
+        letter-spacing: -0.02em
+        +lg 
+            font-size: 24px
+    .icon
+        font-size: 24px
+        coolor: $black
+        margin-top: 8px
+        margin-left: 16px
+        +md 
+            font-size: 18px
+            margin-top: 6px
+        

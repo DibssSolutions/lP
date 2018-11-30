@@ -137,14 +137,15 @@
         font-size: 36px
 
 .link-cta
-    display: flex
+    display: inline-flex
+    vertical-align: middle
     align-items: center
     justify-content: center
     position: relative
     &_bouncing
         +hover
             .icon
-                animation: bounce-top 0.4s both
+                animation: bounce 0.4s both
     &_big
         +circle(406)
         background-color: $white
@@ -183,32 +184,32 @@
             font-size: 30px
             margin-top: 2px
 
-@keyframes bounce-top 
+@keyframes bounce 
     0% 
-        transform: translateY(-40px)
+        transform: translateX(-20px)
         opacity: 1
     24% 
         opacity: 1
     40% 
-        transform: translateY(-24px)
+        transform: translateX(-14px)
         animation-timing-function: ease-in
     65% 
-        transform: translateY(-12px)
+        transform: translateX(-6px)
         animation-timing-function: ease-in
     82% 
-        transform: translateY(-6px)
+        transform: translateX(-3px)
         animation-timing-function: ease-in
     93% 
-        transform: translateY(-4px)
+        transform: translateX(-2px)
         animation-timing-function: ease-in
     25%,
     55%,
     75%,
     87% 
-        transform: translateY(0px)
+        transform: translateX(0px)
         animation-timing-function: ease-out
     100% 
-        transform: translateY(0px)
+        transform: translateX(0px)
         animation-timing-function: ease-out
         opacity: 1
   
