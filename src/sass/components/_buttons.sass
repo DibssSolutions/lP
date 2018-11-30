@@ -20,7 +20,27 @@
         z-index: -2
     &:after
         z-index: -1
-        background-image: linear-gradient(90deg, $blue, $purple)
+        background-image: $mainGradientReversed
+        +fadeout($tr)
+    +xl 
+        font-size: 48px
+    +lg 
+        font-size: 36px
+        padding: 10px 20px
+
+.gradient-hover
+    +hover
+        &:after
+            +fadein
+    &:before,
+    &:after
+        content: ''
+        +coverdiv
+    &:before
+        background-image: $mainGradient
+    &:after
+        z-index: 2
+        background-image: $mainGradientReversed
         +fadeout($tr)
     +xl 
         font-size: 48px
@@ -72,14 +92,19 @@
     line-height: 1
     letter-spacing: -0.02em
     color: $white
-    background-image: $mainGradient
+    // background-image: $mainGradient
+    background-color: transparent
     padding: 4px 14px 6px
     width: 100%
     text-align: left
+    position: relative
     +lg 
         font-size: 30px
     +sm
         text-align: center
+    span 
+        position: relative
+        z-index: 3
 
 .btn-back
     font-family: $geo
