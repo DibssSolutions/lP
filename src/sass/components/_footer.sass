@@ -15,7 +15,8 @@
             transform: translateX(-50%)
         +sm
             top: 20px
-            left: 10px
+            // left: 10px
+            left: 8.333%
             transform: none
     &__content
         display: flex
@@ -41,6 +42,8 @@
                 margin-bottom: 0
         .link:first-child
             margin-right: 50px
+            +xl 
+                margin-right: 30px
             +lg 
                 margin-right: 0
         +lg 
@@ -55,6 +58,8 @@
     letter-spacing: -0.03em
     line-height: 1
     margin-bottom: 5px
+    +xl 
+        font-size: 26px
     +lg 
         font-size: 22px
 
