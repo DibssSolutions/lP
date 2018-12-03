@@ -1,10 +1,10 @@
 .ticket
-	height: 660px
-	width: 320px
+	height: 446px
+	width: 215px
 	color: $white
-	+lg
-		height: 528px
-		width: 255px
+	// +lg
+	// 	height: 528px
+	// 	width: 255px
 	+hover
 		.btn-notification,
 		.btn-edit,
@@ -21,14 +21,14 @@
 		+cover
 		+coverdiv
 		clip-path: url(#ticket-top)
-		+lg 
-			clip-path: url(#ticket-top-lg)
+		// +lg 
+		// 	clip-path: url(#ticket-top-lg)
 	&__actions
 		position: absolute
 		top: 0
 		left: 100%
-		padding-left: 16px
-		padding-top: 20px
+		padding-left: 12px
+		padding-top: 12px
 		text-align: center
 		+lg 
 			padding-left: 6px
@@ -39,7 +39,7 @@
 			transition: opacity 0.35s, visibility 0.35s, transform 0.45s
 			transform: translateX(-60%)
 			&:not(:last-child)
-				margin-bottom: 20px
+				margin-bottom: 12px
 		.btn-edit
 			transition-delay: 0.15s
 		.btn-present
@@ -58,8 +58,8 @@
 		&:before
 			+fadeout($tr)
 			z-index: -1
-		+lg 
-			clip-path: url(#ticket-bottom-lg)
+		// +lg 
+		// 	clip-path: url(#ticket-bottom-lg)
 		&_blue
 			&:after
 				background-image: $blueGradient
@@ -80,43 +80,36 @@
 		// position: absolute
 		// bottom: 17px
 		// left: 30px
-		padding: 0 10px 5px 30px
+		padding: 0 10px 5px 20px
 		text-align: left
 		font-weight: 700
 		+lg 
 			padding: 0 10px 10px
 	&__logo-wrapper
-		height: 158px
+		height: 100px
 		padding: 0 10px
 		+vertical
-		+lg 	
-			height: 120px
 	&__logo
 		vertical-align: middle
 		max-width: 100%
 	&__place
 		font-family: $ermilov
-		font-size: 20px
+		font-size: 13px
 		letter-spacing: -0.04em
-		+lg 
-			font-size: 18px
+		line-height: 1
 	&__time
-		font-size: 18px
+		font-size: 12px
 		letter-spacing: -0.025em 
-		+lg 
-			font-size: 16px
+
 
 .tickets
-		padding-top: 306px
-		margin-bottom: 168px
-		+xl 
-			padding-top: 200px
-			margin-bottom: 100px
+		padding-top: 218px
+		margin-bottom: 86px
 		+lg 
 			padding-top: 150px
 			margin-bottom: 50px
 		&__title
-				margin-bottom: 60px
+				margin-bottom: 40px
 		&__main,
 		&__secondary
 				display: flex
@@ -142,8 +135,7 @@
 								// 		margin-right: 50px
 								+sm 
 										margin-right: 0
-		&__main
-				margin-bottom: 52px
+
 		&__secondary
 				max-height: 0
 				overflow: hidden
@@ -153,7 +145,7 @@
 		&__cta
 				position: absolute
 				right: -172px
-				top: 330px
+				top: 223px
 				transform: translateY(-56%)
 				+xl 
 					right: -70px

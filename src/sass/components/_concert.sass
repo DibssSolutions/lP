@@ -1,8 +1,10 @@
 .concerts
     font-size: 0
-    margin-bottom: 114px
+    margin-bottom: 100px
     +lg 
         margin-bottom: 50px
+    +sm 
+        margin-bottom: 10px
 
 .concert
     display: inline-block
@@ -26,12 +28,10 @@
         transition: transform 0.7s
         backface-visibility: hidden
     &__info
-        padding: 20px 74px 20px 112px 
+        padding: 28px 50px 
         display: flex
         flex-wrap: wrap
-        +xl 
-            padding: 20px 40px
-        +lg 
+        +md 
             padding: 10px
     &__group
         +flex-size(64%)
@@ -44,13 +44,15 @@
     &__group-online
         display: inline-block
         vertical-align: middle
-        margin-left: 32px
+        margin-left: 10px
     &__details
         +flex-size(36%)
-        // margin-top: 32px
+        line-height: 62px
         +lg 
             +flex-size(100%)
             margin-top: 16px
+        +lg 
+            line-height: 1
         .info-control
             // margin-bottom: 16px
             &:not(:last-child)

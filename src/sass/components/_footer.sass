@@ -1,11 +1,12 @@
 .footer
     position: relative
-    padding: 90px 0 120px
+    padding: 60px 0 80px
     background-color: $lightGrey
     border-radius: 10px
-    +lg
-        padding-bottom: 40px
-        padding-top: 40px
+    &__inner
+        position: relative
+    +md
+        padding: 40px 0
     +sm 
         padding-top: 90px
     &__logo
@@ -15,8 +16,7 @@
             left: 50%
             transform: translateX(-50%)
         +sm
-            top: 20px
-            // left: 10px
+            top: -60px
             left: 8.333%
             transform: none
     &__content
@@ -38,41 +38,46 @@
             +flex-size(100%)
     &__row
         &:not(:last-child)
-            margin-bottom: 40px
+            margin-bottom: 30px
             +lg 
                 margin-bottom: 0
         .link:first-child
-            margin-right: 50px
-            +xl 
-                margin-right: 30px
-            +lg 
+            margin-right: 40px
+            +md 
                 margin-right: 0
         +lg 
-            .link
+            .outer-link
                 display: block
     .links
         margin-bottom: 13px
 
 .link
+    position: relative
+    display: inline-block
+    padding-bottom: 3px
     font-weight: 700
-    font-size: 17px
+    font-size: 21px
     letter-spacing: -0.03em
     line-height: 1
     margin-bottom: 5px
     transition: color 0.2s
-    +hover 
-        color: $grey
-    // +xl 
-    //     font-size: 26px
-    // +lg 
-    //     font-size: 22px
+    overflow: hidden
+    &:hover:after
+        transform: translateX(0)
+    &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 100%
+        transform: translateX(-100%)
+        background-color: $black
+        transition: transform $tr
 
 .copyright
-    // font-size: 30px
-    font-size: 17px
+    font-size: 21px
     color: $grey
-    // +lg 
-    //     font-size: 20px
 
 #clip-svg
     position: absolute

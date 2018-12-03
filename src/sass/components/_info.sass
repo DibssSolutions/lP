@@ -5,12 +5,10 @@
         color: $white
     &__logo
         float: left
-        font-size: 166px
+        font-size: 112px
         line-height: 1
         padding-right: 30px
-        +xl 
-            line-height: 120px
-        +lg 
+        +md 
             line-height: 70px
         +sm 
             line-height: 56px
@@ -21,15 +19,15 @@
     &__name
         font-family: $letterica
         // font-size: 166px
-        font-size: 94px
+        font-size: 112px
         line-height: 1
         letter-spacing: 0.02em
         // &_v1 
         //     font-size: 94px
         // +xl 
         //     font-size: 120px
-        // +lg 
-        //     font-size: 70px
+        +md 
+            font-size: 70px
         +sm 
             font-size: 56px
     &__place
@@ -37,7 +35,7 @@
         font-size: 48px
         margin-top: -20px
         letter-spacing: -0.06em
-        font-size: 27px
+        font-size: 32px
         // +lg 
         //     font-size: 32px
         +sm 
@@ -61,7 +59,7 @@
     &__text
         font-weight: 800
         // font-size: 18px
-        font-size: 10px
+        font-size: 12px
         line-height: 1.2
         &_thin
             font-weight: 700
@@ -73,6 +71,7 @@
         display: inline-block
         vertical-align: middle  
         font-size: 0
+        line-height: 1
     &__like
         background-color: transparent
         font-family: $geo
@@ -82,32 +81,32 @@
             .icon
                 color: $red
     .icon-circle
-        color: red
-        // font-size: 20px
-        font-size: 11px
         margin-right: 6px
         margin-bottom: -3px
+        +circle(12)
+        background-color: $red
+        display: inline-block
         animation: heartbeat 1.5s ease-in-out infinite both
-        +md 
-            font-size: 12px
+        // +md 
+        //     font-size: 12px
     .icon-heart
         // font-size: 22px
-        font-size: 11px
+        font-size: 15px
         margin-right: 6px
         // +md 
         //     font-size: 14px
     .icon-eye
         // font-size: 14px
         font-size: 11px
-        margin-right: 13px
+        margin-right: 9px
         // +md 
         //     font-size: 10px
 
 @keyframes heartbeat 
     50% 
-        transform: scale(0.3)
+        transform: scale(0)
         opacity: 0.3
-        transform-origin: center center
+        // transform-origin: center center
 //   from 
 //     transform: scale(1)
 //     transform-origin: center center

@@ -1,9 +1,15 @@
 .chanels-section
-    margin: 140px auto 30px
+    margin: 100px auto 10px
     +lg 
-        margin: 70px auto 30px
+        margin: 40px auto 0
     &__title
-        margin-bottom: 30px
+        margin-bottom: 50px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        .title-big
+            padding-right: 50px
     &__row
         display: flex
         flex-wrap: wrap
@@ -17,22 +23,22 @@
         .chanel
             flex-grow: 1
     .chanel
-        margin-bottom: 50px
-        +lg 
+        &:not(:last-child)
+            margin-bottom: 32px
+        +md 
             margin-bottom: 24px
         +sm 
             margin-bottom: 12px
     &__load-more
-        padding: 40px 0 100px
+        padding: 5px 0 40px
         text-align: center
         +md 
-            padding: 40px 0
+            padding: 5px 0 30px
         
 
 .tags
-    display: inline-block
-    vertical-align: middle
-    margin-left: 140px
+    margin-left: auto
+    // padding-left: 50px
     +md 
         width: 100%
         margin: 10px 0 0
@@ -42,13 +48,11 @@
     display: inline-block
     padding: 2px 10px 10px 10px
     font-family: $ermilov
-    // font-size: 64px
-    font-size: 36px
+    font-size: 42px
     line-height: 1
     letter-spacing: -0.06em
     position: relative
-    +xl 
-        font-size: 40px
+    transition: color $tr
     +lg 
         font-size: 32px
         padding: 1px 5px 5px
@@ -58,26 +62,31 @@
     &:after
         content: ''
         +coverdiv
-        display: none
     &:before
         background-image: $mainGradient
         z-index: 1
+        +fadeout($tr)
     &:after
         z-index: 1
         background-image: linear-gradient(90deg, $blue, $purple)
         +fadeout($tr)
-    &:hover:after
-        +fadein
+    &:hover
+        color: $white
+        &:before
+            +fadein
+    
     &.is-active
         color: $white
         &:before,
-        &:after
-            display: block
+            opacity: 1
+            visibility: visible
+        &:hover:after
+            +fadein
     span 
         position: relative
         z-index: 3
 
-  
+
 .tag-small
     line-height: 1
     display: inline-block
@@ -104,10 +113,12 @@
 
 .chanel
     position: relative
-    height: 312px
+    height: 210px
     padding: 32px 0 18px
     +cover  
     color: $white
+    +md 
+        padding: 10px 18px
     &:after
         position: absolute
         top: 0
@@ -140,10 +151,10 @@
         +sm 
             margin-bottom: 16px
     &__logo
-        +circle(104)
+        +circle(70)
         +cover
     &__group
-        font-size: 10px
+        font-size: 12px
         letter-spacing: -0.02em
         line-height: 1.2
         font-weight: 700
@@ -185,7 +196,7 @@
 
 .card-online
     position: relative
-    height: 312px
+    height: 210px
     color: $white
     display: flex
     align-items: center
