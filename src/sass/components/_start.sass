@@ -57,57 +57,41 @@
             margin-bottom: 16px
     &__icons
         display: flex
-        justify-content: space-between
         align-items: flex-end
+        margin: 0 -35px
         +md 
-            justify-content: flex-start
             margin: 0 -20px
-            & > * 
-                padding: 0 20px
+        & > * 
+            padding: 0 35px
+            +md
+                margin: 0 -20px
         .icon-monitor
-            font-size: 196px
-            +xl 
-                font-size: 140px
-            +lg    
-                font-size: 98px
+            font-size: 132px
             +sm 
                 font-size: 60px
         .icon-device
-            font-size: 141px
-            +xl 
-                font-size: 120px
-            +lg 
-                font-size: 70px
+            font-size: 95px
             +sm 
                 font-size: 48px
-
         .icon-phone
-            font-size: 96px
-            +xl 
-                font-size: 80px
-            +lg 
-                font-size: 48px
+            font-size: 65px
             +sm 
                 font-size: 36px
     &__title
         max-width: 400px
-        font-size: 80px
+        font-size: 64px
         font-family: $ermilov
         letter-spacing: -0.04em
         line-height: 1
-        +lg 
-            font-size: 60px
+        +md 
+            font-size: 54px
         +sm 
             font-size: 40px
     &__lead,
     p
-        font-size: 30px
+        font-size: 25px
         letter-spacing: -0.02em
         line-height: 1
-        +xl 
-            font-size: 30px
-        +lg 
-            font-size: 28px
         +sm 
             font-size: 22px
     &__lead
@@ -116,34 +100,24 @@
         font-weight: 500
         
 .start-btn
-    padding: 16px 36px 20px
+    padding: 6px 16px 12px
     max-width: 360px
     background-color: $white
     border-radius: 12px
     color: black
     font-size: 0
-    +xl 
-        padding: 6px 16px 12px
-    +lg
-        max-width: 300px
-    +md 
-        max-width: 270px
+    max-width: 270px
     & > * 
         display: inline-block
         vertical-align: middle
     &__text
-        font-size: 32px
+        font-size: 21px
         font-family: $geo
         line-height: 1
         letter-spacing: -0.02em
-        +lg 
-            font-size: 24px
     .icon
-        font-size: 24px
-        coolor: $black
-        margin-top: 8px
-        margin-left: 16px
-        +md 
-            font-size: 18px
-            margin-top: 6px
+        font-size: 18px
+        margin-top: 6px
+        margin-left: 10px
+        color: $black
         

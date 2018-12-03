@@ -9,15 +9,12 @@ body
     
 .title
     font-family: $letterica
-    font-size: 108px
+    // font-size: 108px
+    font-size: 73px
     line-height: 1
     letter-spacing: 0.02em
     display: inline-block
     vertical-align: middle
-    +xl 
-        font-size: 90px
-    +lg 
-        font-size: 70px
     +md 
         font-size: 50px
     +sm 
@@ -25,16 +22,14 @@ body
 
 .title-big
     font-family: $letterica
-    font-size: 139px
+    font-size: 94px
     letter-spacing: 0.02em
     line-height: 1
     text-transform: uppercase
     display: inline-block
     vertical-align: middle
-    +xl 
-        font-size: 90px
-    +lg 
-        font-size: 70px
+    // +xl 
+    //     font-size: 90px
     +md 
         font-size: 50px
     +sm 
@@ -43,17 +38,18 @@ body
 .subtitle
     display: inline-block
     vertical-align: middle
-    max-width: 500px
+    max-width: 300px
     margin-top: -10px
-    margin-left: 20px
+    margin-left: 24px
     font-weight: 400
-    font-size: 37px
+    // font-size: 37px
+    font-size: 25px
     line-height: 1.1
     letter-spacing: -0.02em
-    +xl 
-        font-size: 30px
-    +lg 
-        font-size: 22px
+    // +xl 
+    //     font-size: 30px
+    // +lg 
+    //     font-size: 22px
     +sm 
         font-size: 18px
         display: block
@@ -64,14 +60,9 @@ body
 .group-title
     padding: 0 10px
     font-family: $letterica
-    font-size: 91px
+    font-size: 62px
     line-height: 1
     letter-spacing: 0.02em
-
-    +xl 
-        font-size: 80px
-    +lg 
-        font-size: 60px
     +md 
         font-size: 40px
     +sm 
@@ -84,31 +75,29 @@ body
         display: inline-block
         vertical-align: middle
         position: absolute
-        top: 8px
-        left: 101%
-        +circle(54)
+        top: 3px
+        left: 103%
+        +circle(32)
         background-image: $mainGradient
-        +vertical
-        +xl 
-            +circle(40)
-        +lg 
-            +circle(32)
-            top: -5px
+        text-align: center
+        // +xl 
+        //     +circle(40)
+        // +lg 
+        //     +circle(32)
+        //     top: -5px
         +md 
             position: static
         span
+            margin-top: 2px
             display: inline-block
-            vertical-align: middle
-            line-height: 54px
+            vertical-align: top
+            line-height: 1
             font-family: $ermilov
-            font-size: 48px
+            font-size: 27px
             color: $white
-            +xl 
-                line-height: 40px
-                font-size: 36px
-            +lg 
-                line-height: 32px
-                font-size: 30px
+            
+
+    
         
 .out
     overflow: hidden

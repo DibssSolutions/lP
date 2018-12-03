@@ -1,14 +1,19 @@
 .btn-cta
     position: relative
-    padding: 5px 24px 10px 20px
+    // padding: 5px 24px 10px 20px
     text-align: center
     line-height: 1
     background-color: transparent
     font-family: $ermilov
-    font-size: 64px
+    // font-size: 64px
     color: $white
     box-shadow : 7px 7px 5px rgba(0, 0, 0, 0.3)
     letter-spacing: -0.012em
+    font-size: 44px
+    padding: 2px 10px 8px
+    &_v1 
+        font-size: 36px
+        padding: 2px 10px 8px
     &:hover:after
         +fadein
     &:before,
@@ -23,10 +28,11 @@
         background-image: $mainGradientReversed
         +fadeout($tr)
     +xl 
-        font-size: 48px
+        font-size: 40px
+        padding: 10px 24px 14px
     +lg 
-        font-size: 36px
-        padding: 10px 20px
+        font-size: 24px
+        // padding: 10px 10px
 
 .gradient-hover
     +hover
@@ -42,11 +48,7 @@
         z-index: 2
         background-image: $mainGradientReversed
         +fadeout($tr)
-    +xl 
-        font-size: 48px
-    +lg 
-        font-size: 36px
-        padding: 10px 20px
+
 
     
 .btn-load-more
@@ -60,7 +62,8 @@
         margin-left: 10px
         padding-bottom: 4px
         font-family: $geo
-        font-size: 44px
+        // font-size: 44px
+        font-size: 30px
         font-weight: 700
         position: relative
         overflow: hidden
@@ -74,32 +77,29 @@
             height: 2px
             width: 100%
             background-color: $darkBlue
-        +lg 
-            font-size: 30px
         +sm 
             font-size: 20px
     .icon
-        font-size: 48px
-        +lg 
-            font-size: 36px
+        // font-size: 48px
+        font-size: 31px
+        // +lg 
+        //     font-size: 36px
         +sm 
             font-size: 24px
 
 .btn-submit
     font-family: $ermilov
     font-weight: 700
-    font-size: 42px
+    font-size: 29px
     line-height: 1
     letter-spacing: -0.02em
     color: $white
     // background-image: $mainGradient
     background-color: transparent
-    padding: 4px 14px 6px
+    padding: 1px 14px 4px
     width: 100%
     text-align: left
     position: relative
-    +lg 
-        font-size: 30px
     +sm
         text-align: center
     span 
@@ -109,7 +109,7 @@
 .btn-back
     font-family: $geo
     font-weight: 700
-    font-size: 25px
+    font-size: 17px
     line-height: 1.2
     letter-spacing: -0.02em
     color: $darkGrey
@@ -125,12 +125,13 @@
     color: transparent
     background-color: transparent
     .icon
-        font-size: 172px
+        // font-size: 172px
         stroke: $white
         stroke-width: 16px
-        +xl 
-            font-size: 120px
-        +lg 
+        font-size: 117px
+        // +xl 
+        //     font-size: 120px
+        +md 
             font-size: 80px
         +sm 
             font-size: 50px
@@ -151,15 +152,15 @@
 
 .btn-notification
     .icon
-        font-size: 33px
+        font-size: 23px
 
 .btn-edit
     .icon
-        font-size: 27px
+        font-size: 18px
 
 .btn-present
     .icon
-        font-size: 36px
+        font-size: 25px
 
 .link-cta
     display: inline-flex
@@ -172,9 +173,9 @@
             .icon
                 animation: bounce 0.4s both
     &_big
-        +circle(406)
+        +circle(276)
         background-color: $white
-        +lg 
+        +md
             +circle(200)
         +hover
             &:before
@@ -182,9 +183,9 @@
         &:after,
         &:before
             +vcenter
-            +circle(826)
+            +circle(558)
             content: ''
-            +lg 
+            +md 
                 +circle(400)
         &:after
             background-image: $mainGradient
@@ -201,9 +202,9 @@
         z-index: 2
         padding: 0 10px
     .icon
-        font-size: 121px
+        font-size: 80px
         color: $darkBlue
-        +lg 
+        +md 
             font-size: 60px
         +sm 
             font-size: 30px
@@ -240,13 +241,13 @@
   
 .main-link
     color: $darkBlue
-    font-size: 48px
+    font-size: 32px
     font-family: $ermilov
     letter-spacing: -0.06em
-    +xl 
-        font-size: 40px
-    +lg 
-        font-size: 30px
+    // +xl 
+    //     font-size: 40px
+    // +lg 
+    //     font-size: 30px
     +sm 
         font-size: 20px
 
