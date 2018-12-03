@@ -2,6 +2,7 @@
     position: relative
     padding: 90px 0 120px
     background-color: $lightGrey
+    border-radius: 10px
     +lg
         padding-bottom: 40px
         padding-top: 40px
@@ -54,20 +55,24 @@
 
 .link
     font-weight: 700
-    font-size: 30px
+    font-size: 17px
     letter-spacing: -0.03em
     line-height: 1
     margin-bottom: 5px
-    +xl 
-        font-size: 26px
-    +lg 
-        font-size: 22px
+    transition: color 0.2s
+    +hover 
+        color: $grey
+    // +xl 
+    //     font-size: 26px
+    // +lg 
+    //     font-size: 22px
 
 .copyright
-    font-size: 30px
+    // font-size: 30px
+    font-size: 17px
     color: $grey
-    +lg 
-        font-size: 20px
+    // +lg 
+    //     font-size: 20px
 
 #clip-svg
     position: absolute

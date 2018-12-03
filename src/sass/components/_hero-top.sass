@@ -1,7 +1,7 @@
 .hero-top
     position: relative
     height: 100vh
-    min-height: 700px 
+    min-height: 500px 
     overflow: hidden
     color: $white
     &:hover
@@ -36,17 +36,19 @@
         div
             display: inline-block
             vertical-align: middle
-            margin-right: 89px
-            +xl 
-                margin-right: 50px
-            +lg 
-                margin-right: 30px
+            // margin-right: 89px
+            margin-right: 46px
+            // +xl 
+            //     margin-right: 50px
+            // +lg 
+            //     margin-right: 30px
             +sm 
                 margin-right: 16px
         span
             display: block
             font-family: $ermilov
-            font-size: 50px
+            // font-size: 50px
+            font-size: 28px
             letter-spacing: -0.02em
             max-width: 300px
             line-height: 1
@@ -57,30 +59,25 @@
             +sm 
                 font-size: 24px
         .icon
-            font-size: 118px
+            // font-size: 118px
+            font-size: 66px
             display: inline-block
             vertical-align: middle
             color: $white
-            +lg 
-                font-size: 90px
+            margin-top: 5px
+            // +lg 
+            //     font-size: 90px
             +sm 
                 font-size: 54px
     &__details
         position: absolute
-        // left: 10px
         left: 0
         bottom: 0
         display: flex
         align-items: center
         height: 25vh
         text-align: left
-        font-size: 31px
-        padding-left: 8.333%
-        // +xl 
-        //     padding-left: calc(50% - 710px)
-        +lg 
-            font-size: 24px
-        //     padding-left: calc(50% - 610px)
+        font-size: 18px
         +sm 
             font-size: 18px
         span 
@@ -103,13 +100,14 @@
     text-align: left
     h3 
         font-family: $letterica
-        font-size: 166px
+        // font-size: 166px
+        font-size: 94px
         line-height: 1
         letter-spacing: 0.02em
-        +xl 
-            font-size: 120px
-        +lg 
-            font-size: 70px
+        // +xl 
+        //     font-size: 120px
+        // +lg 
+        //     font-size: 70px
         +sm 
             font-size: 56px
     &__right
@@ -146,11 +144,12 @@
         left: 0
         bottom: 100%
         font-weight: 400
-        font-size: 32px
+        // font-size: 32px
+        font-size: 18px
         line-height: 1
         letter-spacing: 0.04em
-        +lg 
-            font-size: 24px
+        // +lg 
+        //     font-size: 24px
         +sm 
             font-size: 16px
 
@@ -165,7 +164,6 @@
     &:hover
         .group-card__bg
             +imgScale
-
     &__bg
         +coverdiv
         +cover

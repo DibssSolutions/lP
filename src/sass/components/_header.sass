@@ -9,16 +9,17 @@
     +xl
         top: 20px
     &__inner
-        // margin-left: calc(50% - 800px)
-        margin-left: 8.33%
-        margin-right: 30px
+        margin-left: calc(50% - 550px)
+        // margin-right: calc(50% - 600px)
+        // margin-left: 8.33%
+        // margin-right: 30px
         display: flex
         justify-content: space-between
         align-items: center
-        &_v1
-            margin-left: calc(50% - 540px)
         &_center
-            margin-right: calc(50% - 800px)
+            max-width: 1100px
+            margin: 0 auto
+            padding: 0 10px
         +xl 
             margin-right: 8.33%
         //     max-width: 1600px
@@ -30,7 +31,8 @@
                 display: none
     &__search
         +vcenter
-        width: 320px
+        // width: 320px
+        width: 20%
         z-index: 10
         +lg 
             position: relative
@@ -99,14 +101,13 @@
     &_dark
         color: $black
     &__image
-        width: 118px
-        height: 118px
+        // width: 118px
+        // height: 118px
+        height: 80px
+        width: 80px
         transition: transform $tr
         position: relative
-        +xl
-            width: 70px
-            height: 70px
-        +lg
+        +md
             width: 50px
             height: 50px
         img
@@ -125,23 +126,25 @@
             margin-left: 8px
     &__name
         font-family: $ermilov
-        font-size: 48px
+        // font-size: 48px
+        font-size: 28px
         letter-spacing: -0.057em
-        +xl     
-            font-size: 40px
-        +md 
-            font-size: 30px
+        // +xl     
+        //     font-size: 40px
+        // +md 
+        //     font-size: 30px
     &__descr
         position: absolute
         left: 0
-        top: 70px
+        top: 40px
         margin-right: -20px
         font-weight: 300
         font-size: 24px
+        font-size: 13px
         line-height: 1.1
-        +xl 
-            font-size: 18px
-            top: 50px
+        // +xl 
+        //     font-size: 18px
+        //     top: 50px
         +md 
             display: none
 
@@ -155,9 +158,9 @@
         .hover-vis 
             fill: rgba($black, 0.8)
     .header__inner_center &
-        margin-right: 100px
-        +lg 
-            margin-right: 30px
+        margin-right: 20px
+        // +lg 
+        //     margin-right: 30px
         +sm 
             margin-right: 10px
     &__list
@@ -168,38 +171,27 @@
         +md 
             margin-right: 12px
     &__item
-        &:nth-child(1)
-            margin-right: 45px
-            +r(1700)
-                margin-right: 30px
-            +lg
-                margin-right: 20px
-            +sm 
-                margin-right: 6px
-        &:nth-child(2)
-            margin-right: 57px
-            +r(1700)
-                margin-right: 30px
-            +lg
-                margin-right: 20px
+        &:not(:last-child)
+            margin-right: 20px
             +sm 
                 margin-right: 6px
     &__link
         display: inline-block
         vertical-align: middle
-        // mask: url(img/sprite.svg#flame-mask)
-        // background-color: transparent
+        &:hover,
         &.is-active
             .hover-invis 
                 opacity: 0
             .hover-vis
                 opacity: 1
         svg
-            height: 76px
-            width: 76px
-            +xl
-                height: 50px
-                width: 50px
+            // height: 76px
+            // width: 76px
+            height: 46px
+            width: 46px
+            // +xl
+            //     height: 50px
+            //     width: 50px
             +md 
                 height: 40px
                 width: 40px
@@ -209,11 +201,11 @@
         .hover-invis
             opacity: 1
             fill: $white
-            transition: opacity 0.2s
+            transition: opacity 0.3s
         .hover-vis 
             fill: $white
             opacity: 0
-            transition: opacity 0.2s
+            transition: opacity 0.3s
 
 .user-info
     margin-left: auto
@@ -225,7 +217,8 @@
         align-items: center
         justify-content: center
     &__name
-        font-size: 24px
+        // font-size: 24px
+        font-size: 13px
         line-height: 1.1
         font-weight: 300
         +md 
@@ -234,21 +227,22 @@
         display: block
         position: relative
         margin-left: 32px
-        height: 88px
-        width: 88px
+        // height: 88px
+        // width: 88px
+        width: 50px
+        height: 50px
         &_colored
             &:after
                 content: ''
-                height: calc(100% + 24px)
-                width: calc(100% + 24px)
+                height: calc(100% + 12px)
+                width: calc(100% + 12px)
                 border-radius: 50%
                 +vcenter
-                background-color: red
                 z-index: -1
                 background-image: $mainGradient
-                +xl 
-                    height: calc(100% + 12px)
-                    width: calc(100% + 12px)
+                // +xl 
+                //     height: calc(100% + 8px)
+                //     width: calc(100% + 8px)
         img 
             max-width: 100%
         +xl 
@@ -270,11 +264,11 @@
         width: 100%
         background-color: transparent
         border: 3px solid rgba($white, 0.5)
-        height: 52px
+        height: 30px
         padding: 10px 49px 10px 26px
         color: $white
         font-size: 18px
-        border-radius: 26px 
+        border-radius: 15px 
         .header_dark &
             border: 3px solid rgba($black, 0.5)
             color: $black
@@ -315,12 +309,12 @@
                     opacity: 0
         .icon
             color: $white
-            font-size: 24px
+            font-size: 13px
             .header_dark &
                 color: $black
             .is-active &
                 +sm 
-                    font-size: 20px
+                    font-size: 13px
 
     &__close
         display: none
@@ -372,7 +366,7 @@
         transform: rotate(-45deg) translate(3px, -9px)
 
 .login
-    font-size: 32px
+    font-size: 18px
     letter-spacing: -0.02em
     color: $white
     position: relative
