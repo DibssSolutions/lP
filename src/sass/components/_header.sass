@@ -4,14 +4,18 @@
     left: 0
     width: 100%
     z-index: 15
+    +md 
+        top: 20px
     // &.is-active 
     //     background-color: $white
     &__inner
         margin-left: calc(50% - 550px)
-        margin-right: calc(50% - 800px)
+        margin-right: 10vw
         display: flex
         justify-content: space-between
         align-items: center
+        +r(1700) 
+            margin-right: calc(50% - 550px)
         +lg 
             padding: 0 8.333%
             margin: 0 auto
@@ -54,18 +58,18 @@
                 position: absolute
                 top: 50%
                 transform: translateY(-50%)
-                left: 60px
+                left: 80px
                 width: calc(100% - 70px)
     &__nav
         display: flex
         justify-content: space-between
         align-items: center
-        +flex-size(612px)
+        // +flex-size(612px)
         transition: 0.4s opacity, 0.4s visibility
         .header__inner_center &
             justify-content: flex-end
-        +xl
-            +flex-size(auto)
+        // +xl
+        //     +flex-size(auto)
         .is-active &
             +sm
                 opacity: 0
@@ -165,6 +169,8 @@
             margin-right: 30px
         +md 
             margin-right: 12px
+        +sm 
+            margin-right: 0
     &__item
         &:not(:last-child)
             margin-right: 20px
@@ -235,19 +241,17 @@
                 +vcenter
                 z-index: -1
                 background-image: $mainGradient
-                // +xl 
-                //     height: calc(100% + 8px)
-                //     width: calc(100% + 8px)
+                +md 
+                    height: calc(100% + 6px)
+                    width: calc(100% + 6px)
         img 
             max-width: 100%
         +xl 
-            height: 60px
-            width: 60px
             margin-left: 24px
         +md 
-            height: 50px
-            width: 50px
-            margin-left: 12px
+            height: 30px
+            width: 30px
+            margin-left: 8px
 
 .avatar
     border-radius: 50%
@@ -257,12 +261,15 @@
     width: 100%
     &__input
         width: 100%
-        background-color: transparent
-        border: 3px solid rgba($white, 0.5)
         height: 34px
-        padding: 10px 49px 10px 26px
+        padding: 8px 49px 10px 26px
+        border: 3px solid rgba($white, 0.5)
+        background-color: transparent
         color: $white
+        font-family: $geo
         font-size: 18px
+        font-weight: 400
+        line-height: 1
         border-radius: 17px 
         .header_dark &
             border: 3px solid rgba($black, 0.5)
@@ -274,6 +281,7 @@
         +sm 
             +fadeout(0.4s)
             padding-right: 35px
+            padding-left: 16px
         .is-active &
             +sm
                 +fadein
@@ -313,14 +321,16 @@
         display: none
         background-color: transparent
         position: absolute
-        right: -30px
+        right: -16px
         top: -10px
         .is-active &
             +sm
                 display: block
         .icon
-            font-size: 16px
+            font-size: 12px
             color: $white
+            .header_dark &
+                color: $black
 
 .toggle-button 
     position: relative
@@ -356,7 +366,7 @@
     overflow: hidden
     display: inline-block
     +sm 
-        font-size: 20px
+        font-size: 16px
     &:hover:after
         transform: translateX(0)
     &:after

@@ -68,6 +68,11 @@
             <div class="ticket__bottom{% if props.color %} ticket__bottom_{{props.color}}{% else %} ticket__bottom_blue{% endif %}">
                 <div class="ticket__logo-wrapper">
                     <img class="ticket__logo" src="img/{{props.logo}}" alt=""/>
+                    {% if props.pass %}
+                        <span class="ticket__pass">
+                            пропуск на 1 день
+                        </span>
+                    {% endif %}
                 </div>
                 <div class="ticket__text">
                     <h5 class="ticket__place">{{ props.place }}</h5>

@@ -27,7 +27,6 @@
         padding: 10px 24px 14px
     +lg 
         font-size: 24px
-        // padding: 10px 10px
 
 .gradient-hover
     +hover
@@ -44,8 +43,6 @@
         background-image: $mainGradientReversed
         +fadeout($tr)
 
-
-    
 .btn-load-more
     font-size: 0
     background-color: transparent
@@ -142,8 +139,6 @@
         color: rgba(#000, 0.4)
         transition: transform $tr
     
-        
-
 .btn-notification
     .icon
         font-size: 23px
@@ -163,15 +158,16 @@
     justify-content: center
     position: relative
     &_bouncing
-        +hover
+        &:hover
             .icon
-                animation: bounce 0.4s both
+                animation: bounce 1s both ease-in
     &_big
         +circle(276)
         background-color: $white
+        backface-visibility: hidden
         +md
             +circle(200)
-        +hover
+        &:hover
             &:before
                 +fadein 
         &:after,
@@ -206,7 +202,7 @@
 
 @keyframes bounce 
     0% 
-        transform: translateX(-20px)
+        transform: translateX(-18px)
         opacity: 1
     24% 
         opacity: 1
