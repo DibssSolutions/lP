@@ -38,6 +38,8 @@
 
 .tags
     margin-left: auto
+    &__item
+        display: inline-block
     &.is-hoverable 
         .is-active
             color: $black
@@ -85,7 +87,7 @@
         background-image: linear-gradient(90deg, $blue, $purple)
         opacity: 0
         visibility: hidden
-        transition: opacity $tr $tr, visibility $tr $tr
+        transition: opacity $tr, visibility $tr
     // &:hover
     //     color: $white
     //     &:before

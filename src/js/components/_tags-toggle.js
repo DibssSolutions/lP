@@ -29,9 +29,13 @@ if (tags) {
   tagsContainer.addEventListener('mouseenter', e => {
     if (e.target.classList.contains(ACTIVE)) return;
     setTimeout(() => tagsContainer.classList.add('is-hoverable'), 200);
+    // tagsContainer.classList.add('is-hoverable');
   });
   tagsContainer.addEventListener('mouseleave', e => {
-    if (e.target.classList.contains(ACTIVE)) return;
-    setTimeout(() => tagsContainer.classList.remove('is-hoverable'), 200);
+    tagsContainer.classList.remove('is-hoverable');
+    tagsArr.forEach(tag => {
+      if (tag.classList.contains(ACTIVE)) return;
+      setTimeout(() => tag.classList.remove('to-left', 'to-right'), 400);
+    });
   });
 }
