@@ -1,17 +1,12 @@
 .hero-middle
-    height: 56vw
-    min-height: 1080px
+    padding-bottom: 38%
     background-image: url(../img/hero-middle.png), $mainGradient
     background-position: 0 100%, 0 0
     background-repeat: no-repeat
     position: relative
     background-size: contain
-    +lg 
-        min-height: 700px
     +md 
-        min-height: 650px
-    +sm 
-        min-height: 500px
+        padding-bottom: 42%
     &__close
         display: inline-block
         background-color: transparent
@@ -29,6 +24,8 @@
         padding-top: 70px
         +lg 
             padding-top: 40px
+        +md     
+            padding-top: 30px
     &__slogan-middle
         font-family: $ermilov
         font-size: 44px
@@ -37,6 +34,7 @@
         max-width: 70%
         +md 
             font-size: 36px
+            margin-top: 0
         +sm 
             font-size: 24px
     &__slogan-big
@@ -46,7 +44,7 @@
         color: $white
         text-align: right
         letter-spacing: -0.04em
-        margin-top: 14px
+        margin-top: 5px
         +lg 
             font-size: 55px
         +md 
