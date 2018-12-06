@@ -9,10 +9,14 @@
         .block__bg
             +imgScale
     &__bg
-        +coverdiv
-        +cover
+        position: absolute
+        top: -0.5%
+        left: -0.5%
+        height: 101%
+        width: 101%
         transition: transform 0.7s
         backface-visibility: hidden
+        +cover
         &:after
             content: ''
             position: absolute
