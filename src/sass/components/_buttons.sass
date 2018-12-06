@@ -186,7 +186,8 @@
             +md 
                 +circle(400)
         &:after
-            background-image: $mainGradient
+            // background-image: $mainGradient
+            background-image: linear-gradient(to right,#9800FF,#005EFF)
             z-index: -2
             // background-image: radial-gradient(farthest-side at 50% 50%, transparent 0%, transparent 50%, $purple 50%, $blue 100%)
         &:before
@@ -194,7 +195,8 @@
             visibility: hidden
             transition: opacity $tr ease-in-out, visibility $tr ease-in-out
             z-index: -1
-            background-image: linear-gradient(90deg, $blue, $purple)
+            // background-image: linear-gradient(90deg, $blue, $purple)
+            background-image: linear-gradient(to right,#005EFF,#9800FF)
     .main-link
         position: relative
         z-index: 2
