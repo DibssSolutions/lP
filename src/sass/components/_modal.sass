@@ -93,7 +93,8 @@
 		height: 76px
 		background-image: $mainGradient
 		position: relative
-		+vertical
+		display: flex
+		align-items: center
 		text-align: left
 		&:after
 			content: ''
@@ -102,6 +103,12 @@
 			height: 0
 			border-top: 38px solid transparent
 			border-bottom: 38px solid transparent
+		&:before
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			border: 38px solid transparent
 		span 
 			display: inline-block
 			vertical-align: middle
@@ -118,6 +125,11 @@
 			&:after
 				top: 0
 				left: 100%
+				border-left: 18px solid $blue
+			&:before
+				top: 0
+				left: 100%
+				margin-left: -1px
 				border-left: 18px solid $blue
 		&_right
 			border-radius: 0 10px 10px 0
