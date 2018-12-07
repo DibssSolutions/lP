@@ -187,10 +187,10 @@
                       </ul>
                       <div class="modal-form__group">
                         <label for="number" class="modal-form__label"> Номер карты </label>
-                        <input type="text" class="modal-form__input modal-form__input_sm modal-form__input_bold" />
-                        <input type="text" class="modal-form__input modal-form__input_sm" />
-                        <input type="text" class="modal-form__input modal-form__input_sm" />
-                        <input type="text" class="modal-form__input modal-form__input_sm" />
+                        <input type="number" maxlength='4' class="modal-form__input modal-form__input_sm js-card-number" />
+                        <input type="number" maxlength='4' class="modal-form__input modal-form__input_sm js-card-number" />
+                        <input type="number" maxlength='4' class="modal-form__input modal-form__input_sm js-card-number" />
+                        <input type="number" maxlength='4' class="modal-form__input modal-form__input_sm js-card-number" />
                       </div>
                       <div class="modal-form__inline-group modal-form__group-with-helper">
                         <label for="number" class="modal-form__label"> Имя держателя карты </label>
@@ -199,7 +199,7 @@
                       </div>
                       <div class="modal-form__inline-group">
                         <label for="number" class="modal-form__label"> Месяц / Год </label>
-                        <input type="text" class="modal-form__input modal-form__input_sm" />
+                        <input type="text" class="modal-form__input modal-form__input_sm js-date-mask" />
                       </div>
                       <div class="modal-form__payments-systems">
                         <img src="img/card-payment-systems.png" alt="" />
@@ -538,6 +538,7 @@
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script>
