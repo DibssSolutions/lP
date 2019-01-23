@@ -67,6 +67,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
+    "clip-path": "^1.1.0",
     "jquery-mask-plugin": "^1.14.15"
   }
 }
