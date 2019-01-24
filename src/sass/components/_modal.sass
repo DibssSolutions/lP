@@ -1,361 +1,357 @@
 [data-modal]
-	position: absolute
-	z-index: -1
-	top: 0
-	left: 0
-	opacity: 0
-	visibility: hidden
-	min-width: 320px
-	width: 100%
-	height: 100%
-	+vertical
-	+gpu
-	overflow: auto
-	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
-	text-align: center
-	&.is-open
-		opacity: 1
-		visibility: visible
-		z-index: 100
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    min-width: 320px
+    width: 100%
+    height: 100%
+    +vertical
+    +gpu
+    overflow: auto
+    transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+    text-align: center
+    &.is-open
+        opacity: 1
+        visibility: visible
+        z-index: 100
 
 [data-modal-container]
-	position: relative
-	z-index: 1
-	font-size: 14px
-	vertical-align: middle
-	padding: 10px
+    position: relative
+    z-index: 1
+    font-size: 14px
+    vertical-align: middle
+    padding: 10px
 [data-modal-close]
-	position: absolute
-	background-color: transparent
-	font-size: 0
-	.icon
-		font-size: 16px
+    position: absolute
+    background-color: transparent
+    font-size: 0
+    .icon
+        font-size: 16px
 
 .modal
-	padding-top: 120px
-	+lg 
-		padding-top: 0
-	&__container
-		display: inline-flex
-		flex-wrap: wrap
-	&__left
-		+flex-size(30%)
-		+md 
-			display: none
-	&__right
-		+flex-size(70%)
-		
-		text-align: left
-		+md
-			+flex-size(100%)
-			min-height: 400px
-		.info__name
-			margin-top: -10px
-	&__info
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		height: 100%
-		+xl 
-			padding-left: 100px
-		+sm 
-			padding-left: 0
-	&__info-descr
-		font-family: $ermilov
-		font-weight: 700
-		line-height: 1.2
-		font-size: 32px
-		letter-spacing: -0.06em
-		color: $white
-		+md
-			font-size: 20px
-			// letter-spacing: 0
+    padding-top: 120px
+    +lg
+        padding-top: 0
+    &__container
+        display: inline-flex
+        flex-wrap: wrap
+    &__left
+        +flex-size(30%)
+        +md
+            display: none
+    &__right
+        +flex-size(70%)
+        text-align: left
+        +md
+            +flex-size(100%)
+            min-height: 400px
+        .info__name
+            margin-top: -10px
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        +xl
+            padding-left: 100px
+        +sm
+            padding-left: 0
+    &__info-descr
+        font-family: $ermilov
+        font-weight: 700
+        line-height: 1.2
+        font-size: 32px
+        letter-spacing: -0.06em
+        color: $white
+        +md
+            font-size: 20px
 
 .modal-card
-	border-radius: 12px
-	background-color: $white
-	height: 100%
-	// min-height: 600px
-	&_bg
-		background-image: url(../img/card-bg.png)
-		background-position: -150% 250%
-		background-size: 557px
-		background-repeat: no-repeat
-		+r(1400)
-			background-image: none
-	+sm 
-		min-height: inherit
-	&__top
-		+clr
-		background-color: $lightGrey
-		border-radius: 12px
-	&__tag
-		height: 76px
-		background-image: $mainGradient
-		position: relative
-		display: flex
-		align-items: center
-		text-align: left
-		&:after
-			content: ''
-			position: absolute
-			width: 0
-			height: 0
-			border-top: 38px solid transparent
-			border-bottom: 38px solid transparent
-		&:before
-			content: ''
-			position: absolute
-			width: 0
-			height: 0
-			border: 38px solid transparent
-		span 
-			display: inline-block
-			vertical-align: middle
-			font-size: 32px
-			font-family: $ermilov
-			color: $white
-			+sm 
-				font-size: 24px
-		&_left
-			border-radius: 12px 0 0 12px
-			width: 49.5%
-			span 
-				padding-left: 45px
-			&:after
-				top: 0
-				left: 100%
-				border-left: 18px solid $blue
-			&:before
-				top: 0
-				left: 100%
-				margin-left: -1px
-				border-left: 18px solid $blue
-		&_right
-			border-radius: 0 10px 10px 0
-			width: 51.5%
-			float: right
-			span 
-				padding-left: 97px
-				+sm 
-					padding-left: 50px
-			&:after
-				top: 0
-				left: 0
-				border-left: 18px solid $lightGrey
-
-	&__bottom
-		height: calc(100% - 76px)
-		display: flex
-		align-items: center
-	&__content
-		width: 100%
-		padding: 26px 100px 0
-		text-align: left
-		+lg 
-			padding: 26px 30px
-	&__title
-		margin-bottom: 28px
-		font-family: $ermilov
-		font-size: 33px
-		line-height: 1
-		color: $black
-		letter-spacing: -0.06em
-		+lg 
-			font-size: 30px
-	&__descr
-		font-weight: 700
-		font-size: 20px
-		letter-spacing: -0.02em
-		color: #333333
-		line-height: 1.2
-		margin-bottom: 50px
-	&__social
-		.social-icon
-			&:not(:last-child)
-				margin-right: 18px
-	.modal-form
-		width: 100%
+    border-radius: 12px
+    background-color: $white
+    height: 100%
+    // min-height: 600px
+    &_bg
+        background-image: url(../img/card-bg.png)
+        background-position: -150% 250%
+        background-size: 557px
+        background-repeat: no-repeat
+        +r(1400)
+        background-image: none
+    +sm
+        min-height: inherit
+    &__top
+        +clr
+        background-color: $lightGrey
+        border-radius: 12px
+    &__tag
+        height: 76px
+        background-image: $mainGradient
+        position: relative
+        display: flex
+        align-items: center
+        text-align: left
+        &:after
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border-top: 38px solid transparent
+            border-bottom: 38px solid transparent
+        &:before
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border: 38px solid transparent
+        span
+            display: inline-block
+            vertical-align: middle
+            font-size: 32px
+            font-family: $ermilov
+            color: $white
+        +sm
+            font-size: 24px
+        &_left
+            border-radius: 12px 0 0 12px
+            width: 49.5%
+        span
+            padding-left: 45px
+        &:after
+            top: 0
+            left: 100%
+            border-left: 18px solid $blue
+        &:before
+            top: 0
+            left: 100%
+            margin-left: -1px
+            border-left: 18px solid $blue
+        &_right
+            border-radius: 0 10px 10px 0
+            width: 51.5%
+            float: right
+        span
+            padding-left: 97px
+            +sm
+                padding-left: 50px
+        &:after
+            top: 0
+            left: 0
+            border-left: 18px solid $lightGrey
+    &__bottom
+        height: calc(100% - 76px)
+        display: flex
+        align-items: center
+    &__content
+        width: 100%
+        padding: 26px 100px 0
+        text-align: left
+        +lg
+            padding: 26px 30px
+    &__title
+        margin-bottom: 28px
+        font-family: $ermilov
+        font-size: 33px
+        line-height: 1
+        color: $black
+        letter-spacing: -0.06em
+        +lg
+            font-size: 30px
+    &__descr
+        font-weight: 700
+        font-size: 20px
+        letter-spacing: -0.02em
+        color: #333333
+        line-height: 1.2
+        margin-bottom: 50px
+    &__social
+        .social-icon
+            &:not(:last-child)
+                margin-right: 18px
+    .modal-form
+        width: 100%
 
 .modal-form
-	display: inline-flex
-	flex-wrap: wrap
-	height: 100%
-	color: $black
-	font-weight: 700
-	overflow: hidden
-	&__left
-		+flex-size(69%)
-		padding: 32px 30px 4px 100px
-		border-radius: 0 0 12px 12px
-		box-shadow : 7px 7px 5px rgba(#000, 0.3)
-		height: 100%
-		+lg 
-			padding-left: 20px
-			padding-right: 20px
-		+sm
-			+flex-size(100%)
-			box-shadow: none
-			height: auto
-			padding: 20px
-	&__title
-		margin-bottom: 11px
-		font-family: $ermilov
-		font-size: 32px
-		line-height: 1
-		color: $black
-		letter-spacing: -0.06em
-		+md 
-			font-size: 30px
-	&__list
-		margin-bottom: 30px
-	&__list-item
-		margin-bottom: 3px
-		font-weight: 700
-		font-size: 12px
-		letter-spacing: -0.02em
-		line-height: 1
-	&__group
-		margin-bottom: 12px
-	&__inline-group
-		display: inline-block
-		+sm 
-			display: block
-			margin-bottom: 18px
-		+ .modal-form__inline-group
-			margin-left: 30px
-			+sm 
-				margin-left: 0
-	&__group-with-helper
-		position: relative
-		padding-bottom: 40px
-	&__label
-		display: block
-		margin-bottom: 12px
-		font-size: 17px
-		letter-spacing: -0.02em
-		color: #333333
-		+md 
-			font-size: 16px
-			margin-bottom: 6px
-	&__input
-		display: inline-block
-		position: relative
-		padding: 3px
-		font-family: $geo
-		font-weight: 700
-		background-color: transparent
-		border-bottom: 1px solid #B2B2B2
-		&_sm
-			width: 56px
-			&:not(:last-child)
-				margin-right: 16px
-				+sm 
-					margin-right: 2px
-		&_lg
-			width: 180px
-		&:focus
-			// border-bottom: 5px solid #B2B2B2
-			box-shadow: 0 2px 0 0 #B2B2B2
-	&__helper
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		font-size: 12px
-		letter-spacing: -0.02em
-		color: #999999
-		+sm 
-			line-height: 1
-	&__payments-systems
-		text-align: right
-		margin-top: 10px
-		+sm 
-			display: none
-		img 
-			display: inline-block
-			max-width: 220px
-
-	&__right
-		+flex-size(31%)
-		padding-top: 45px
-		padding-left: 20px
-		+lg 
-			padding-left: 10px
-		+sm
-			+flex-size(100%)
-			padding: 0 20px 30px
-	&__line
-		background-color: #4d4d4d
-		width: calc(100% + 21px)
-		height: 60px
-		margin-left: -20px
-		margin-bottom: 37px
-		+lg
-			margin-bottom: 36px
-			width: calc(100% + 10px)
-			margin-left: -10px
-		+md 
-			margin-bottom: 12px
-		+sm	
-			display: none
-	&__check-group
-		margin-bottom: 51px
-		// +lg 
-		// 	margin-bottom: 52px
-		+md 
-			margin-bottom: 69px
-		+sm 
-			margin-bottom: 18px
-	&__actions-group
-		margin-top: 24px
+    display: inline-flex
+    flex-wrap: wrap
+    height: 100%
+    color: $black
+    font-weight: 700
+    overflow: hidden
+    &__left
+        +flex-size(69%)
+        padding: 32px 30px 4px 100px
+        border-radius: 0 0 12px 12px
+        box-shadow : 7px 7px 5px rgba(#000, 0.3)
+        height: 100%
+        +lg
+            padding-left: 20px
+            padding-right: 20px
+        +sm
+            +flex-size(100%)
+            box-shadow: none
+            height: auto
+            padding: 20px
+    &__title
+        margin-bottom: 11px
+        font-family: $ermilov
+        font-size: 32px
+        line-height: 1
+        color: $black
+        letter-spacing: -0.06em
+        +md
+            font-size: 30px
+    &__list
+        margin-bottom: 30px
+    &__list-item
+        margin-bottom: 3px
+        font-weight: 700
+        font-size: 12px
+        letter-spacing: -0.02em
+        line-height: 1
+    &__group
+        margin-bottom: 12px
+    &__inline-group
+        display: inline-block
+        +sm
+            display: block
+            margin-bottom: 18px
+        + .modal-form__inline-group
+            margin-left: 30px
+            +sm
+                margin-left: 0
+    &__group-with-helper
+        position: relative
+        padding-bottom: 40px
+    &__label
+        display: block
+        margin-bottom: 12px
+        font-size: 17px
+        letter-spacing: -0.02em
+        color: #333333
+        +md
+            font-size: 16px
+            margin-bottom: 6px
+    &__input
+        display: inline-block
+        position: relative
+        padding: 3px
+        font-family: $geo
+        font-weight: 700
+        background-color: transparent
+        border-bottom: 1px solid #B2B2B2
+        &_sm
+            width: 56px
+        &:not(:last-child)
+            margin-right: 16px
+            +sm
+                margin-right: 2px
+        &_lg
+            width: 180px
+        &:focus
+        // border-bottom: 5px solid #B2B2B2
+        box-shadow: 0 2px 0 0 #B2B2B2
+    &__helper
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        font-size: 12px
+        letter-spacing: -0.02em
+        color: #999999
+        +sm
+            line-height: 1
+    &__payments-systems
+        text-align: right
+        margin-top: 10px
+        +sm
+            display: none
+        img
+            display: inline-block
+            max-width: 220px
+    &__right
+        +flex-size(31%)
+        padding-top: 45px
+        padding-left: 20px
+        +lg
+            padding-left: 10px
+        +sm
+            +flex-size(100%)
+            padding: 0 20px 30px
+    &__line
+        background-color: #4d4d4d
+        width: calc(100% + 21px)
+        height: 60px
+        margin-left: -20px
+        margin-bottom: 37px
+        +lg
+            margin-bottom: 36px
+            width: calc(100% + 10px)
+            margin-left: -10px
+        +md
+            margin-bottom: 12px
+        +sm
+            display: none
+    &__check-group
+        margin-bottom: 51px
+        // +lg
+        // 	margin-bottom: 52px
+        +md
+            margin-bottom: 69px
+        +sm
+            margin-bottom: 18px
+    &__actions-group
+        margin-top: 24px
 
 
 .check
-	position: relative
-	&__input
-		position: absolute
-		top: 0
-		height: 0
-		width: 0
-		opacity: 0
-		&:checked
-			+ .check__label:after
-				+fadein
-	&__label
-		display: block
-		position: relative
-		padding-left: 26px
-		font-size: 17px
-		color: #666666
-		letter-spacing: -0.02em
-		+md 
-			padding-left: 30px
-			font-size: 16px
-		&:before
-			content: ''
-			position: absolute
-			bottom: 0
-			left: 0
-			height: 20px
-			width: 20px
-			border: 1px solid #b2b2b2
-			border-radius: 30%
-			+md 
-				height: 24px
-				width: 24px
-		&:after
-			content: "✔"
-			position: absolute
-			bottom: 1px
-			left: 6px
-			color: $purple
-			+fadeout(0.4s)
+    position: relative
+    &__input
+        position: absolute
+        top: 0
+        height: 0
+        width: 0
+        opacity: 0
+        &:checked
+            + .check__label:after
+                +fadein
+    &__label
+        display: block
+        position: relative
+        padding-left: 26px
+        font-size: 17px
+        color: #666666
+        letter-spacing: -0.02em
+        +md
+            padding-left: 30px
+            font-size: 16px
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 20px
+            width: 20px
+            border: 1px solid #b2b2b2
+            border-radius: 30%
+        +md
+            height: 24px
+            width: 24px
+        &:after
+            content: "✔"
+            position: absolute
+            bottom: 1px
+            left: 6px
+            color: $purple
+            +fadeout(0.4s)
 
 .social-icon
     display: inline-block
     vertical-align: middle
     height: 44px
     width: 44px
-    img 
+    img
         max-width: 100%

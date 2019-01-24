@@ -30,10 +30,10 @@
         z-index: -1
         background-image: $mainGradientReversed
         +fadeout($tr)
-    +xl 
+    +xl
         font-size: 40px
         padding: 10px 24px 14px
-    +lg 
+    +lg
         font-size: 24px
 
 .gradient-hover
@@ -77,14 +77,14 @@
             height: 2px
             width: 100%
             background-color: $darkBlue
-        +sm 
+        +sm
             font-size: 20px
     .icon
         // font-size: 48px
         font-size: 27px
-        // +lg 
+        // +lg
         //     font-size: 36px
-        +sm 
+        +sm
             font-size: 24px
 
 .btn-submit
@@ -101,7 +101,7 @@
     position: relative
     +sm
         text-align: center
-    span 
+    span
         position: relative
         z-index: 3
 
@@ -116,11 +116,11 @@
     padding: 6px 0
     width: 100%
     text-align: left
-    +sm 
+    +sm
         text-align: center
     &:hover
         span
-            border-color: currentColor 
+            border-color: currentColor
     span
         border-bottom: 1px solid transparent
         transition: border-color 0.3s
@@ -134,11 +134,11 @@
         stroke: $white
         stroke-width: 16px
         font-size: 96px
-        // +xl 
+        // +xl
         //     font-size: 120px
-        +md 
+        +md
             font-size: 80px
-        +sm 
+        +sm
             font-size: 50px
 
 .btn-edit,
@@ -147,12 +147,12 @@
     background: none
     display: inline-block
     +hover
-        .icon 
+        .icon
             color: $red
     .icon
         color: rgba(#000, 0.4)
         transition: transform $tr
-    
+
 .btn-notification
     .icon
         font-size: 23px
@@ -183,13 +183,13 @@
             +circle(200)
         &:hover
             &:before
-                +fadein 
+                +fadein
         &:after,
         &:before
             +vcenter
             +circle(558)
             content: ''
-            +md 
+            +md
                 +circle(400)
         &:after
             // background-image: $mainGradient
@@ -210,55 +210,55 @@
     .icon
         font-size: 80px
         color: $darkBlue
-        +md 
+        +md
             font-size: 60px
-        +sm 
+        +sm
             font-size: 30px
             margin-top: 2px
 
-@keyframes bounce 
-    0% 
+@keyframes bounce
+    0%
         transform: translateX(-18px)
         opacity: 1
-    24% 
+    24%
         opacity: 1
-    40% 
+    40%
         transform: translateX(-14px)
         animation-timing-function: ease-in
-    65% 
+    65%
         transform: translateX(-6px)
         animation-timing-function: ease-in
-    82% 
+    82%
         transform: translateX(-3px)
         animation-timing-function: ease-in
-    93% 
+    93%
         transform: translateX(-2px)
         animation-timing-function: ease-in
     25%,
     55%,
     75%,
-    87% 
+    87%
         transform: translateX(0px)
         animation-timing-function: ease-out
-    100% 
+    100%
         transform: translateX(0px)
         animation-timing-function: ease-out
         opacity: 1
-  
+
 .main-link
     color: $darkBlue
     font-size: 32px
     font-family: $ermilov
     letter-spacing: -0.06em
     font-weight: 800
-    // +xl 
+    // +xl
     //     font-size: 40px
-    // +lg 
+    // +lg
     //     font-size: 30px
-    +sm 
+    +sm
         font-size: 20px
 
-@keyframes line 
+@keyframes line
     0%
         transform: translateX(0)
     50%

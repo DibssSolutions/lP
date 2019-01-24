@@ -4,9 +4,9 @@
     left: 0
     width: 100%
     z-index: 15
-    +md 
+    +md
         top: 20px
-    // &.is-active 
+    // &.is-active
     //     background-color: $white
     &__inner
         margin-left: calc(50% - 550px)
@@ -14,43 +14,43 @@
         display: flex
         justify-content: space-between
         align-items: center
-        +r(1700) 
+        +r(1700)
             margin-right: calc(50% - 550px)
-        +lg 
+        +lg
             padding: 0 8.333%
             margin: 0 auto
         &_center
             max-width: 1100px
             margin: 0 auto
             padding: 0 10px
-            +lg 
+            +lg
                 padding: 0 8.333%
-        // +xl 
+        // +xl
         //     max-width: 1100px
         //     margin: 0 auto
         //     padding: 0 10px
     &__logo
         .logo__text
-            +sm 
+            +sm
                 display: none
     &__search
         +vcenter
         width: 215px
         z-index: 10
-        +lg 
+        +lg
             position: relative
             top: 0
             left: 0
             flex-grow: 1
             padding: 0 50px
             transform: none
-        +md 
+        +md
             // order: 2
             // width: 34px
             padding: 0 10px
             width: auto
             flex-grow: 0
-        +sm 
+        +sm
             width: 30px
             margin-left: auto
             padding-right: 40px
@@ -74,7 +74,7 @@
             +sm
                 opacity: 0
                 visibility: hidden
-        // +md 
+        // +md
         //     position: fixed
         //     top: 0
         //     left: 0
@@ -89,7 +89,7 @@
         //         z-index: -1
     // &__toggle
     //     display: none
-    //     +md 
+    //     +md
     //         display: block
 
 
@@ -118,7 +118,7 @@
             position: absolute
             top: 0
             left: 0
-    &__rotated-img   
+    &__rotated-img
         transform: scale(-1)
         z-index: 2
         +fadeout($tr)
@@ -131,9 +131,9 @@
         // font-size: 48px
         font-size: 27px
         letter-spacing: -0.057em
-        // +xl     
+        // +xl
         //     font-size: 40px
-        // +md 
+        // +md
         //     font-size: 30px
     &__descr
         position: absolute
@@ -143,10 +143,10 @@
         font-weight: 300
         font-size: 13px
         line-height: 1.1
-        // +xl 
+        // +xl
         //     font-size: 18px
         //     top: 50px
-        +md 
+        +md
             display: none
 
 .nav
@@ -154,35 +154,35 @@
     font-size: 0
     .header_dark &
         color: $black
-        .hover-invis 
+        .hover-invis
             fill: rgba($black, 0.8)
-        .hover-vis 
+        .hover-vis
             fill: rgba($black, 0.8)
     .header__inner_center &
         margin-right: 70px
         margin-left: auto
-        +sm 
+        +sm
             margin-right: 10px
     &__list
         display: flex
         align-items: center
         +xl
             margin-right: 30px
-        +md 
+        +md
             margin-right: 12px
-        +sm 
+        +sm
             margin-right: 0
     &__item
         &:not(:last-child)
             margin-right: 20px
-            +sm 
+            +sm
                 margin-right: 6px
     &__link
         display: inline-block
         vertical-align: middle
         &:hover,
         &.is-active
-            .hover-invis 
+            .hover-invis
                 opacity: 0
             .hover-vis
                 opacity: 1
@@ -194,17 +194,17 @@
             // +xl
             //     height: 50px
             //     width: 50px
-            +md 
+            +md
                 height: 40px
                 width: 40px
-            +sm 
+            +sm
                 height: 30px
                 width: 30px
         .hover-invis
             opacity: 1
             fill: $white
             transition: opacity 0.3s
-        .hover-vis 
+        .hover-vis
             fill: $white
             opacity: 0
             transition: opacity 0.3s
@@ -212,7 +212,7 @@
 .user-info
     margin-left: auto
     color: $white
-    +md 
+    +md
         margin-right: auto
     &__list
         display: flex
@@ -223,7 +223,7 @@
         font-size: 13px
         line-height: 1.1
         font-weight: 300
-        +md 
+        +md
             display: none
     &__avatar
         display: block
@@ -242,14 +242,14 @@
                 +vcenter
                 z-index: -1
                 background-image: $mainGradient
-                +md 
+                +md
                     height: calc(100% + 6px)
                     width: calc(100% + 6px)
-        img 
+        img
             max-width: 100%
-        +xl 
+        +xl
             margin-left: 24px
-        +md 
+        +md
             height: 30px
             width: 30px
             margin-left: 8px
@@ -271,7 +271,7 @@
         font-size: 16px
         font-weight: 400
         line-height: 1
-        border-radius: 17px 
+        border-radius: 17px
         .header_dark &
             border: 3px solid rgba($black, 0.5)
             color: $black
@@ -279,7 +279,7 @@
             border-color: $white
             .header_dark &
                 border-color: $black
-        +sm 
+        +sm
             +fadeout(0.4s)
             padding-right: 35px
             padding-left: 16px
@@ -304,7 +304,7 @@
                 display: block
         &_mob
             display: none
-            +sm 
+            +sm
                 display: block
             .is-active &
                 +sm
@@ -315,7 +315,7 @@
             .header_dark &
                 color: $black
             .is-active &
-                +sm 
+                +sm
                     font-size: 13px
 
     &__close
@@ -333,7 +333,7 @@
             .header_dark &
                 color: $black
 
-.toggle-button 
+.toggle-button
     position: relative
     z-index: 20
     width: 40px
@@ -351,7 +351,7 @@
         transition: all 0.3s
         backface-visibility: hidden
 
-.toggle-button.on 
+.toggle-button.on
     span:nth-child(1)
         transform: rotate(45deg) translate(4px, 10px)
     span:nth-child(2)
@@ -366,7 +366,7 @@
     position: relative
     overflow: hidden
     display: inline-block
-    +sm 
+    +sm
         font-size: 16px
     &:hover:after
         transform: translateX(0)

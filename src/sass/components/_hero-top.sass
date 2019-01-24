@@ -4,13 +4,13 @@
 .hero-top
     position: relative
     height: 100vh
-    min-height: 700px 
+    min-height: 700px
     overflow: hidden
     color: $white
     &:hover
         .hero-top__bg
             transform: scale(1.05)
-    &__bg 
+    &__bg
         +coverdiv
         +cover
         transition: transform 0.7s
@@ -25,7 +25,7 @@
         justify-content: space-between
         align-items: center
         width: 100%
-        +xs 
+        +xs
             flex-direction: column
             min-height: 400px
             align-items: flex-start
@@ -34,19 +34,19 @@
     &__more
         font-size: 0
         text-align: left
-        +hover 
-            .icon 
+        +hover
+            .icon
                 animation: bounce 1s both ease-in
         div
             display: inline-block
             vertical-align: middle
             // margin-right: 89px
             margin-right: 56px
-            // +xl 
+            // +xl
             //     margin-right: 50px
-            // +lg 
+            // +lg
             //     margin-right: 30px
-            +sm 
+            +sm
                 margin-right: 16px
         span
             display: block
@@ -59,7 +59,7 @@
             line-height: 1
             &:not(:first-child)
                 margin-top: -4px
-            +sm 
+            +sm
                 font-size: 24px
         .icon
             // font-size: 118px
@@ -68,9 +68,9 @@
             vertical-align: middle
             color: $white
             margin-top: 5px
-            // +lg 
+            // +lg
             //     font-size: 90px
-            +sm 
+            +sm
                 font-size: 54px
     &__details
         position: absolute
@@ -81,9 +81,9 @@
         height: 25%
         text-align: left
         font-size: 18px
-        +lg 
+        +lg
             left: 8.333%
-        span 
+        span
             display: block
 
 .groups
@@ -94,7 +94,7 @@
     height: 25%
     min-height: 200px
     font-size: 0
-    +md 
+    +md
         position: relative
         width: 100%
         height: 25vh
@@ -102,17 +102,17 @@
 .hero-info
     position: relative
     text-align: left
-    h3 
+    h3
         font-family: $letterica
         // font-size: 166px
         font-size: 93px
         line-height: 1
         letter-spacing: 0.02em
-        // +xl 
+        // +xl
         //     font-size: 120px
-        // +lg 
+        // +lg
         //     font-size: 70px
-        +sm 
+        +sm
             font-size: 56px
     &__right
         position: absolute
@@ -121,10 +121,10 @@
         transform: translateY(-50%)
         width: 200px
         text-align: left
-        +md 
+        +md
             left: 0
             top: 120%
-        +xs 
+        +xs
             position: static
             margin-top: 16px
     &__bottom
@@ -133,15 +133,15 @@
         left: 0
         min-width: 200px
         text-align: left
-        +md 
+        +md
             top: 140%
-        +xs 
+        +xs
             position: relative
             transform: none
     .info-control
         width: 100%
         margin-bottom: 10px
-        +sm 
+        +sm
             margin-bottom: 4px
         // &__icon //MR
         //     min-width: 27px //MR
@@ -154,9 +154,9 @@
         font-size: 18px
         line-height: 1
         letter-spacing: 0.04em
-        // +lg 
+        // +lg
         //     font-size: 24px
-        +sm 
+        +sm
             font-size: 16px
 
 .group-card
@@ -187,4 +187,3 @@
         z-index: 2
 
 
-    
